@@ -68,11 +68,6 @@ public class PlotManager : MonoBehaviour
         }
     }
 
-    private void OnDisabled()
-    {
-
-    }
-
     private void OnMouseDown()
     {
         // If Item is placed but player wants to remove it
@@ -238,8 +233,7 @@ public class PlotManager : MonoBehaviour
         }
     }
 
-
-    void Harvest()
+    private void Harvest()
     {
         isPlanted = false;
         plant.gameObject.SetActive(false);
@@ -250,7 +244,7 @@ public class PlotManager : MonoBehaviour
         XPManager.instance.AddXP(10);
     }
 
-    void RemoveItem()
+    private void RemoveItem()
     {
         isPlaced = false;
         isPlanted = false;
@@ -258,7 +252,7 @@ public class PlotManager : MonoBehaviour
         gm.Transaction(selectedItem.sellPrice);
     }
 
-    void Plant(ShopPlantItemSO newPlant)
+    private void Plant(ShopPlantItemSO newPlant)
     {
         selectedPlant = newPlant;
         isPlanted = true;
@@ -270,7 +264,7 @@ public class PlotManager : MonoBehaviour
         plant.gameObject.SetActive(true);
     }
 
-    void Place(ShopItemsSO newItem)
+    private void Place(ShopItemsSO newItem)
     {      
         selectedItem = newItem;
 
@@ -282,7 +276,7 @@ public class PlotManager : MonoBehaviour
     }
 
     //Show Item in the map before it is placed
-    void ShowItem(ShopItemsSO newItem)
+    private void ShowItem(ShopItemsSO newItem)
     {
         selectedItem = newItem;
 
@@ -296,7 +290,7 @@ public class PlotManager : MonoBehaviour
         item.gameObject.SetActive(false);
     }
 
-    void UpdatePlant()
+    private void UpdatePlant()
     {
         if (isDry)
         {
@@ -310,7 +304,7 @@ public class PlotManager : MonoBehaviour
         plantCollider.offset = new Vector2(0, plant.bounds.size.y / 2);
     }
 
-    void UpdateItem()
+    private void UpdateItem()
     {
         item.sprite = selectedItem.icon;
     }

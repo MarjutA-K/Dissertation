@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd8f8dd127026940b44313cf682ec12, type: 3}
   m_Name: Crunch
   m_EditorClassIdentifier: 
-  exerciseTitle: Crunches
-  exerciseDescription: 
+  exerciseTitle: Crunch
   btnImage: {fileID: 21300000, guid: 84f6e530652c0214da724209304d6066, type: 3}
   exerciseOrder: 3
+  exerciseDescription: 
+  description: {fileID: 3591710937067243018, guid: e0bbe3a85b61fd04ea50b9e821a419a6, type: 3}

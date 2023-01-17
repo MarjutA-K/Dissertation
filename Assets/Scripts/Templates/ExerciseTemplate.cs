@@ -10,10 +10,20 @@ public class ExerciseTemplate : MonoBehaviour
 
     public TMP_Text titleTxt;
     public Image btnImage;
+    public TMP_Text descriptionTxt;
+
+    ExerciseDescrSelection edt;
 
     private void Start()
     {
+        edt = FindObjectOfType<ExerciseDescrSelection>();
         InitializeUI();
+    }
+
+    public void Selected()
+    {
+        edt.SelectExercise(this);
+        Debug.Log(exercise.exerciseTitle);
     }
 
     void InitializeUI()

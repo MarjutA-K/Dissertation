@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PushUp
   m_EditorClassIdentifier: 
   exerciseTitle: Push Up
-  exerciseDescription: 
   btnImage: {fileID: 21300000, guid: 935f27a7befd0754d870defc85870dcd, type: 3}
   exerciseOrder: 2
+  exerciseDescription: 
+  description: {fileID: 3591710937067243018, guid: 8a3bca375420ffa4089ed24eec51db9a, type: 3}
