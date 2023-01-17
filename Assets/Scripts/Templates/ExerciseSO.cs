@@ -8,6 +8,5 @@ public class ExerciseSO : ScriptableObject
     public string exerciseTitle;
     public Sprite btnImage;
     public int exerciseOrder;
-    public string exerciseDescription;
     public GameObject description;
 }

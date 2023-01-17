@@ -10,7 +10,6 @@ public class ExerciseTemplate : MonoBehaviour
 
     public TMP_Text titleTxt;
     public Image btnImage;
-    public TMP_Text descriptionTxt;
 
     ExerciseDescrSelection edt;
 

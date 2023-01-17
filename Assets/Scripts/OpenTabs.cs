@@ -10,10 +10,6 @@ public class OpenTabs : MonoBehaviour
     public GameObject workout;
     public GameObject exerciseDescription;
 
-    public GameObject squat;
-    public GameObject pushUp;
-    public GameObject crunch;
-
 
     public void OpenShop()
     {
@@ -28,7 +24,6 @@ public class OpenTabs : MonoBehaviour
         shop.SetActive(false);
     }
 
-    
     public void OpenActivities()
     {
         if (activities != null)
@@ -56,18 +51,13 @@ public class OpenTabs : MonoBehaviour
         workout.SetActive(false);
     }
 
-    public void OpenSquad()
+    public void OpenExerciseDescr()
     {
-        if (exerciseDescription != null)
-        {
-            exerciseDescription.SetActive(true);
-            squat.SetActive(true);
-        }
+        exerciseDescription.SetActive(true);
     }
 
-    public void CloseSquad()
+    public void CloseExerciseDescr()
     {
         exerciseDescription.SetActive(false);
-        squat.SetActive(false);
     }
 }

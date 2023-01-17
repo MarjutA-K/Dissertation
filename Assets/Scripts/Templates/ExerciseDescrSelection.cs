@@ -5,8 +5,8 @@ using TMPro;
 
 public class ExerciseDescrSelection : MonoBehaviour
 {
-    public ExerciseTemplate selectExercise;
-    public GameObject exerciseDescription;
+    private ExerciseTemplate selectExercise;
+    private GameObject clone;
 
     private bool isTrue = false;
     private bool isSelecting = false;
@@ -39,9 +39,8 @@ public class ExerciseDescrSelection : MonoBehaviour
             CheckSelection();
             selectExercise = newExercise;
             isTrue = true;
-            exerciseDescription.SetActive(true);
             selectExercise.exercise.description.SetActive(true);
-            Instantiate(selectExercise.exercise.description, transform);
+            clone = Instantiate(selectExercise.exercise.description, transform);
         }
     }
 
@@ -53,6 +52,7 @@ public class ExerciseDescrSelection : MonoBehaviour
             if (selectExercise != null)
             {
                 selectExercise.exercise.description.SetActive(false);
+                Destroy(clone);
                 selectExercise = null;
             }
         }
@@ -62,7 +62,5 @@ public class ExerciseDescrSelection : MonoBehaviour
             isSelecting = false;
             selectedTool = 0;
         }
-
-
     }
 }
