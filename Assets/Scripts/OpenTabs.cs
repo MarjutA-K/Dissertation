@@ -9,6 +9,7 @@ public class OpenTabs : MonoBehaviour
     public GameObject activities;
     public GameObject workout;
     public GameObject exerciseDescription;
+    public GameObject exerciseTimer;
 
 
     public void OpenShop()
@@ -59,5 +60,15 @@ public class OpenTabs : MonoBehaviour
     public void CloseExerciseDescr()
     {
         exerciseDescription.SetActive(false);
+    }
+
+    public void OpenExerciseTimerView()
+    {
+        exerciseTimer.SetActive(true);
+    }
+
+    public void CloseExerciseTimerView()
+    {
+        exerciseTimer.SetActive(false);
     }
 }
