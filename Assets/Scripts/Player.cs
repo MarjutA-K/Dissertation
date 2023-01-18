@@ -11,6 +11,6 @@ public class Player : MonoBehaviour
 
     public void AddMoney()
     {
-        GardenManager.instance.AddMoney(10);
+        GardenManager.instance.AddMoney(50);
     }
 }

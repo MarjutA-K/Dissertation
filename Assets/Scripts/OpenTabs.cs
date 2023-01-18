@@ -10,6 +10,7 @@ public class OpenTabs : MonoBehaviour
     public GameObject workout;
     public GameObject exerciseDescription;
     public GameObject exerciseTimer;
+    public GameObject congratsMsg;
 
 
     public void OpenShop()
@@ -70,5 +71,15 @@ public class OpenTabs : MonoBehaviour
     public void CloseExerciseTimerView()
     {
         exerciseTimer.SetActive(false);
+    }
+
+    public void showCongratsMsg()
+    {
+        congratsMsg.SetActive(true);
+    }
+
+    public void CloseCongratsMsg()
+    {
+        congratsMsg.SetActive(false);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlotManager : MonoBehaviour
 {
 
-    bool isPlanted = false;
+    public bool isPlanted = false;
     bool isPlaced = false;
     SpriteRenderer plant;
     SpriteRenderer item;
@@ -24,8 +24,9 @@ public class PlotManager : MonoBehaviour
     ShopItemsSO selectedItem;
 
     GardenManager gm;
+    WOCompleted woc;
 
-    bool isDry = true;
+    public bool isDry = true;
     public Sprite drySprite;
     public Sprite normalSprite;
     public Sprite unavailableSprite;
@@ -41,6 +42,7 @@ public class PlotManager : MonoBehaviour
         plantCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
         gm = transform.parent.GetComponent<GardenManager>();
         plot = GetComponent<SpriteRenderer>();
+        woc = FindObjectOfType<WOCompleted>();
 
         if (isBought)
         {
@@ -54,6 +56,15 @@ public class PlotManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        if(woc.isWOCompleted)
+        {
+            isDry = false;
+            UpdateStages();
+        }       
+    }
+
+    public void UpdateStages()
     {
         if (isPlanted && !isDry)
         {
@@ -257,6 +268,7 @@ public class PlotManager : MonoBehaviour
         selectedPlant = newPlant;
         isPlanted = true;
         gm.Transaction(-selectedPlant.buyPrice);
+        plot.sprite = normalSprite;
 
         plantStage = 0;
         UpdatePlant();

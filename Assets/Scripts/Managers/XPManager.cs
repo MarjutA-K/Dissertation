@@ -5,7 +5,7 @@ using TMPro;
 
 public class XPManager : MonoBehaviour
 {
-    public TextMeshProUGUI currentXPTxt, targetXPTxt, levelTxt;
+    public TextMeshProUGUI currentXPTxt, targetXPTxt, levelTxt, levelTxt1;
     public int currentXP, targetXP, level;
 
     public static XPManager instance;
@@ -27,6 +27,7 @@ public class XPManager : MonoBehaviour
         currentXPTxt.text = currentXP.ToString();
         targetXPTxt.text = targetXP.ToString();
         levelTxt.text = "Lvl. " + level.ToString();
+        levelTxt1.text = "Lvl. " + level.ToString();
     }
 
     public void AddXP(int xp)
@@ -42,6 +43,7 @@ public class XPManager : MonoBehaviour
             targetXP += targetXP / 20;
 
             levelTxt.text = "Lvl. " + level.ToString();
+            levelTxt1.text = "Lvl. " + level.ToString();
             targetXPTxt.text = targetXP.ToString();
         }
 

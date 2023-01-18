@@ -6,19 +6,26 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft;
-    public bool timerOn = false;
-
-    public TMP_Text timerTxt;
+    public TMP_Text workoutTimerTxt;
     public TMP_Text sliderTimerText;
 
     public Slider slider;
-    public TMP_Text timeText;
-    public float gametime;
-    float time;
+    public float sliderTime;
+    public float workoutTime;
+    private float time;
+
+    public bool timerOn = false;
+
+    Player player;
+    OpenTabs congratsMsg;
+    WOCompleted workout;
 
     private void Start()
     {
+        player = FindObjectOfType<Player>();
+        congratsMsg = FindObjectOfType<OpenTabs>();
+        workout = FindObjectOfType<WOCompleted>();
+
         slider.onValueChanged.AddListener((v) =>
         {
             float minutes = Mathf.FloorToInt(v / 60);
@@ -26,7 +33,7 @@ public class Timer : MonoBehaviour
 
             sliderTimerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
-            gametime = v;
+            sliderTime = v;
         });
     }
 
@@ -35,21 +42,35 @@ public class Timer : MonoBehaviour
     {
         if (timerOn)
         { 
-            if (timeLeft > 0)
+            if (workoutTime > 0)
             {
-                timeLeft -= Time.deltaTime;
-                updateTimer(timeLeft);
-                time = gametime - Time.time;
+                workoutTime -= Time.deltaTime;
+                time = sliderTime - Time.time;
+                updateTimer(workoutTime);
                 updateSliderTimer(time);           
             }
             else
             {
                 Debug.Log("Time is up");
-                timeLeft = 0;
+                workoutTime = 0;
                 timerOn = false;
                 slider.value = time;
+                player.AddMoney();
+                player.AddXP();
+                congratsMsg.showCongratsMsg();
+                StartCoroutine(showMsgCountdown());
+                workout.isWOCompleted = true;
             }
         }
+    }
+
+    private IEnumerator showMsgCountdown()
+    {
+        yield return new WaitForSeconds(2);
+        congratsMsg.CloseCongratsMsg();
+        congratsMsg.CloseExerciseTimerView();
+        congratsMsg.CloseExerciseDescr();
+        congratsMsg.CloseWorkoutView();
     }
 
     private void updateTimer(float currentTime)
@@ -59,7 +80,7 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        timerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        workoutTimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
 
     private void updateSliderTimer(float currentTime)
@@ -77,13 +98,13 @@ public class Timer : MonoBehaviour
 
     public void StartTimer()
     {
-        timeLeft = slider.value;
+        workoutTime = slider.value;
         timerOn = true;
     }
 
     public void StopTimer()
     {
-        timeLeft = 0;
+        workoutTime = 0;
         timerOn = false;
     }
 }
