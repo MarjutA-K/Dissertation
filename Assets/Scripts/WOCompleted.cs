@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class WOCompleted : MonoBehaviour
 {
     public GameObject checkmark;
+    public GameObject complitedTxt;
+    public GameObject descriptionTxt;
     public Button startWOBtn;
 
     public bool isWOCompleted;
 
-    PlotManager pm;
-
     // Start is called before the first frame update
     void Start()
     {
-        pm = FindObjectOfType<PlotManager>();
         checkmark.SetActive(false);
         isWOCompleted = false;
+        complitedTxt.SetActive(false);
+        descriptionTxt.SetActive(true);
     }
 
     // Update is called once per frame
@@ -27,6 +28,8 @@ public class WOCompleted : MonoBehaviour
         {
             checkmark.SetActive(true);
             startWOBtn.interactable = false;
+            complitedTxt.SetActive(true);
+            descriptionTxt.SetActive(false);
         }
     }
 }

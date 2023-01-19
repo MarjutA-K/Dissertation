@@ -5,6 +5,8 @@ using TMPro;
 
 public class OpenTabs : MonoBehaviour
 {
+    OpenTabs instance;
+
     public GameObject shop;
     public GameObject activities;
     public GameObject workout;
@@ -12,6 +14,24 @@ public class OpenTabs : MonoBehaviour
     public GameObject exerciseTimer;
     public GameObject congratsMsg;
 
+    public bool interactable;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        interactable = true;
+    }
 
     public void OpenShop()
     {
@@ -31,12 +51,14 @@ public class OpenTabs : MonoBehaviour
         if (activities != null)
         {
             activities.SetActive(true);
+            interactable = false;
         }
     }
 
     public void CloseActivities()
     {
         activities.SetActive(false);
+        interactable = true;
     }
 
     public void OpenWorkoutView()

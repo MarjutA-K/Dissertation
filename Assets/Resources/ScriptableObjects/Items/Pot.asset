@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb80ffa2d242d641a98daeea197e2a7, type: 3}
   m_Name: Pot
   m_EditorClassIdentifier: 
-  itemTitle: Pot
-  buyPrice: 100
+  itemTitle: Fence
+  buyPrice: 50
   sellPrice: 5
-  icon: {fileID: 21300000, guid: 9a18a5cbdd22bdd4590aa9ee22fe6005, type: 3}
+  icon: {fileID: 21300000, guid: 1d2ea163c66344343b89f2cec3fad14b, type: 3}
   isVisible: 1
   level: 5
   isLocked: 1

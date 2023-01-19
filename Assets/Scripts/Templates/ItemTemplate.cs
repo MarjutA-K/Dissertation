@@ -10,20 +10,25 @@ public class ItemTemplate : MonoBehaviour
 
     public TMP_Text titleTxt;
     public TMP_Text priceTxt;
-    public Image icon;
-
-    public Image btnImage;
     public TMP_Text btnTxt;
+    public TMP_Text lockedTxt;
+
+    public GameObject lockedTxtActive;
+    public GameObject priceTxtActive;
+
+    public Image icon;
+    public Image btnImage;
 
     private int level;
 
-    private Color buyColor = Color.green;
+    public Color buyColor = Color.green;
     private Color lockedColor = Color.gray;
 
     GardenManager gm;
     XPManager xpm;
+    OpenTabs op;
 
-    private bool interactable;
+    public bool interactable;
     private bool isOpen = false;
 
     // Start is called before the first frame update
@@ -46,7 +51,6 @@ public class ItemTemplate : MonoBehaviour
             }
 
         }
-
         if (item.isLocked)
         {
             Locked();
@@ -78,6 +82,9 @@ public class ItemTemplate : MonoBehaviour
         btnImage.GetComponent<Selectable>().interactable = false;
         btnImage.color = lockedColor;
         btnTxt.text = "Item locked";
+        lockedTxt.text = "Reach level " + item.level.ToString() + " to unlock item";
+        lockedTxtActive.SetActive(true);
+        priceTxtActive.SetActive(false);
     }
 
     void InitializeUI()
@@ -85,6 +92,8 @@ public class ItemTemplate : MonoBehaviour
         titleTxt.text = item.itemTitle;
         priceTxt.text = "$" + item.buyPrice;
         icon.sprite = item.icon;
+        lockedTxtActive.SetActive(false);
+        priceTxtActive.SetActive(true);
 
         if (gm.money < item.buyPrice)
         {

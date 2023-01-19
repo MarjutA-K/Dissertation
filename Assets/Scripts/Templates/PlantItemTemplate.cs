@@ -10,10 +10,14 @@ public class PlantItemTemplate : MonoBehaviour
 
     public TMP_Text titleTxt;
     public TMP_Text priceTxt;
-    public Image icon;
-
-    public Image btnImage;
+    public TMP_Text lockedTxt;
     public TMP_Text btnTxt;
+
+    public GameObject lockedTxtActive;
+    public GameObject priceTxtActive;
+
+    public Image icon;
+    public Image btnImage;
 
     private bool interactable;
     private bool isOpen = false;
@@ -79,6 +83,9 @@ public class PlantItemTemplate : MonoBehaviour
         btnImage.GetComponent<Selectable>().interactable = false;
         btnImage.color = lockedColor;
         btnTxt.text = "Item locked";
+        lockedTxt.text = "Reach Level " + plant.level.ToString() + " to Unlock plant";
+        lockedTxtActive.SetActive(true);
+        priceTxtActive.SetActive(false);
     }
 
     void InitializeUI()
@@ -86,6 +93,8 @@ public class PlantItemTemplate : MonoBehaviour
         titleTxt.text = plant.plantTitle;
         priceTxt.text = "$" + plant.buyPrice;
         icon.sprite = plant.icon;
+        lockedTxtActive.SetActive(false);
+        priceTxtActive.SetActive(true);
 
 
         if (gm.money < plant.buyPrice)

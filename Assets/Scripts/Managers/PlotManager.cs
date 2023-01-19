@@ -25,6 +25,7 @@ public class PlotManager : MonoBehaviour
 
     GardenManager gm;
     WOCompleted woc;
+    OpenTabs op;
 
     public bool isDry = true;
     public Sprite drySprite;
@@ -41,6 +42,7 @@ public class PlotManager : MonoBehaviour
         item = transform.GetChild(1).GetComponent<SpriteRenderer>();
         plantCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
         gm = transform.parent.GetComponent<GardenManager>();
+        op = FindObjectOfType<OpenTabs>();
         plot = GetComponent<SpriteRenderer>();
         woc = FindObjectOfType<WOCompleted>();
 
@@ -57,7 +59,7 @@ public class PlotManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(woc.isWOCompleted)
+        if (woc.isWOCompleted)
         {
             isDry = false;
             UpdateStages();
@@ -89,7 +91,7 @@ public class PlotManager : MonoBehaviour
                 RemoveItem();
             }
         }
-
+      
         if (isPlanted)
         {
             if (plantStage == selectedPlant.plantStages.Length - 1 && !gm.isPlanting && !gm.isSelecting)
@@ -103,7 +105,7 @@ public class PlotManager : MonoBehaviour
             Plant(gm.selectPlant.plant);
         }
         //Place Item
-        else if (gm.isPlacing && gm.selectItem.item.buyPrice <= gm.money && !isBought)
+        else if (gm.isPlacing && gm.selectItem.item.buyPrice <= gm.money && isBought)
         {
             Place(gm.selectItem.item);
         }
@@ -159,11 +161,13 @@ public class PlotManager : MonoBehaviour
             if(!isPlanted)
             {
                 // Sets item invisible when player does not have money to buy it
-                if (!gm.selectPlant.plant.isVisible)
+                if (!gm.selectPlant.plant.isVisible || !op.interactable)
                 {
                     gm.isPlanting = false;
                     if(gm.selectPlant != null)
                     {
+                        gm.selectPlant.btnImage.color = gm.buyColor;
+                        gm.selectPlant.btnTxt.text = "Buy";
                         gm.selectPlant = null;
                     }
                 }
@@ -174,7 +178,7 @@ public class PlotManager : MonoBehaviour
         // Able to place Items 
         if (gm.isPlacing)
         {
-            if (isPlanted || gm.selectItem.item.buyPrice > gm.money || !isBought)
+            if (isPlanted || gm.selectItem.item.buyPrice > gm.money || isBought)
             {
                 //can buy
                 plot.color = availableColor;
@@ -183,13 +187,14 @@ public class PlotManager : MonoBehaviour
                     ShowItem(gm.selectItem.item);
 
                     // Sets item invisible when player does not have money to buy it
-                    if (!gm.selectItem.item.isVisible)
+                    if (!gm.selectItem.item.isVisible || !op.interactable)
                     {
                         gm.isPlacing = false;
                         if(gm.selectItem != null)
                         {
+                            gm.selectItem.btnImage.color = gm.buyColor;
+                            gm.selectItem.btnTxt.text = "Buy";
                             gm.selectItem = null;
-                            //HideItem();
                         }
 
                     }        
