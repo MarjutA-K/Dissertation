@@ -24,7 +24,7 @@ public class WOCompleted : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isWOCompleted)
+        if (isWOCompleted)
         {
             checkmark.SetActive(true);
             startWOBtn.interactable = false;

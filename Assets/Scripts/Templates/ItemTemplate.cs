@@ -47,7 +47,7 @@ public class ItemTemplate : MonoBehaviour
             item.isLocked = false;
             if(!isOpen)
             {
-                callFunction();
+                CallFunction();
             }
 
         }
@@ -61,7 +61,7 @@ public class ItemTemplate : MonoBehaviour
         }
     }
 
-    void callFunction()
+    private void CallFunction()
     {
         isOpen = true;
         btnImage.color = buyColor;
@@ -77,7 +77,7 @@ public class ItemTemplate : MonoBehaviour
         }
     }
 
-    void Locked()
+    private void Locked()
     {
         btnImage.GetComponent<Selectable>().interactable = false;
         btnImage.color = lockedColor;

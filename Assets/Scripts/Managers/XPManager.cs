@@ -35,7 +35,7 @@ public class XPManager : MonoBehaviour
 
     public void AddXP(int xp)
     {
-        currentXP += xp;
+        currentXP += xp/level;
 
         // Level Up
         while(currentXP >= targetXP)
