@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Flower
   m_EditorClassIdentifier: 
   plantTitle: Balloon Flower
-  plantStages:
-  - {fileID: 21300000, guid: 261af59162776cc419a279b98ff8ee42, type: 3}
-  - {fileID: 21300000, guid: 29f50421d686b2d44be307d760148bd1, type: 3}
-  timeBtwStages: 2
   buyPrice: 3
   sellPrice: 2
   icon: {fileID: 21300000, guid: 29f50421d686b2d44be307d760148bd1, type: 3}
-  dryPlanted: {fileID: 1263269177, guid: 83b6a7b56f376094ebf8e134288474f0, type: 3}
+  growthSprite:
+  - {fileID: 21300000, guid: 261af59162776cc419a279b98ff8ee42, type: 3}
+  - {fileID: 21300000, guid: 29f50421d686b2d44be307d760148bd1, type: 3}
+  isGrowing: 1
+  growthStage: -1
+  growthTime: 2
+  maxSize: 0
+  worthPer: 20
+  finalProduct: {fileID: 21300000, guid: 29f50421d686b2d44be307d760148bd1, type: 3}
   isVisible: 1
   level: 0
   isLocked: 0

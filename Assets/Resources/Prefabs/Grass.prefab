@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3972121954409217608}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,8 +459,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlanted: 0
+  plotChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   availableColor: {r: 0, g: 1, b: 0, a: 1}
   unavailableColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedPlant: {fileID: 0}
   isDry: 1
   drySprite: {fileID: 21300000, guid: 7a257e4174caac84d9ed736d480ad6ef, type: 3}
   normalSprite: {fileID: 21300000, guid: 7a257e4174caac84d9ed736d480ad6ef, type: 3}

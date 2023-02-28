@@ -28,6 +28,8 @@ public class GardenManager : MonoBehaviour
     public Image[] buttonsImg;
     public Sprite normalButton;
     public Sprite selectedButton;
+    [SerializeField]
+    TempLoadSave saveManager;
 
 
     private void Awake()
@@ -157,12 +159,14 @@ public class GardenManager : MonoBehaviour
     {
         money += _money;
         moneyTxt.text = "$" + money;
+        saveManager.moneyChanged.Invoke(money);
     }
 
     public void Transaction(int value)
     {
         money += value;
         moneyTxt.text = "$" + money;
+        saveManager.moneyChanged.Invoke(money);
     }
 
 }

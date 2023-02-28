@@ -6,42 +6,44 @@ using TMPro;
 
 public class PlantItemTemplate : MonoBehaviour
 {
-    public ShopPlantItemSO plant;
+    [HideInInspector]public ShopPlantItemSO plant;
 
     public TMP_Text titleTxt;
     public TMP_Text priceTxt;
-    public TMP_Text lockedTxt;
+    //public TMP_Text lockedTxt;
     public TMP_Text btnTxt;
 
-    public GameObject lockedTxtActive;
-    public GameObject priceTxtActive;
+    //public GameObject lockedTxtActive;
+    //public GameObject priceTxtActive;
 
     public Image icon;
     public Image btnImage;
 
-    private bool interactable;
-    private bool isOpen = false;
+    //private bool interactable;
+    //private bool isOpen = false;
 
     int level;
 
     private Color lockedColor = Color.gray;
     private Color buyColor = Color.green;
 
-    GardenManager gm;
+    //GardenManager gm;
     XPManager xpm;
 
     // Start is called before the first frame update
     void Start()
     {
-        gm = FindObjectOfType<GardenManager>();
+        //gm = FindObjectOfType<GardenManager>();
         xpm = FindObjectOfType<XPManager>();
-        InitializeUI();
-        plant.isLocked = true;
+        //InitializeUI();
+        //plant.isLocked = true;
+
+
     }
 
     private void Update()
     {
-        if(plant.level <= xpm.level)
+        /*if(plant.level <= xpm.level)
         {
             plant.isLocked = false;
 
@@ -57,28 +59,31 @@ public class PlantItemTemplate : MonoBehaviour
         }
         else
         {
-            InitializeUI();
-        }
-       
+            //InitializeUI();
+        }*/
+
     }
 
-    void callFunction()
+    /*void callFunction()
     {
         isOpen = true;
         btnImage.color = buyColor;
         btnTxt.text = "Buy";
-    }
+    }*/
 
-    public void BuyPlant()
+    /*public void BuyPlant()
     {     
        if(interactable)
         {
-            gm.SelectPlant(this);
+            //gm.SelectPlant(this);
             Debug.Log("Bought " + plant.plantTitle);
-        }
-    }
 
-    void Locked()
+        }
+    }*/
+
+
+
+    /*void Locked()
     {
         btnImage.GetComponent<Selectable>().interactable = false;
         btnImage.color = lockedColor;
@@ -97,7 +102,7 @@ public class PlantItemTemplate : MonoBehaviour
         priceTxtActive.SetActive(true);
 
 
-        if (gm.money < plant.buyPrice)
+        /*if (gm.money < plant.buyPrice)
         {
             btnImage.GetComponent<Selectable>().interactable = false;
             interactable = false;
@@ -111,6 +116,6 @@ public class PlantItemTemplate : MonoBehaviour
             interactable = true;
             plant.isVisible = true;
         }
-    }
+    }*/
 
 }

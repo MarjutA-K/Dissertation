@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Sunflower
   m_EditorClassIdentifier: 
   plantTitle: Sunflower
-  plantStages:
-  - {fileID: 21300000, guid: 1fe1b66aa2e7ec146ba9d8770189659b, type: 3}
-  - {fileID: 21300000, guid: 1fe1b66aa2e7ec146ba9d8770189659b, type: 3}
-  timeBtwStages: 2
   buyPrice: 5
   sellPrice: 2
   icon: {fileID: 21300000, guid: 1fe1b66aa2e7ec146ba9d8770189659b, type: 3}
-  dryPlanted: {fileID: 1263269177, guid: 83b6a7b56f376094ebf8e134288474f0, type: 3}
+  growthSprite:
+  - {fileID: 21300000, guid: e8d9061c32389504cae081d0f14d0d59, type: 3}
+  - {fileID: 21300000, guid: 1fe1b66aa2e7ec146ba9d8770189659b, type: 3}
+  isGrowing: 1
+  growthStage: -1
+  growthTime: 2
+  maxSize: 0
+  worthPer: 20
+  finalProduct: {fileID: 21300000, guid: 1fe1b66aa2e7ec146ba9d8770189659b, type: 3}
   isVisible: 1
   level: 2
   isLocked: 0

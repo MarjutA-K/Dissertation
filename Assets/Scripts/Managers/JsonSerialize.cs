@@ -10,4 +10,15 @@ public class JsonSerialize
     public int exp;
     public int streak;
     public long lastOnlineDate;
+
+    [System.Serializable]
+    public class plotWrapper : plotArrayWrapper<plotData> { };
+    public plotWrapper savedPlants;
+}
+
+[System.Serializable]
+public class plotData
+{
+    public int plotnum;
+    public string plantname;
 }

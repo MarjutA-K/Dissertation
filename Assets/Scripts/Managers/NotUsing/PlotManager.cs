@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlotManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlotManager : MonoBehaviour
     SpriteRenderer plant;
     SpriteRenderer item;
     BoxCollider2D plantCollider;
+    public UnityEvent plotChangedEvent;
 
     int plantStage = 0;
     float timer;
@@ -20,7 +22,7 @@ public class PlotManager : MonoBehaviour
 
     SpriteRenderer plot;
 
-    ShopPlantItemSO selectedPlant;
+    public ShopPlantItemSO selectedPlant;
     ShopItemsSO selectedItem;
 
     GardenManager gm;
@@ -72,9 +74,9 @@ public class PlotManager : MonoBehaviour
         {
             timer -= speed * Time.deltaTime;
 
-            if (timer < 0 && plantStage < selectedPlant.plantStages.Length - 1)
+            if (timer < 0 && plantStage < selectedPlant.growthSprite.Length - 1)
             {
-                timer = selectedPlant.timeBtwStages;
+                //timer = selectedPlant.timeBtwStages;
                 plantStage++;
                 UpdatePlant();
             }
@@ -94,7 +96,7 @@ public class PlotManager : MonoBehaviour
       
         if (isPlanted)
         {
-            if (plantStage == selectedPlant.plantStages.Length - 1 && !gm.isPlanting && !gm.isSelecting)
+            if (plantStage == selectedPlant.growthSprite.Length - 1 && !gm.isPlanting && !gm.isSelecting)
             {
                 Harvest();
             }        
@@ -277,8 +279,11 @@ public class PlotManager : MonoBehaviour
 
         plantStage = 0;
         UpdatePlant();
-        timer = selectedPlant.timeBtwStages;
+        //timer = selectedPlant.timeBtwStages;
         plant.gameObject.SetActive(true);
+
+        plotChangedEvent.Invoke();
+        
     }
 
     private void Place(ShopItemsSO newItem)
@@ -290,6 +295,7 @@ public class PlotManager : MonoBehaviour
         gm.Transaction(-selectedItem.buyPrice);
         UpdateItem();
         item.gameObject.SetActive(true);
+        //item.gameObject.transform.localPosition
     }
 
     //Show Item in the map before it is placed
@@ -311,11 +317,11 @@ public class PlotManager : MonoBehaviour
     {
         if (isDry)
         {
-            plant.sprite = selectedPlant.dryPlanted;
+            //plant.sprite = selectedPlant.dryPlanted;
         }
         else
         {
-            plant.sprite = selectedPlant.plantStages[plantStage];
+            plant.sprite = selectedPlant.growthSprite[plantStage];
         }
         plantCollider.size = plant.sprite.bounds.size;
         plantCollider.offset = new Vector2(0, plant.bounds.size.y / 2);

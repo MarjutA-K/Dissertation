@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Catchfly
   m_EditorClassIdentifier: 
   plantTitle: Catchfly
-  plantStages:
-  - {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
-  - {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
-  timeBtwStages: 2
   buyPrice: 10
   sellPrice: 5
   icon: {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
-  dryPlanted: {fileID: 1263269177, guid: 83b6a7b56f376094ebf8e134288474f0, type: 3}
+  growthSprite:
+  - {fileID: 21300000, guid: 8668a3f80d4dd814eaa5f03648acae17, type: 3}
+  - {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
+  isGrowing: 0
+  growthStage: -1
+  growthTime: 2
+  maxSize: 0
+  worthPer: 0
+  finalProduct: {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
   isVisible: 1
   level: 5
   isLocked: 1

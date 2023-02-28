@@ -232,11 +232,8 @@ MonoBehaviour:
   plant: {fileID: 11400000, guid: ef2b755f15581d04e9daa46382599932, type: 2}
   titleTxt: {fileID: 7077086115178209655}
   priceTxt: {fileID: 1633803418529744370}
-  lockedTxt: {fileID: 1624401080812354347}
   btnTxt: {fileID: 6988436651611613552}
-  lockedTxtActive: {fileID: 4983089857833821976}
-  priceTxtActive: {fileID: 7024623994951222227}
-  icon: {fileID: 5887655530905596324}
+  icon: {fileID: 2800000, guid: b43129c4bbec2d64da6c0227b0319178, type: 3}
   btnImage: {fileID: 2484933865463828464}
 --- !u!1 &4983089857833821976
 GameObject:
@@ -255,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &234865260650918605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,6 +845,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlantItemTemplate, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

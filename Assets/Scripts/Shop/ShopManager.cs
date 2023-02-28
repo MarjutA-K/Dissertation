@@ -9,10 +9,12 @@ public class ShopManager : MonoBehaviour
 {
     public int coins;
     public TMP_Text coinsTxt;
-    public ShopItemsSO[] shopItemsSO;
+    public ShopPlantItemSO[] shopItemsSO;
     public GameObject[] shopPanelsSO;
-    public ItemTemplate[] shopPanels;
+    public PlantItemTemplate[] shopPanels;
     public Button[] purchasaBtns;
+
+    public InventoryManager InventoryManager;
 
     private void Start()
     {
@@ -62,8 +64,48 @@ public class ShopManager : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++)
         {
-            shopPanels[i].titleTxt.text = shopItemsSO[i].itemTitle;
+            shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
             shopPanels[i].priceTxt.text = shopItemsSO[i].buyPrice.ToString();
+        }
+    }
+
+    public void BoughtVegetables(int id)
+    {
+        bool result = InventoryManager.AddItem(shopItemsSO[id]);
+        if (result == true)
+        {
+            Debug.Log("Item added");
+        }
+        else
+        {
+            Debug.Log("ITEM NOT ADDED");
+        }
+    }
+
+    public void GetSelectedVegetable()
+    {
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(false);
+        if (receivedVegetable != null)
+        {
+            Debug.Log("Received item: " + receivedVegetable);
+
+        }
+        else
+        {
+            Debug.Log("Item NOT received");
+        }
+    }
+
+    public void UseSelectedVegetable()
+    {
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(true);
+        if (receivedVegetable != null)
+        {
+            Debug.Log("Used item: " + receivedVegetable);
+        }
+        else
+        {
+            Debug.Log("Item NOT USED");
         }
     }
 }

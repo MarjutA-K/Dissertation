@@ -45,10 +45,10 @@ public class StoreManager : MonoBehaviour
         return plantObject1.buyPrice.CompareTo(plantObject2.buyPrice);
     }
 
-    int SortByTime(ShopPlantItemSO plantObject1, ShopPlantItemSO plantObject2)
-    {
-        return plantObject1.timeBtwStages.CompareTo(plantObject2.timeBtwStages);
-    }
+    //int SortByTime(ShopPlantItemSO plantObject1, ShopPlantItemSO plantObject2)
+    //{
+        //return plantObject1.timeBtwStages.CompareTo(plantObject2.timeBtwStages);
+    //}
 
     int SortItemsByPrice(ShopItemsSO itemObject1, ShopItemsSO itemObject2)
     {

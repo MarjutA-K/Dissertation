@@ -10,6 +10,9 @@ public class XPManager : MonoBehaviour
 
     public static XPManager instance;
 
+    [SerializeField]
+    TempLoadSave saveManager;
+
     private void Awake()
     {
         if(instance == null)
@@ -54,5 +57,7 @@ public class XPManager : MonoBehaviour
 
         currentXPTxt.text = currentXP.ToString();
         currentXPTxt1.text = currentXP.ToString();
+        saveManager.xpChanged.Invoke(currentXP, level);
+
     }
 }
