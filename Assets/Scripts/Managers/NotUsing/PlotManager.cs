@@ -102,10 +102,10 @@ public class PlotManager : MonoBehaviour
             }        
         }
         //Place Plant
-        else if (gm.isPlanting && gm.selectPlant.plant.buyPrice <= gm.money && isBought)
+        /*else if (gm.isPlanting && gm.selectPlant.plant.buyPrice <= gm.money && isBought)
         {
             Plant(gm.selectPlant.plant);
-        }
+        }*/
         //Place Item
         else if (gm.isPlacing && gm.selectItem.item.buyPrice <= gm.money && isBought)
         {
@@ -149,7 +149,7 @@ public class PlotManager : MonoBehaviour
     {
         if (gm.isPlanting)
         {
-            if (isPlanted || gm.selectPlant.plant.buyPrice > gm.money || !isBought)
+            /*if (isPlanted || gm.selectPlant.plant.buyPrice > gm.money || !isBought)
             {
                 //can't buy
                 plot.color = unavailableColor;            
@@ -158,12 +158,12 @@ public class PlotManager : MonoBehaviour
             {
                 //can buy
                 plot.color = availableColor;
-            }
+            }*/
 
             if(!isPlanted)
             {
                 // Sets item invisible when player does not have money to buy it
-                if (!gm.selectPlant.plant.isVisible || !op.interactable)
+                /*if (!gm.selectPlant.plant.isVisible || !op.interactable)
                 {
                     gm.isPlanting = false;
                     if(gm.selectPlant != null)
@@ -172,7 +172,7 @@ public class PlotManager : MonoBehaviour
                         gm.selectPlant.btnTxt.text = "Buy";
                         gm.selectPlant = null;
                     }
-                }
+                }*/
             }
 
         }

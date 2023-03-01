@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
   m_Name: Catchfly
   m_EditorClassIdentifier: 
-  plantTitle: Catchfly
+  plantTitle: Red Flower
   buyPrice: 10
   sellPrice: 5
-  icon: {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
+  icon: {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   growthSprite:
-  - {fileID: 21300000, guid: 8668a3f80d4dd814eaa5f03648acae17, type: 3}
-  - {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
+  - {fileID: 1635569147, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1190473755, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1538479916, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   isGrowing: 0
   growthStage: -1
   growthTime: 2
-  maxSize: 0
+  maxSize: 3
   worthPer: 0
-  finalProduct: {fileID: 21300000, guid: 93b861c6aab08474da49c05e0dc9f516, type: 3}
-  isVisible: 1
-  level: 5
-  isLocked: 1
+  finalProduct: {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  level: 10

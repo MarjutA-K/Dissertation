@@ -25,12 +25,11 @@ public class ShopPlantItemSO : ScriptableObject
     public int worthPer;
     public Sprite finalProduct;
 
-    // when player has no money deselcts the item
-    public bool isVisible = true;
+    [Header("Level to be Unlocked")]
     public int level;
-    public bool isLocked = true;
 
     //public float timeBtwStages;
-
+    //public bool isVisible = true;
     //public Sprite dryPlanted;
+    //public bool isLocked = true;
 }

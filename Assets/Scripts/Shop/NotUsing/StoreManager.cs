@@ -12,7 +12,7 @@ public class StoreManager : MonoBehaviour
     private void Awake()
     {
         //Assets/Resources/Plants
-        var loadPlants = Resources.LoadAll("ScriptableObjects", typeof(ShopPlantItemSO));
+        /*var loadPlants = Resources.LoadAll("ScriptableObjects", typeof(ShopPlantItemSO));
         foreach (var plant in loadPlants)
         {
             plantObjects.Add((ShopPlantItemSO)plant);
@@ -37,21 +37,26 @@ public class StoreManager : MonoBehaviour
         {
             ItemTemplate newItem = Instantiate(items, transform).GetComponent<ItemTemplate>();
             newItem.item = item;
-        }
+        }*/
     }
 
-    int SortByPrice(ShopPlantItemSO plantObject1, ShopPlantItemSO plantObject2)
+    private void Start()
+    {
+        
+    }
+
+    /*int SortByPrice(ShopPlantItemSO plantObject1, ShopPlantItemSO plantObject2)
     {
         return plantObject1.buyPrice.CompareTo(plantObject2.buyPrice);
-    }
+    }*/
 
     //int SortByTime(ShopPlantItemSO plantObject1, ShopPlantItemSO plantObject2)
     //{
         //return plantObject1.timeBtwStages.CompareTo(plantObject2.timeBtwStages);
     //}
 
-    int SortItemsByPrice(ShopItemsSO itemObject1, ShopItemsSO itemObject2)
+    /*int SortItemsByPrice(ShopItemsSO itemObject1, ShopItemsSO itemObject2)
     {
         return itemObject1.buyPrice.CompareTo(itemObject2.buyPrice);
-    }
+    }*/
 }

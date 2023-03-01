@@ -10,11 +10,11 @@ public class PlantItemTemplate : MonoBehaviour
 
     public TMP_Text titleTxt;
     public TMP_Text priceTxt;
-    //public TMP_Text lockedTxt;
+    public TMP_Text lockedTxt;
     public TMP_Text btnTxt;
 
-    //public GameObject lockedTxtActive;
-    //public GameObject priceTxtActive;
+    public GameObject lockedTxtActive;
+    public GameObject priceTxtActive;
 
     public Image icon;
     public Image btnImage;
@@ -22,28 +22,24 @@ public class PlantItemTemplate : MonoBehaviour
     //private bool interactable;
     //private bool isOpen = false;
 
-    int level;
-
-    private Color lockedColor = Color.gray;
-    private Color buyColor = Color.green;
+    //private Color lockedColor = Color.gray;
+    //private Color buyColor = Color.green;
 
     //GardenManager gm;
-    XPManager xpm;
+    //XPManager xpm;
 
     // Start is called before the first frame update
-    void Start()
+   /* void Start()
     {
         //gm = FindObjectOfType<GardenManager>();
         xpm = FindObjectOfType<XPManager>();
         //InitializeUI();
-        //plant.isLocked = true;
-
-
+        plant.isLocked = true;
     }
-
+        
     private void Update()
     {
-        /*if(plant.level <= xpm.level)
+        if(plant.level <= xpm.level)
         {
             plant.isLocked = false;
 
@@ -59,19 +55,19 @@ public class PlantItemTemplate : MonoBehaviour
         }
         else
         {
-            //InitializeUI();
-        }*/
+            InitializeUI();
+        }
 
     }
 
-    /*void callFunction()
+    void callFunction()
     {
-        isOpen = true;
+        //isOpen = true;
         btnImage.color = buyColor;
         btnTxt.text = "Buy";
-    }*/
+    }
 
-    /*public void BuyPlant()
+   public void BuyPlant()
     {     
        if(interactable)
         {
@@ -79,14 +75,12 @@ public class PlantItemTemplate : MonoBehaviour
             Debug.Log("Bought " + plant.plantTitle);
 
         }
-    }*/
+    }
 
-
-
-    /*void Locked()
+    void Locked()
     {
-        btnImage.GetComponent<Selectable>().interactable = false;
-        btnImage.color = lockedColor;
+        //btnImage.GetComponent<Selectable>().interactable = false;
+        //btnImage.color = lockedColor;
         btnTxt.text = "Item locked";
         lockedTxt.text = "Reach Level " + plant.level.ToString() + " to Unlock plant";
         lockedTxtActive.SetActive(true);
@@ -95,12 +89,11 @@ public class PlantItemTemplate : MonoBehaviour
 
     void InitializeUI()
     {
-        titleTxt.text = plant.plantTitle;
-        priceTxt.text = "$" + plant.buyPrice;
-        icon.sprite = plant.icon;
+        //titleTxt.text = plant.plantTitle;
+        //priceTxt.text = "$" + plant.buyPrice;
+        //icon.sprite = plant.icon;
         lockedTxtActive.SetActive(false);
         priceTxtActive.SetActive(true);
-
 
         /*if (gm.money < plant.buyPrice)
         {
@@ -117,5 +110,4 @@ public class PlantItemTemplate : MonoBehaviour
             plant.isVisible = true;
         }
     }*/
-
 }

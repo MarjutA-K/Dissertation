@@ -232,8 +232,11 @@ MonoBehaviour:
   plant: {fileID: 11400000, guid: ef2b755f15581d04e9daa46382599932, type: 2}
   titleTxt: {fileID: 7077086115178209655}
   priceTxt: {fileID: 1633803418529744370}
+  lockedTxt: {fileID: 1624401080812354347}
   btnTxt: {fileID: 6988436651611613552}
-  icon: {fileID: 2800000, guid: b43129c4bbec2d64da6c0227b0319178, type: 3}
+  lockedTxtActive: {fileID: 4983089857833821976}
+  priceTxtActive: {fileID: 7024623994951222227}
+  icon: {fileID: 5887655530905596324}
   btnImage: {fileID: 2484933865463828464}
 --- !u!1 &4983089857833821976
 GameObject:
@@ -252,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &234865260650918605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -270,8 +273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152.70403, y: 32.5}
-  m_SizeDelta: {x: 212.9728, y: 52.663}
+  m_AnchoredPosition: {x: 166.80165, y: 24.1296}
+  m_SizeDelta: {x: 258.79, y: 69.4039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3538227419714215819
 CanvasRenderer:
@@ -301,7 +304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reach level 0 to unlock item
+  m_text: Reach level 000 to unlock item
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -837,28 +840,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2484933865463828464}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 881048955948446798}
-        m_TargetAssemblyTypeName: PlantItemTemplate, Assembly-CSharp
-        m_MethodName: BuyPlant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlantItemTemplate, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

@@ -4,42 +4,84 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
 public class ShopManager : MonoBehaviour
 {
-    public int coins;
-    public TMP_Text coinsTxt;
+    public static ShopManager instance;
+    private XPManager _xp;
+    public InventoryManager InventoryManager;
+    [SerializeField]
+    public TempLoadSave _saveManager;
+
+    public int money;
+    public TMP_Text moneyTxt;
+
     public ShopPlantItemSO[] shopItemsSO;
     public GameObject[] shopPanelsSO;
     public PlantItemTemplate[] shopPanels;
     public Button[] purchasaBtns;
 
-    public InventoryManager InventoryManager;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
+        _xp = FindObjectOfType<XPManager>();
+
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
             shopPanelsSO[i].SetActive(true);
         }
 
-        coinsTxt.text = "Coins: " + coins.ToString();
+        moneyTxt.text = "Money: " + money.ToString();
         LoadPanels();
         CheckPurchaseable();
+        //ItemLocked();
     }
 
-    public void AddCoins()
+    private void Update()
     {
-        coins++;
-        coinsTxt.text = "Coins: " + coins.ToString();
-        CheckPurchaseable();
+        ItemLocked();
     }
 
+    public void AddMoney(int _money)
+    {
+        money += _money;
+        moneyTxt.text = "Coins: " + money.ToString();
+        CheckPurchaseable();
+        _saveManager.moneyChanged.Invoke(money);
+    }
+
+    // Check if Item is purchable
    public void CheckPurchaseable()
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
-            if(coins >= shopItemsSO[i].buyPrice)
+            if(money >= shopItemsSO[i].buyPrice)
+            {
+                purchasaBtns[i].interactable = true;
+            }
+            else
+            {
+                purchasaBtns[i].interactable = false;
+            }
+        }
+    }
+
+    // Check if item is locked
+    private void ItemLocked()
+    {
+        for (int i = 0; i < shopItemsSO.Length; i++)
+        {
+            if (_xp.level >= shopItemsSO[i].level)
             {
                 purchasaBtns[i].interactable = true;
             }
@@ -52,11 +94,14 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int btnNo)
     {
-        if (coins >= shopItemsSO[btnNo].buyPrice)
+        if (money >= shopItemsSO[btnNo].buyPrice)
         {
-            coins = coins - shopItemsSO[btnNo].buyPrice;
-            coinsTxt.text = "Coins: " + coins.ToString();
+            money = money - shopItemsSO[btnNo].buyPrice;
+            moneyTxt.text = "Coins: " + money.ToString();
             CheckPurchaseable();
+            _saveManager.moneyChanged.Invoke(money);
+            BoughtPlant(btnNo);
+            ItemLocked();
         }
     }
 
@@ -64,12 +109,26 @@ public class ShopManager : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++)
         {
+            shopPanels[i].icon.sprite = shopItemsSO[i].icon;
             shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
-            shopPanels[i].priceTxt.text = shopItemsSO[i].buyPrice.ToString();
+
+            if (_xp.level >= shopItemsSO[i].level)
+            {         
+                shopPanels[i].priceTxt.text = "£" + shopItemsSO[i].buyPrice.ToString();
+                shopPanels[i].lockedTxtActive.SetActive(false);
+                shopPanels[i].priceTxtActive.SetActive(true);
+            }
+            else
+            {
+                shopPanels[i].lockedTxtActive.SetActive(true);
+                shopPanels[i].priceTxtActive.SetActive(false);
+                shopPanels[i].lockedTxt.text = "Reach Level " + shopItemsSO[i].level.ToString() + " to Unlock plant";
+            }
         }
     }
 
-    public void BoughtVegetables(int id)
+    // Add item to Inventory
+    public void BoughtPlant(int id)
     {
         bool result = InventoryManager.AddItem(shopItemsSO[id]);
         if (result == true)
@@ -82,7 +141,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void GetSelectedVegetable()
+    public void GetSelectedPlant()
     {
         ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(false);
         if (receivedVegetable != null)
@@ -96,7 +155,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void UseSelectedVegetable()
+    public void UseSelectedPlant()
     {
         ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(true);
         if (receivedVegetable != null)

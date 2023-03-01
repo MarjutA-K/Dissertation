@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class TempLoadSave : MonoBehaviour
 {
     [SerializeField] XPManager xpManager;
-    [SerializeField] GardenManager gardenManager;
+    [SerializeField] ShopManager shopManager;
     int streak;
     GameObject []plots;
     public UnityEvent<int, int> xpChanged;
@@ -25,7 +25,7 @@ public class TempLoadSave : MonoBehaviour
         saveData =JsonUtility.FromJson<JsonSerialize>(File.ReadAllText("JsonData/SaveData.json"));
         xpManager.currentXP = saveData.exp;
         xpManager.level = saveData.level;
-        gardenManager.money = saveData.money;
+        shopManager.money = saveData.money;
         streak = saveData.streak;
        
 

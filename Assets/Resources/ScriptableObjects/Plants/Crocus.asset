@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
   m_Name: Crocus
   m_EditorClassIdentifier: 
-  plantTitle: Crocus
+  plantTitle: Orenge flower
   buyPrice: 7
   sellPrice: 3
-  icon: {fileID: 21300000, guid: 51a92944cbb43994da23aecd56a62978, type: 3}
+  icon: {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   growthSprite:
-  - {fileID: 21300000, guid: 5f6cc6ff2d143144eb04dabbf21f8b78, type: 3}
-  - {fileID: 21300000, guid: 51a92944cbb43994da23aecd56a62978, type: 3}
+  - {fileID: -366262165, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 1751498620, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 662595321, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 165638600, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   isGrowing: 0
   growthStage: -1
   growthTime: 2
-  maxSize: 0
+  maxSize: 4
   worthPer: 20
-  finalProduct: {fileID: 21300000, guid: 51a92944cbb43994da23aecd56a62978, type: 3}
-  isVisible: 1
-  level: 0
-  isLocked: 0
+  finalProduct: {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  level: 1

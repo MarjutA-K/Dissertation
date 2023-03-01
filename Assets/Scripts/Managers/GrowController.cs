@@ -9,7 +9,7 @@ public class GrowController : MonoBehaviour
     [Header("Vegatable Scritable Object")]
     public ShopPlantItemSO vg;
 
-    private PlayerStats playerStats;
+    private Player player;
 
     public Sprite emptyPlot;
 
@@ -20,9 +20,8 @@ public class GrowController : MonoBehaviour
     private float growthTime;
     private int maxSize;
 
-    private float interactRange;
     public float playerDistance;
-    public bool interactable;
+    //public bool interactable;
 
     private void Start()
     {
@@ -31,22 +30,7 @@ public class GrowController : MonoBehaviour
         growthTime = vg.growthTime;
         maxSize = vg.maxSize;
 
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        interactRange = playerStats.interactRange;
-    }
-
-    private void FixedUpdate()
-    {
-        playerDistance = Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-
-        if (playerDistance <= interactRange)
-        {
-            interactable = true;
-        }
-        else
-        {
-            interactable = false;
-        }
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void Update()
@@ -113,13 +97,13 @@ public class GrowController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!isGrowing && interactable && playerStats.activeVegetable)
+        if (!isGrowing && player.activePlant)
         {
             Debug.Log("Pressed");
 
             InventoryManager.instance.GetSelectedVegetable(true);
 
-            vg = playerStats.activeVegetable;
+            vg = player.activePlant;
 
             isGrowing = vg.isGrowing;
             growthStage = vg.growthStage;
