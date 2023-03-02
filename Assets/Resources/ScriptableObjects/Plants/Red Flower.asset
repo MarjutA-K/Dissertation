@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
-  m_Name: Catchfly
+  m_Name: Red Flower
   m_EditorClassIdentifier: 
   plantTitle: Red Flower
   buyPrice: 10
   sellPrice: 5
-  icon: {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  icon: {fileID: -1287099279, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   growthSprite:
-  - {fileID: 1635569147, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: -1190473755, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: -1538479916, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 2124541008, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1065239184, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 1974841553, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -352551416, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 1099218346, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   isGrowing: 0
   growthStage: -1
   growthTime: 2
-  maxSize: 3
+  maxSize: 4
   worthPer: 0
   finalProduct: {fileID: -1523965937, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   level: 10

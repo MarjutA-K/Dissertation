@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
-  m_Name: Crocus
+  m_Name: Orange Flower
   m_EditorClassIdentifier: 
-  plantTitle: Orenge flower
+  plantTitle: Orange Flower
   buyPrice: 7
   sellPrice: 3
-  icon: {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  icon: {fileID: 1635691915, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   growthSprite:
   - {fileID: -366262165, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: 1751498620, guid: 58e34bda4339bac47b055b199767dd19, type: 3}

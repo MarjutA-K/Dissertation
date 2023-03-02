@@ -13,6 +13,7 @@ public class OpenTabs : MonoBehaviour
     public GameObject exerciseDescription;
     public GameObject exerciseTimer;
     public GameObject congratsMsg;
+    public GameObject inventory;
 
     public bool interactable;
 
@@ -103,5 +104,18 @@ public class OpenTabs : MonoBehaviour
     public void CloseCongratsMsg()
     {
         congratsMsg.SetActive(false);
+    }
+
+    public void OpenInventory()
+    {
+        if (inventory != null)
+        {
+            inventory.SetActive(true);
+        }
+    }
+
+    public void CloseInventory()
+    {
+        inventory.SetActive(false);
     }
 }

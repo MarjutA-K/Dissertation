@@ -77,7 +77,7 @@ public class GrowController : MonoBehaviour
     void DropItems()
     {
         GameObject go = new GameObject(vg.name + "Drop");
-        go.tag = "VegetableDrop";
+        go.tag = "Drop";
         DropController dc = go.AddComponent<DropController>();
         dc.worth = vg.worthPer;
 
@@ -88,11 +88,11 @@ public class GrowController : MonoBehaviour
         ren.sortingOrder = 1;
         go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
 
-        Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        /*Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         Rigidbody2D rb = go.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.drag = 5;
-        rb.AddForce(dropDirection * 2f, ForceMode2D.Impulse);
+        rb.AddForce(dropDirection * 2f, ForceMode2D.Impulse);*/
     }
 
     private void OnMouseDown()
