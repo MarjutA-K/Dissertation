@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Flower
   m_EditorClassIdentifier: 
   plantTitle: Black Flower
-  buyPrice: 3
+  buyPrice: 1000
   sellPrice: 2
   icon: {fileID: 1386888230, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   growthSprite:

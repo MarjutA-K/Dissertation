@@ -20,4 +20,6 @@ public class Player : MonoBehaviour
     {
         ShopManager.instance.AddMoney(50);
     }
+
+
 }

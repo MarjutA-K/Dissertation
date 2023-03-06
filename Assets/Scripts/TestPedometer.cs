@@ -37,16 +37,70 @@ public class TestPedometer : MonoBehaviour
         InputSystem.DisableDevice(StepCounter.current);
     }*/
 
-
     public TMP_Text stepsTxt;
     public float stepThreshold = 0.5f;
     private float lowPassFilterFactor = 0.2f;
     private float[] lowPassResults = new float[3];
     private Vector3 prevAcceleration;
     private Vector3 prevRotation;
-    private int stepCount = 0;
+    public int stepCount = 0;
+
+    private bool reachedTarget1;
+    private bool reachedTarget2;
+    private bool reachedTarget3;
+
+    private void Start()
+    {
+        stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
+
+        reachedTarget1 = true;
+        reachedTarget2 = true;
+        reachedTarget3 = true;
+    }
 
     void Update()
+    {
+        StepsTaken();
+
+        switch (stepCount)
+        {
+            case 500:
+                if (reachedTarget1)
+                {
+                    reachedTarget1 = false;
+                    ShopManager.instance.AddMoney(50);
+                }
+                Debug.Log("500 steps");
+                break;
+            case 1000:
+                if (reachedTarget2)
+                {
+                    reachedTarget2 = false;
+                    ShopManager.instance.AddMoney(100);
+                }
+                Debug.Log("1000 steps");
+                break;
+            case 5000:
+                if (reachedTarget3)
+                {
+                    reachedTarget3 = false;
+                    ShopManager.instance.AddMoney(200);
+                }
+                Debug.Log("5000 steps");
+                break;
+            default:
+                Debug.Log("Unknown level");
+                break;
+        }
+    }
+
+    public void AddSteps()
+    {
+        stepCount += 100;
+        stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
+    }
+
+    private void StepsTaken()
     {
         Vector3 rawAcceleration = Input.acceleration;
         Vector3 rawRotation = Input.gyro.rotationRateUnbiased;
