@@ -13,15 +13,12 @@ public class GrowController : MonoBehaviour
 
     public Sprite emptyPlot;
 
-    private float timer;
+    public float timer;
 
-    private bool isGrowing;
+    public bool isGrowing;
     private int growthStage;
     private float growthTime;
     private int maxSize;
-
-    public float playerDistance;
-    //public bool interactable;
 
     private void Start()
     {
@@ -34,6 +31,12 @@ public class GrowController : MonoBehaviour
     }
 
     private void Update()
+    {
+        ClickPlot();
+        GrowTimer();
+    }
+
+    public void GrowTimer()
     {
         timer += Time.deltaTime;
 
@@ -67,11 +70,42 @@ public class GrowController : MonoBehaviour
             sr.sprite = emptyPlot;
         }
     }
+
+    public void ClickPlot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            {
+                Debug.Log(hit.collider.gameObject.name);
+
+                if (!isGrowing && player.activePlant)
+                {
+                    InventoryManager.instance.GetSelectedPlant(true);
+
+                    vg = player.activePlant;
+
+                    isGrowing = vg.isGrowing;
+                    growthStage = vg.growthStage;
+                    growthTime = vg.growthTime;
+                    maxSize = vg.maxSize;
+
+                    isGrowing = true;
+                    growthStage = 0;
+                }
+            }
+        }
+    }
+
     IEnumerator FinishGrowing()
     {
         yield return new WaitForSeconds(growthTime);
-        sr.sprite = emptyPlot;
-        DropItems();
+        //sr.sprite = emptyPlot;
+        //DropItems();
     }
 
     void DropItems()
@@ -79,7 +113,7 @@ public class GrowController : MonoBehaviour
         GameObject go = new GameObject(vg.name + "Drop");
         go.tag = "Drop";
         DropController dc = go.AddComponent<DropController>();
-        dc.worth = vg.worthPer;
+        //dc.worth = vg.worthPer;
 
         CircleCollider2D col = go.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
@@ -87,31 +121,5 @@ public class GrowController : MonoBehaviour
         ren.sprite = vg.finalProduct;
         ren.sortingOrder = 1;
         go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
-
-        /*Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        Rigidbody2D rb = go.AddComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
-        rb.drag = 5;
-        rb.AddForce(dropDirection * 2f, ForceMode2D.Impulse);*/
-    }
-
-    private void OnMouseDown()
-    {
-        if (!isGrowing && player.activePlant)
-        {
-            Debug.Log("Pressed");
-
-            InventoryManager.instance.GetSelectedVegetable(true);
-
-            vg = player.activePlant;
-
-            isGrowing = vg.isGrowing;
-            growthStage = vg.growthStage;
-            growthTime = vg.growthTime;
-            maxSize = vg.maxSize;
-
-            isGrowing = true;
-            growthStage = 0;
-        }
     }
 }

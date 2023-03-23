@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        activePlant = InventoryManager.instance.GetSelectedVegetable(false);
+        activePlant = InventoryManager.instance.GetSelectedPlant(false);
     }
 
     public void AddXP()

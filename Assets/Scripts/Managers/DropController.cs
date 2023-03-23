@@ -4,37 +4,37 @@ using UnityEngine;
 
 public class DropController : MonoBehaviour
 {
-    public bool isMovingToPlayer = false;
-    public int worth;
+    public bool isClicked = true;
 
-    private float speed = 20f;
-    private GameObject target;
+    GrowController gc;
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        gc = FindObjectOfType<GrowController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (isMovingToPlayer)
+        if (Input.GetMouseButtonDown(0) && isClicked)
         {
-            // Move our position a step closer to the target.
-            var step = speed * Time.deltaTime; // calculate distance to move
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            if (Vector3.Distance(transform.position, target.transform.position) < 0.001f)
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                //target.GetComponent<PlayerStats>().money += worth;
-                Destroy(gameObject);
-            }
-        }*/
-    }
+                Debug.Log(hit.collider.gameObject.name);
+                XPManager.instance.AddXP(100);
+                ShopManager.instance.AddMoney(50);
 
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
-        //target.GetComponent<PlayerStats>().money += worth;
+                isClicked = false;
+
+                gc.isGrowing = true;
+                gc.timer = 0;
+
+                Debug.Log(gc.timer);
+            }
+        }
     }
 }

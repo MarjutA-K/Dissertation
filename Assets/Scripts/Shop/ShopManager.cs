@@ -44,12 +44,11 @@ public class ShopManager : MonoBehaviour
         moneyTxt.text = "Money: " + money.ToString();
         LoadPanels();
         CheckPurchaseable();
-        //ItemLocked();
     }
 
     private void Update()
     {
-        ItemLocked();
+        CheckPurchaseable();
     }
 
     public void AddMoney(int _money)
@@ -65,23 +64,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
-            if(money >= shopItemsSO[i].buyPrice)
-            {
-                purchasaBtns[i].interactable = true;
-            }
-            else
-            {
-                purchasaBtns[i].interactable = false;
-            }
-        }
-    }
-
-    // Check if item is locked
-    private void ItemLocked()
-    {
-        for (int i = 0; i < shopItemsSO.Length; i++)
-        {
-            if (_xp.level >= shopItemsSO[i].level)
+            if (money >= shopItemsSO[i].buyPrice && _xp.level >= shopItemsSO[i].level)
             {
                 purchasaBtns[i].interactable = true;
             }
@@ -101,7 +84,6 @@ public class ShopManager : MonoBehaviour
             CheckPurchaseable();
             _saveManager.moneyChanged.Invoke(money);
             BoughtPlant(btnNo);
-            ItemLocked();
         }
     }
 
@@ -143,7 +125,7 @@ public class ShopManager : MonoBehaviour
 
     public void GetSelectedPlant()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(false);
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
         if (receivedVegetable != null)
         {
             Debug.Log("Received item: " + receivedVegetable);
@@ -157,7 +139,7 @@ public class ShopManager : MonoBehaviour
 
     public void UseSelectedPlant()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(true);
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
         if (receivedVegetable != null)
         {
             Debug.Log("Used item: " + receivedVegetable);

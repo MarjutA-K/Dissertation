@@ -10,14 +10,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Image image;
     public TMP_Text countText;
 
-    [HideInInspector] public ShopPlantItemSO vegetable;
+    [HideInInspector] public ShopPlantItemSO plant;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
 
-    public void InitializeVegtable(ShopPlantItemSO newVegetable)
+    public void InitializePlant(ShopPlantItemSO newPlant)
     {
-        vegetable = newVegetable;
-        image.sprite = newVegetable.icon;
+        plant = newPlant;
+        image.sprite = newPlant.icon;
         RefreshCount();
     }
 

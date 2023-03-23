@@ -115,5 +115,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 958205832224976987}
-  selectedColor: {r: 1, g: 0, b: 0, a: 0.36078432}
-  notSelectedcolor: {r: 0.23178892, g: 0.8396226, b: 0.14653791, a: 0.6313726}
+  selectedColor: {r: 0.18879262, g: 1, b: 0.08962262, a: 0.36078432}
+  notSelectedcolor: {r: 0.5990566, g: 0.9047757, b: 1, a: 0.6313726}

@@ -22,7 +22,7 @@ public class DemoScript : MonoBehaviour
 
     public void GetSelectedVegetable()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(false);
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
         if(receivedVegetable != null)
         {
             Debug.Log("Received item: " + receivedVegetable);
@@ -36,7 +36,7 @@ public class DemoScript : MonoBehaviour
 
     public void UseSelectedVegetable()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedVegetable(true);
+        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
         if (receivedVegetable != null)
         {
             Debug.Log("Used item: " + receivedVegetable);

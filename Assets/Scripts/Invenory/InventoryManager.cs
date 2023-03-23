@@ -31,14 +31,16 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.inputString != null)
+        // Check for mouse click on inventory slot
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
-            bool isNumber = int.TryParse(Input.inputString, out int number);
-            if(isNumber && number > 0 && number < 8)
+            if (Input.GetMouseButtonDown(0) && RectTransformUtility.RectangleContainsScreenPoint(inventorySlots[i].GetComponent<RectTransform>(), Input.mousePosition))
             {
-                ChangeSelectedSlot(number - 1);
+                ChangeSelectedSlot(i);
+                break;
             }
         }
+
     }
 
     void ChangeSelectedSlot(int newValue)
@@ -52,14 +54,14 @@ public class InventoryManager : MonoBehaviour
         selectedSlot = newValue;
     }
 
-    public bool AddItem(ShopPlantItemSO vegetable)
+    public bool AddItem(ShopPlantItemSO plant)
     {
         // Check if any slot has the same item with count lower than max
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot != null && itemInSlot.vegetable == vegetable 
+            if (itemInSlot != null && itemInSlot.plant == plant 
                 && itemInSlot.count < maxStackedItems
                 /*&& itemInSlot.vegetable.stackable == true*/)
             {
@@ -76,7 +78,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if(itemInSlot == null)
             {
-                SpawnNewItem(vegetable, slot);
+                SpawnNewItem(plant, slot);
                 return true;
             }
         }
@@ -84,20 +86,20 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    void SpawnNewItem(ShopPlantItemSO vegetable, InventorySlot slot)
+    void SpawnNewItem(ShopPlantItemSO plant, InventorySlot slot)
     {
-        GameObject newVegetableGo = Instantiate(inventoryItemPrefab, slot.transform);
-        InventoryItem inventoryItem = newVegetableGo.GetComponent<InventoryItem>();
-        inventoryItem.InitializeVegtable(vegetable);
+        GameObject newPlantGo = Instantiate(inventoryItemPrefab, slot.transform);
+        InventoryItem inventoryItem = newPlantGo.GetComponent<InventoryItem>();
+        inventoryItem.InitializePlant(plant);
     }
 
-    public ShopPlantItemSO GetSelectedVegetable(bool use)
+    public ShopPlantItemSO GetSelectedPlant(bool use)
     {
         InventorySlot slot = inventorySlots[selectedSlot];
         InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
         if (itemInSlot != null)
         {
-            ShopPlantItemSO vegetable = itemInSlot.vegetable;
+            ShopPlantItemSO plant = itemInSlot.plant;
             if(use)
             {
                 itemInSlot.count--;
@@ -110,7 +112,7 @@ public class InventoryManager : MonoBehaviour
                     itemInSlot.RefreshCount();
                 }
             }
-            return vegetable;
+            return plant;
         }
 
         return null;
