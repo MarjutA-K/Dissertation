@@ -29,3 +29,4 @@ MonoBehaviour:
   worthPer: 20
   finalProduct: {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   level: 1
+  quantity: 1

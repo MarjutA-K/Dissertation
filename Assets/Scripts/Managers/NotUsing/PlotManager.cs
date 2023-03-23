@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlotManager : MonoBehaviour
+/*public class PlotManager : MonoBehaviour
 {
 
     public bool isPlanted = false;
@@ -107,7 +107,7 @@ public class PlotManager : MonoBehaviour
             Plant(gm.selectPlant.plant);
         }*/
         //Place Item
-        else if (gm.isPlacing && gm.selectItem.item.buyPrice <= gm.money && isBought)
+        /*else if (gm.isPlacing && gm.selectItem.item.buyPrice <= gm.money && isBought)
         {
             Place(gm.selectItem.item);
         }
@@ -160,7 +160,7 @@ public class PlotManager : MonoBehaviour
                 plot.color = availableColor;
             }*/
 
-            if(!isPlanted)
+            /*if(!isPlanted)
             {
                 // Sets item invisible when player does not have money to buy it
                 /*if (!gm.selectPlant.plant.isVisible || !op.interactable)
@@ -173,7 +173,7 @@ public class PlotManager : MonoBehaviour
                         gm.selectPlant = null;
                     }
                 }*/
-            }
+            /*}
 
         }
 
@@ -331,4 +331,4 @@ public class PlotManager : MonoBehaviour
     {
         item.sprite = selectedItem.icon;
     }
-}
+}*/

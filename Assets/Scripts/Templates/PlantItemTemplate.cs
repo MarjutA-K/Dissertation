@@ -6,7 +6,7 @@ using TMPro;
 
 public class PlantItemTemplate : MonoBehaviour
 {
-    [HideInInspector]public ShopPlantItemSO plant;
+    [HideInInspector]public PlantSO plant;
 
     public TMP_Text titleTxt;
     public TMP_Text priceTxt;

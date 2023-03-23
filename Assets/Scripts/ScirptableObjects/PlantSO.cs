@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Plant", menuName = "Plant")]
-public class ShopPlantItemSO : ScriptableObject
+public class PlantSO : ScriptableObject
 {
     //UI Template
     [Header("Shop Template")]
@@ -27,4 +27,6 @@ public class ShopPlantItemSO : ScriptableObject
 
     [Header("Level to be Unlocked")]
     public int level;
+
+    public int quantity;
 }

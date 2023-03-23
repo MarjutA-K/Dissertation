@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    public ShopPlantItemSO[] startVegetables;
+    public PlantSO[] startVegetables;
 
     public int maxStackedItems = 4;
     public InventorySlot[] inventorySlots;
@@ -54,7 +54,7 @@ public class InventoryManager : MonoBehaviour
         selectedSlot = newValue;
     }
 
-    public bool AddItem(ShopPlantItemSO plant)
+    public bool AddItem(PlantSO plant)
     {
         // Check if any slot has the same item with count lower than max
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -86,20 +86,20 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
-    void SpawnNewItem(ShopPlantItemSO plant, InventorySlot slot)
+    void SpawnNewItem(PlantSO plant, InventorySlot slot)
     {
         GameObject newPlantGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newPlantGo.GetComponent<InventoryItem>();
         inventoryItem.InitializePlant(plant);
     }
 
-    public ShopPlantItemSO GetSelectedPlant(bool use)
+    public PlantSO GetSelectedPlant(bool use)
     {
         InventorySlot slot = inventorySlots[selectedSlot];
         InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
         if (itemInSlot != null)
         {
-            ShopPlantItemSO plant = itemInSlot.plant;
+            PlantSO plant = itemInSlot.plant;
             if(use)
             {
                 itemInSlot.count--;

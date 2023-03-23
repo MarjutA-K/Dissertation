@@ -7,7 +7,7 @@ public class StoreManager : MonoBehaviour
 {
     public GameObject plantItem;
     public GameObject items;
-    List<ShopPlantItemSO> plantObjects = new List<ShopPlantItemSO>();
+    List<PlantSO> plantObjects = new List<PlantSO>();
     List<ShopItemsSO> itemObjects = new List<ShopItemsSO>();
     private void Awake()
     {

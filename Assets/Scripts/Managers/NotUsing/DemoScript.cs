@@ -5,7 +5,7 @@ using UnityEngine;
 public class DemoScript : MonoBehaviour
 {
     public InventoryManager InventoryManager;
-    public ShopPlantItemSO[] boughtVegetables;
+    public PlantSO[] boughtVegetables;
 
     public void BoughtVegetables(int id)
     {
@@ -22,7 +22,7 @@ public class DemoScript : MonoBehaviour
 
     public void GetSelectedVegetable()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
+        PlantSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
         if(receivedVegetable != null)
         {
             Debug.Log("Received item: " + receivedVegetable);
@@ -36,7 +36,7 @@ public class DemoScript : MonoBehaviour
 
     public void UseSelectedVegetable()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
+        PlantSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
         if (receivedVegetable != null)
         {
             Debug.Log("Used item: " + receivedVegetable);

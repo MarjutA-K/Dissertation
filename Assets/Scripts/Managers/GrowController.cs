@@ -7,7 +7,7 @@ public class GrowController : MonoBehaviour
     [Header("Sprite Renderer")]
     public SpriteRenderer sr;
     [Header("Vegatable Scritable Object")]
-    public ShopPlantItemSO plant;
+    public PlantSO plant;
 
     private Player player;
 
@@ -155,7 +155,7 @@ public class GrowController : MonoBehaviour
         ren.sortingOrder = 1;
         go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
 
-        OrderManager orderManager = FindObjectOfType<OrderManager>();
-        orderManager.AddPlant(plant);
+        OrderInventory orderInventory = FindObjectOfType<OrderInventory>();
+        orderInventory.AddPlant(plant);
     }
 }

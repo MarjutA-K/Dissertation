@@ -13,12 +13,12 @@ public class TempLoadSave : MonoBehaviour
     public UnityEvent<int, int> xpChanged;
     public UnityEvent<int> moneyChanged;
     JsonSerialize saveData;
-    List<ShopPlantItemSO> plantObjects;
+    List<PlantSO> plantObjects;
 
     JsonSerialize.plotWrapper plotSaveData;
     void Awake()
     {
-        plantObjects = new List<ShopPlantItemSO>();
+        plantObjects = new List<PlantSO>();
         xpChanged.AddListener(xpChangedEvent);
         moneyChanged.AddListener(moneyChangedEvent);
         
@@ -51,17 +51,17 @@ public class TempLoadSave : MonoBehaviour
         Debug.Log(currentTime.ToString());
         Debug.Log(streak);
 
-        var loadPlants = Resources.LoadAll("ScriptableObjects", typeof(ShopPlantItemSO));
+        var loadPlants = Resources.LoadAll("ScriptableObjects", typeof(PlantSO));
         foreach (var plant in loadPlants)
         {
-            plantObjects.Add((ShopPlantItemSO)plant);
+            plantObjects.Add((PlantSO)plant);
         }
         int i = 0;
         plots = GameObject.FindGameObjectsWithTag("grid");
         foreach (GameObject Plot in plots)
         {
-            PlotManager current = Plot.GetComponent<PlotManager>();
-            current.plotChangedEvent.AddListener(saveGridData);
+            //PlotManager current = Plot.GetComponent<PlotManager>();
+            //current.plotChangedEvent.AddListener(saveGridData);
             //current.plotChangedEvent.AddListener();
             //Debug.Log("Grid: " + i + " at position:" + Plot.transform.position + " currently planted: " + current.isPlanted);
             ++i;
@@ -129,15 +129,15 @@ public class TempLoadSave : MonoBehaviour
         plots = GameObject.FindGameObjectsWithTag("grid");
         foreach (GameObject Plot in plots)
         {
-            PlotManager current = Plot.GetComponent<PlotManager>();
-            if (current.isPlanted)
+            //PlotManager current = Plot.GetComponent<PlotManager>();
+            /*if (current.isPlanted)
             {
                 plotData tempdata = new plotData();
                 tempdata.plotnum = i;
                 tempdata.plantname = current.selectedPlant.name;
                 plotSaveData.shopPlantItem.Add(tempdata);
                 Debug.Log(current.selectedPlant.plantTitle);
-            }
+            }*/
             //current.plotChangedEvent.AddListener();
             //Debug.Log("Grid: " + i + " at position:" + Plot.transform.position + " currently planted: " + current.isPlanted);
             ++i;

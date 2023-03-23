@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32180c74f7dac5a488b95c0217bf11a8, type: 3}
-  m_Name: New Order List 1
+  m_Script: {fileID: 11500000, guid: b512057b70bd0384294d756c62c1f32b, type: 3}
+  m_Name: New plant Requirement
   m_EditorClassIdentifier: 
-  orders:
-  - {fileID: 11400000, guid: 6cda9b24a58a849428a6a4a0e2afcbf1, type: 2}
+  plant: {fileID: 11400000, guid: 280636a538264a4488526783b1eb8300, type: 2}
+  quantityRequired: 1
+  reward: 0

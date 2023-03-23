@@ -18,6 +18,7 @@ public class PlantOrderTemplate : MonoBehaviour
     private void Start()
     {
         UpdateUI(orderList.orders[0]);
+        UpdateUI(orderList.orders[1]);
     }
 
     public void UpdateUI(PlantOrdersSO order)

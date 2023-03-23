@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public ShopPlantItemSO activePlant;
+    public PlantSO activePlant;
 
     private void Update()
     {

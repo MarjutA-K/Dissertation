@@ -15,7 +15,7 @@ public class ShopManager : MonoBehaviour
     public int money;
     public TMP_Text moneyTxt;
 
-    public ShopPlantItemSO[] shopItemsSO;
+    public PlantSO[] shopItemsSO;
     public GameObject[] shopPanelsSO;
     public PlantItemTemplate[] shopPanels;
     public Button[] purchasaBtns;
@@ -125,7 +125,7 @@ public class ShopManager : MonoBehaviour
 
     public void GetSelectedPlant()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
+        PlantSO receivedVegetable = InventoryManager.GetSelectedPlant(false);
         if (receivedVegetable != null)
         {
             Debug.Log("Received item: " + receivedVegetable);
@@ -139,7 +139,7 @@ public class ShopManager : MonoBehaviour
 
     public void UseSelectedPlant()
     {
-        ShopPlantItemSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
+        PlantSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
         if (receivedVegetable != null)
         {
             Debug.Log("Used item: " + receivedVegetable);
