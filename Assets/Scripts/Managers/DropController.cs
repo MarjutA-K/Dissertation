@@ -6,13 +6,6 @@ public class DropController : MonoBehaviour
 {
     public bool isClicked = true;
 
-    GrowController gc;
-
-    private void Start()
-    {
-        gc = FindObjectOfType<GrowController>();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,16 +17,11 @@ public class DropController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                Debug.Log(hit.collider.gameObject.name);
+                Debug.Log("clicked" + hit.collider.gameObject.name);
                 XPManager.instance.AddXP(100);
                 ShopManager.instance.AddMoney(50);
 
                 isClicked = false;
-
-                gc.isGrowing = true;
-                gc.timer = 0;
-
-                Debug.Log(gc.timer);
             }
         }
     }

@@ -7,7 +7,7 @@ public class GrowController : MonoBehaviour
     [Header("Sprite Renderer")]
     public SpriteRenderer sr;
     [Header("Vegatable Scritable Object")]
-    public ShopPlantItemSO vg;
+    public ShopPlantItemSO plant;
 
     private Player player;
 
@@ -22,10 +22,10 @@ public class GrowController : MonoBehaviour
 
     private void Start()
     {
-        isGrowing = vg.isGrowing;
-        growthStage = vg.growthStage;
-        growthTime = vg.growthTime;
-        maxSize = vg.maxSize;
+        isGrowing = plant.isGrowing;
+        growthStage = plant.growthStage;
+        growthTime = plant.growthTime;
+        maxSize = plant.maxSize;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
@@ -33,7 +33,40 @@ public class GrowController : MonoBehaviour
     private void Update()
     {
         ClickPlot();
-        GrowTimer();
+        //GrowTimer();
+        Growing();
+    }
+
+    private void Growing()
+    {
+        // Grow plant
+        if (TestPedometer.instance.stepCount >= growthTime * growthStage && isGrowing)
+        {
+            sr.color = new Color(255, 255, 255, 255);
+
+            growthStage++;
+
+            if (growthStage >= maxSize)
+            {
+                growthStage = maxSize;
+                sr.sprite = plant.growthSprite[growthStage];
+                isGrowing = false;
+                DropItems();
+            }
+        }
+
+        // Change apperance
+        if (growthStage != -1)
+        {
+            if (isGrowing)
+            {
+                sr.sprite = plant.growthSprite[growthStage];
+            }
+        }
+        else
+        {
+            sr.sprite = emptyPlot;
+        }
     }
 
     public void GrowTimer()
@@ -51,7 +84,7 @@ public class GrowController : MonoBehaviour
             if (growthStage >= maxSize)
             {
                 growthStage = maxSize;
-                sr.sprite = vg.growthSprite[growthStage];
+                sr.sprite = plant.growthSprite[growthStage];
                 isGrowing = false;
                 StartCoroutine(FinishGrowing());
             }
@@ -62,7 +95,7 @@ public class GrowController : MonoBehaviour
         {
             if (isGrowing)
             {
-                sr.sprite = vg.growthSprite[growthStage];
+                sr.sprite = plant.growthSprite[growthStage];
             }
         }
         else
@@ -87,12 +120,12 @@ public class GrowController : MonoBehaviour
                 {
                     InventoryManager.instance.GetSelectedPlant(true);
 
-                    vg = player.activePlant;
+                    plant = player.activePlant;
 
-                    isGrowing = vg.isGrowing;
-                    growthStage = vg.growthStage;
-                    growthTime = vg.growthTime;
-                    maxSize = vg.maxSize;
+                    isGrowing = plant.isGrowing;
+                    growthStage = plant.growthStage;
+                    growthTime = plant.growthTime;
+                    maxSize = plant.maxSize;
 
                     isGrowing = true;
                     growthStage = 0;
@@ -110,7 +143,7 @@ public class GrowController : MonoBehaviour
 
     void DropItems()
     {
-        GameObject go = new GameObject(vg.name + "Drop");
+        GameObject go = new GameObject(plant.name + "Drop");
         go.tag = "Drop";
         DropController dc = go.AddComponent<DropController>();
         //dc.worth = vg.worthPer;
@@ -118,8 +151,11 @@ public class GrowController : MonoBehaviour
         CircleCollider2D col = go.AddComponent<CircleCollider2D>();
         col.isTrigger = true;
         SpriteRenderer ren = go.AddComponent<SpriteRenderer>();
-        ren.sprite = vg.finalProduct;
+        ren.sprite = plant.finalProduct;
         ren.sortingOrder = 1;
         go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
+
+        OrderManager orderManager = FindObjectOfType<OrderManager>();
+        orderManager.AddPlant(plant);
     }
 }

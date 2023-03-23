@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: -1080890372, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   isGrowing: 1
   growthStage: -1
-  growthTime: 2
+  growthTime: 50
   maxSize: 4
   worthPer: 20
   finalProduct: {fileID: -1080890372, guid: 58e34bda4339bac47b055b199767dd19, type: 3}

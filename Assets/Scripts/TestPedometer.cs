@@ -6,36 +6,7 @@ using UnityEngine.InputSystem;
 
 public class TestPedometer : MonoBehaviour
 {
-    /*private int stepCount = 0;
-    public TMP_Text stepsTxt;
-
-    StepCounter stepCounter;
-
-
-    public void OnStep(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            stepCount++;
-            stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
-        }
-    }
-
-    void OnEnable()
-    {
-        InputSystem.EnableDevice(StepCounter.current);
-        InputAction stepAction = new InputAction("step", binding: "<StepCounter>/step");
-        stepAction.performed += OnStep;
-        stepAction.Enable();
-    }
-
-    void OnDisable()
-    {
-        InputAction stepAction = new InputAction("step", binding: "<StepCounter>/step");
-        stepAction.performed -= OnStep;
-        stepAction.Disable();
-        InputSystem.DisableDevice(StepCounter.current);
-    }*/
+    public static TestPedometer instance;
 
     public TMP_Text stepsTxt;
     public float stepThreshold = 0.5f;
@@ -48,6 +19,18 @@ public class TestPedometer : MonoBehaviour
     private bool reachedTarget1;
     private bool reachedTarget2;
     private bool reachedTarget3;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -96,7 +79,7 @@ public class TestPedometer : MonoBehaviour
 
     public void AddSteps()
     {
-        stepCount += 100;
+        stepCount++;
         stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
     }
 

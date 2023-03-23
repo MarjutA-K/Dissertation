@@ -27,9 +27,4 @@ public class ShopPlantItemSO : ScriptableObject
 
     [Header("Level to be Unlocked")]
     public int level;
-
-    //public float timeBtwStages;
-    //public bool isVisible = true;
-    //public Sprite dryPlanted;
-    //public bool isLocked = true;
 }
