@@ -5,15 +5,22 @@ using TMPro;
 
 public class OrderInventory : MonoBehaviour
 {
+    public static OrderInventory instance;
+
     private List<PlantSO> plants = new List<PlantSO>();
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void AddPlant(PlantSO plant)
     {
         plants.Add(plant);
-        Debug.Log("Plant List Count: " + plants.Count);
+        //Debug.Log("Plant List Count: " + plants.Count);
         foreach (var plants in plants)
         {
-            Debug.Log("Plant: " + plants.name);
+            //Debug.Log("Plant: " + plants.name);
         }
     }
 
@@ -26,36 +33,4 @@ public class OrderInventory : MonoBehaviour
     {
         return plants.Contains(plant);
     }
-
-    public int GetQuantity(PlantSO plant)
-    {
-        int count = 0;
-       /*foreach(PlantSO plant in plants)
-        {
-            if(plant.plantType == plantType)
-            {
-                count++;
-            }
-        }*/
-
-        return count;
-    }
 }
-
-
-/*[System.Serializable]
-public class Plant
-{
-    public PlantType type;
-    public int quantity;
-}*/
-
-/*public class PlantInventory : MonoBehaviour
-{
-    public List<Plant> plants = new List<Plant>();
-}*/
-
-/*public class OrderManager : MonoBehaviour
-{
-    public List<Order> orders = new List<Order>();
-}*/

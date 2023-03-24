@@ -10,6 +10,4 @@ public class PlantOrdersSO : ScriptableObject
     public int[] quantityRequired;
     public int reward;
     public Sprite[] icon;
-
-    //public List<PlantRequirementSO> plantRequirements = new List<PlantRequirementSO>(); 
 }

@@ -26,7 +26,7 @@ MonoBehaviour:
   growthStage: -1
   growthTime: 2
   maxSize: 4
-  worthPer: 20
+  worthPer: 10
   finalProduct: {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   level: 1
-  quantity: 1
+  quantity: 0

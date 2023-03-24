@@ -1461,7 +1461,7 @@ GameObject:
   - component: {fileID: 96299115}
   m_Layer: 0
   m_Name: Patches
-  m_TagString: Untagged
+  m_TagString: Drop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2170,6 +2170,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1 &156262745
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,6 +5387,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1 &348308382
 GameObject:
   m_ObjectHideFlags: 0
@@ -8301,6 +8303,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1001 &569089645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9222,6 +9225,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1 &632214252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4608548708174232168, guid: 23d324a1355fb6c4a90bed80ae02c475, type: 3}
@@ -38111,6 +38115,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1001 &649528723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70459,6 +70464,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!4 &950512858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5261821863610855596, guid: a7733a3c277b8434385df264ad488164, type: 3}
@@ -71053,9 +71059,10 @@ GameObject:
   - component: {fileID: 1016043870}
   - component: {fileID: 1016043869}
   - component: {fileID: 1016043871}
+  - component: {fileID: 1016043872}
   m_Layer: 0
   m_Name: OrderManager
-  m_TagString: Untagged
+  m_TagString: OrderInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71099,10 +71106,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5cf5d8390b66d4bb5e609afa3d6cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orders:
+  activeOrders:
   - {fileID: 11400000, guid: 6cda9b24a58a849428a6a4a0e2afcbf1, type: 2}
-  plants:
-  - {fileID: 11400000, guid: 280636a538264a4488526783b1eb8300, type: 2}
+--- !u!114 &1016043872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016043868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79e8eacc6b7a1549be8f1622d263a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderManager: {fileID: 1016043871}
+  activeOrders:
+  - {fileID: 11400000, guid: 6cda9b24a58a849428a6a4a0e2afcbf1, type: 2}
 --- !u!1001 &1030803086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73371,6 +73391,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!4 &1205343417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5261821863610855596, guid: a7733a3c277b8434385df264ad488164, type: 3}
@@ -88840,6 +88861,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!4 &1604518968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5261821863610855596, guid: a7733a3c277b8434385df264ad488164, type: 3}
@@ -90932,6 +90954,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1 &1799045848
 GameObject:
   m_ObjectHideFlags: 0
@@ -91957,6 +91980,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1001 &1855299598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94271,6 +94295,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1 &2052980002
 GameObject:
   m_ObjectHideFlags: 0
@@ -95342,6 +95367,7 @@ MonoBehaviour:
   emptyPlot: {fileID: 946653360, guid: e5692e516ed548a42926eb406152b2a8, type: 3}
   timer: 0
   isGrowing: 0
+  orderFullfilled: 1
 --- !u!1001 &897091797100430901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95449,6 +95475,34 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 829632973}
     m_Modifications:
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1016043872}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeOrderActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ActiveOrders, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1448131527278553751, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_Name
       value: OrderTemplate
@@ -95637,6 +95691,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7315932283948050204, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: order
+      value: 
+      objectReference: {fileID: 11400000, guid: 6cda9b24a58a849428a6a4a0e2afcbf1, type: 2}
+    - target: {fileID: 7315932283948050204, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: rewardTxt
+      value: 
+      objectReference: {fileID: 786270578}
+    - target: {fileID: 7315932283948050204, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 1016043871}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 038870c1950b87244844459c05c981e6, type: 3}

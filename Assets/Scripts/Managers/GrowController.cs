@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,11 @@ public class GrowController : MonoBehaviour
     private float growthTime;
     private int maxSize;
 
+    public bool orderFullfilled = true;
+
+    private List<GameObject> objectsToDestroy = new List<GameObject>();
+    private OrderInventory orderInventory;
+
     private void Start()
     {
         isGrowing = plant.isGrowing;
@@ -28,6 +34,8 @@ public class GrowController : MonoBehaviour
         maxSize = plant.maxSize;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        orderInventory = FindObjectOfType<OrderInventory>();
     }
 
     private void Update()
@@ -141,6 +149,43 @@ public class GrowController : MonoBehaviour
         //DropItems();
     }
 
+    void DestroyObjects()
+    {
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
+        objectsToDestroy.Clear();
+    }
+
+    void CheckOrder()
+    {
+        OrderManager orderManager = FindObjectOfType<OrderManager>();
+        List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
+
+        foreach (PlantOrdersSO order in activeOrders)
+        {
+            for (int i = 0; i < order.plantsRequired.Length; i++)
+            {
+                if (!orderInventory.HasPlant(order.plantsRequired[i]))
+                {
+                    orderFullfilled = false;
+                    break;
+                }
+            }
+
+            if (orderFullfilled)
+            {
+                Debug.Log("Order completed");
+                activeOrders.Remove(order);
+                //sr.sprite = emptyPlot;
+                //Debug.Log("Works");      
+                //DestroyObjects();
+                break;
+            }
+        }
+    }
+
     void DropItems()
     {
         GameObject go = new GameObject(plant.name + "Drop");
@@ -154,8 +199,31 @@ public class GrowController : MonoBehaviour
         ren.sprite = plant.finalProduct;
         ren.sortingOrder = 1;
         go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
+        
+        objectsToDestroy.Add(go);
 
-        OrderInventory orderInventory = FindObjectOfType<OrderInventory>();
+        Debug.Log("Objects to destroy" + objectsToDestroy.Count);
+
         orderInventory.AddPlant(plant);
+
+        CheckOrder();
+
+        /*foreach(PlantOrdersSO order in activeOrders)
+        {
+            if(orderInventory.HasPlant(plant) && System.Array.Exists(order.plantsRequired, p => p == plant))
+            {
+                int plantIndex = System.Array.IndexOf(order.plantsRequired, plant);
+                order.quantityRequired[plantIndex] -= 1;
+                if(order.quantityRequired[plantIndex] == 0)
+                {
+                    Debug.Log("Order completed");
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Order NOT completed");
+                }
+            }
+        }*/
     }
 }

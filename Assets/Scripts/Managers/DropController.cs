@@ -5,6 +5,12 @@ using UnityEngine;
 public class DropController : MonoBehaviour
 {
     public bool isClicked = true;
+    private GrowController gr;
+
+    private void Start()
+    {
+        gr = FindObjectOfType<GrowController>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +29,11 @@ public class DropController : MonoBehaviour
 
                 isClicked = false;
             }
+        }
+
+        if (gr.orderFullfilled)
+        {
+           
         }
     }
 }
