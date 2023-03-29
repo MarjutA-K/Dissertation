@@ -7,7 +7,7 @@ public class OrderInventory : MonoBehaviour
 {
     public static OrderInventory instance;
 
-    private List<PlantSO> plants = new List<PlantSO>();
+    public List<PlantSO> plants = new List<PlantSO>();
 
     private void Awake()
     {
@@ -17,11 +17,11 @@ public class OrderInventory : MonoBehaviour
     public void AddPlant(PlantSO plant)
     {
         plants.Add(plant);
-        //Debug.Log("Plant List Count: " + plants.Count);
+        /*.Log("Plant List Count: " + plants.Count);
         foreach (var plants in plants)
         {
-            //Debug.Log("Plant: " + plants.name);
-        }
+            Debug.Log("Plant: " + plants.name);
+        }*/
     }
 
     public void RemovePlant(PlantSO plant)

@@ -21,5 +21,13 @@ public class Player : MonoBehaviour
         ShopManager.instance.AddMoney(50);
     }
 
+    public void AddRewardMoney1()
+    {
+        ShopManager.instance.AddMoney(50);
+    }
 
+    public void AddRewardMoney2()
+    {
+        ShopManager.instance.AddMoney(100);
+    }
 }

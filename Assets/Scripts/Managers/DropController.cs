@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DropController : MonoBehaviour
 {
     public bool isClicked = true;
     private GrowController gr;
+    private DestroyGameObjects objectsToDestroy;
+    private OrderInventory orderInventory;
+    public bool orderCompleted = true;
+
+    public PlantOrdersSO associatedOrder;
 
     private void Start()
     {
         gr = FindObjectOfType<GrowController>();
+        objectsToDestroy = FindObjectOfType<DestroyGameObjects>();
+        orderInventory = FindObjectOfType<OrderInventory>();
     }
 
     // Update is called once per frame
@@ -27,13 +35,50 @@ public class DropController : MonoBehaviour
                 XPManager.instance.AddXP(100);
                 ShopManager.instance.AddMoney(50);
 
-                isClicked = false;
+                isClicked = false;         
             }
         }
 
-        if (gr.orderFullfilled)
+        CheckOrder();
+    }
+
+    void CheckOrder()
+    {
+        OrderManager orderManager = FindObjectOfType<OrderManager>();
+        List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
+
+        foreach (PlantOrdersSO order in activeOrders)
         {
-           
+            orderCompleted = true;
+
+            for (int i = 0; i < order.plantsRequired.Length; i++)
+            {
+                if (!orderInventory.HasPlant(order.plantsRequired[i]))
+                {
+                    orderCompleted = false;
+                    break;
+                }
+            }
+
+            if (orderCompleted)
+            {
+                var dropControllersToDestroy = FindObjectsOfType<DropController>().Where(dc => dc.associatedOrder == order);
+
+                foreach(var dropController in dropControllersToDestroy)
+                {
+                    Destroy(dropController.gameObject);
+                }
+
+
+                for (int i = 0; i < order.plantsRequired.Length; i++)
+                {
+                    orderInventory.RemovePlant(order.plantsRequired[i]);
+                }
+
+                Debug.Log("Order completed");
+                activeOrders.Remove(order);    
+                break;
+            }         
         }
     }
 }

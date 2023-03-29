@@ -34,7 +34,7 @@ public class TestPedometer : MonoBehaviour
 
     private void Start()
     {
-        stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
+        stepsTxt.text = stepCount.ToString();
 
         reachedTarget1 = true;
         reachedTarget2 = true;
@@ -45,7 +45,7 @@ public class TestPedometer : MonoBehaviour
     {
         StepsTaken();
 
-        switch (stepCount)
+        /*switch (stepCount)
         {
             case 500:
                 if (reachedTarget1)
@@ -72,15 +72,25 @@ public class TestPedometer : MonoBehaviour
                 Debug.Log("5000 steps");
                 break;
             default:
-                Debug.Log("Unknown level");
+                //Debug.Log("Unknown level");
                 break;
-        }
+        }*/
     }
 
     public void AddSteps()
     {
-        stepCount++;
-        stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
+        stepCount += 500;
+        stepsTxt.text = stepCount.ToString();
+
+        if (stepCount >= 1000)
+        {
+            int amountInK = stepCount / 1000;
+            stepsTxt.text = amountInK.ToString("0.#") + "K";
+        }
+        else
+        {
+            stepsTxt.text = stepCount.ToString();
+        }
     }
 
     private void StepsTaken()
@@ -102,7 +112,18 @@ public class TestPedometer : MonoBehaviour
         if (deltaAcceleration.sqrMagnitude > stepThreshold && deltaRotation.sqrMagnitude < 0.05f)
         {
             stepCount++;
-            stepsTxt.text = "Step taken! Total steps: " + stepCount.ToString();
+            stepsTxt.text = stepCount.ToString();
+
+            if(stepCount >= 1000)
+            {
+                Debug.Log("Hello");
+                int amountInK = stepCount / 1000;
+                stepsTxt.text = amountInK.ToString("0.#") + "K";
+            }
+            else
+            {
+                stepsTxt.text = stepCount.ToString();
+            }
         }
 
         // Update previous values

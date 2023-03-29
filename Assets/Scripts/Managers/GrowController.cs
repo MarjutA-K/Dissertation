@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GrowController : MonoBehaviour
@@ -21,10 +22,12 @@ public class GrowController : MonoBehaviour
     private float growthTime;
     private int maxSize;
 
-    public bool orderFullfilled = true;
+    public bool orderCompleted;
 
-    private List<GameObject> objectsToDestroy = new List<GameObject>();
+    private DestroyGameObjects objectsToDestroy;
     private OrderInventory orderInventory;
+
+    //GameObject go;
 
     private void Start()
     {
@@ -36,6 +39,7 @@ public class GrowController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         orderInventory = FindObjectOfType<OrderInventory>();
+        objectsToDestroy = FindObjectOfType<DestroyGameObjects>();
     }
 
     private void Update()
@@ -60,41 +64,7 @@ public class GrowController : MonoBehaviour
                 sr.sprite = plant.growthSprite[growthStage];
                 isGrowing = false;
                 DropItems();
-            }
-        }
-
-        // Change apperance
-        if (growthStage != -1)
-        {
-            if (isGrowing)
-            {
-                sr.sprite = plant.growthSprite[growthStage];
-            }
-        }
-        else
-        {
-            sr.sprite = emptyPlot;
-        }
-    }
-
-    public void GrowTimer()
-    {
-        timer += Time.deltaTime;
-
-        // Grow plant
-        if (timer >= growthTime && isGrowing)
-        {
-            sr.color = new Color(255, 255, 255, 255);
-
-            timer = 0f;
-            growthStage++;
-
-            if (growthStage >= maxSize)
-            {
-                growthStage = maxSize;
-                sr.sprite = plant.growthSprite[growthStage];
-                isGrowing = false;
-                StartCoroutine(FinishGrowing());
+                //orderInventory.AddPlant(plant);
             }
         }
 
@@ -142,22 +112,6 @@ public class GrowController : MonoBehaviour
         }
     }
 
-    IEnumerator FinishGrowing()
-    {
-        yield return new WaitForSeconds(growthTime);
-        //sr.sprite = emptyPlot;
-        //DropItems();
-    }
-
-    void DestroyObjects()
-    {
-        foreach (GameObject obj in objectsToDestroy)
-        {
-            Destroy(obj);
-        }
-        objectsToDestroy.Clear();
-    }
-
     void CheckOrder()
     {
         OrderManager orderManager = FindObjectOfType<OrderManager>();
@@ -165,22 +119,27 @@ public class GrowController : MonoBehaviour
 
         foreach (PlantOrdersSO order in activeOrders)
         {
+            orderCompleted = true;
+
             for (int i = 0; i < order.plantsRequired.Length; i++)
             {
                 if (!orderInventory.HasPlant(order.plantsRequired[i]))
                 {
-                    orderFullfilled = false;
+                    orderCompleted = false;
                     break;
                 }
             }
 
-            if (orderFullfilled)
-            {
+            if (orderCompleted)
+            {       
+                for (int i = 0; i < order.plantsRequired.Length; i++)
+                {
+                    orderInventory.RemovePlant(order.plantsRequired[i]);
+                }
+
                 Debug.Log("Order completed");
                 activeOrders.Remove(order);
-                //sr.sprite = emptyPlot;
-                //Debug.Log("Works");      
-                //DestroyObjects();
+                //sr.sprite = emptyPlot;     
                 break;
             }
         }
@@ -188,42 +147,108 @@ public class GrowController : MonoBehaviour
 
     void DropItems()
     {
-        GameObject go = new GameObject(plant.name + "Drop");
-        go.tag = "Drop";
-        DropController dc = go.AddComponent<DropController>();
-        //dc.worth = vg.worthPer;
-
-        CircleCollider2D col = go.AddComponent<CircleCollider2D>();
-        col.isTrigger = true;
-        SpriteRenderer ren = go.AddComponent<SpriteRenderer>();
-        ren.sprite = plant.finalProduct;
-        ren.sortingOrder = 1;
-        go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
-        
-        objectsToDestroy.Add(go);
-
-        Debug.Log("Objects to destroy" + objectsToDestroy.Count);
-
         orderInventory.AddPlant(plant);
-
+        //sr.sprite = emptyPlot;
         CheckOrder();
-
-        /*foreach(PlantOrdersSO order in activeOrders)
-        {
-            if(orderInventory.HasPlant(plant) && System.Array.Exists(order.plantsRequired, p => p == plant))
-            {
-                int plantIndex = System.Array.IndexOf(order.plantsRequired, plant);
-                order.quantityRequired[plantIndex] -= 1;
-                if(order.quantityRequired[plantIndex] == 0)
-                {
-                    Debug.Log("Order completed");
-                    break;
-                }
-                else
-                {
-                    Debug.Log("Order NOT completed");
-                }
-            }
-        }*/
     }
 }
+
+/*void DropItems()
+{
+    //go = new GameObject(plant.name + "Drop");
+    //go.tag = "Drop";
+    //DropController dc = go.AddComponent<DropController>();
+    //dc.worth = vg.worthPer;
+
+    //CircleCollider2D col = go.AddComponent<CircleCollider2D>();
+    //col.isTrigger = true;
+    //SpriteRenderer ren = go.AddComponent<SpriteRenderer>();
+    //ren.sprite = plant.finalProduct;
+    //ren.sortingOrder = 1;
+    //go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
+
+    //objectsToDestroy.AddPlant(go);
+
+    orderInventory.AddPlant(plant);
+    //sr.sprite = emptyPlot;
+
+    CheckOrder();
+}*/
+
+
+/*foreach (GameObject obj in objectsToDestroy.objects)
+{
+    Destroy(obj);
+    objectsToDestroy.objects.Clear();
+}*/
+
+
+/*foreach(PlantOrdersSO order in activeOrders)
+       {
+           if(orderInventory.HasPlant(plant) && System.Array.Exists(order.plantsRequired, p => p == plant))
+           {
+               int plantIndex = System.Array.IndexOf(order.plantsRequired, plant);
+               order.quantityRequired[plantIndex] -= 1;
+               if(order.quantityRequired[plantIndex] == 0)
+               {
+                   Debug.Log("Order completed");
+                   break;
+               }
+               else
+               {
+                   Debug.Log("Order NOT completed");
+               }
+           }
+       }*/
+
+
+/*public void GrowTimer()
+{
+    timer += Time.deltaTime;
+
+    // Grow plant
+    if (timer >= growthTime && isGrowing)
+    {
+        sr.color = new Color(255, 255, 255, 255);
+
+        timer = 0f;
+        growthStage++;
+
+        if (growthStage >= maxSize)
+        {
+            growthStage = maxSize;
+            sr.sprite = plant.growthSprite[growthStage];
+            isGrowing = false;
+            StartCoroutine(FinishGrowing());
+        }
+    }
+
+    // Change apperance
+    if (growthStage != -1)
+    {
+        if (isGrowing)
+        {
+            sr.sprite = plant.growthSprite[growthStage];
+        }
+    }
+    else
+    {
+        sr.sprite = emptyPlot;
+    }
+}*/
+
+/*IEnumerator FinishGrowing()
+{
+    yield return new WaitForSeconds(growthTime);
+    //sr.sprite = emptyPlot;
+    //DropItems();
+}*/
+
+/*void DestroyObjects()
+{
+foreach (GameObject obj in objectsToDestroy)
+{
+    Destroy(obj);
+}
+objectsToDestroy.Clear();
+}*/

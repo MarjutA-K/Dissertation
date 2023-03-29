@@ -115,7 +115,7 @@ public class ShopManager : MonoBehaviour
         bool result = InventoryManager.AddItem(shopItemsSO[id]);
         if (result == true)
         {
-            Debug.Log("Item added");
+            Debug.Log("Item added to inventory");
         }
         else
         {
