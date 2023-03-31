@@ -17,13 +17,13 @@ public class Timer : MonoBehaviour
     public bool timerOn = false;
 
     Player player;
-    OpenTabs congratsMsg;
+    TabManager congratsMsg;
     WOCompleted workout;
 
     private void Start()
     {
         player = FindObjectOfType<Player>();
-        congratsMsg = FindObjectOfType<OpenTabs>();
+        congratsMsg = FindObjectOfType<TabManager>();
         workout = FindObjectOfType<WOCompleted>();
 
         slider.onValueChanged.AddListener((v) =>

@@ -31,9 +31,9 @@ public class XPManager : MonoBehaviour
         currentXPTxt1.text = currentXP.ToString();
         targetXPTxt.text = targetXP.ToString();
         targetXPTxt1.text = targetXP.ToString();
-        levelTxt.text = "Lvl. " + level.ToString();
-        levelTxt1.text = "Lvl. " + level.ToString();
-        levelTxt2.text = "Lvl. " + level.ToString();
+        levelTxt.text = level.ToString();
+        levelTxt1.text = level.ToString();
+        levelTxt2.text = level.ToString();
     }
 
     public void AddXP(int xp)
@@ -48,9 +48,9 @@ public class XPManager : MonoBehaviour
             // Target XP higher each time player levels up
             targetXP += targetXP / 20;
 
-            levelTxt.text = "Lvl. " + level.ToString();
-            levelTxt1.text = "Lvl. " + level.ToString();
-            levelTxt2.text = "Lvl. " + level.ToString();
+            levelTxt.text = level.ToString();
+            levelTxt1.text = level.ToString();
+            levelTxt2.text = level.ToString();
             targetXPTxt.text = targetXP.ToString();
             targetXPTxt1.text = targetXP.ToString();
         }

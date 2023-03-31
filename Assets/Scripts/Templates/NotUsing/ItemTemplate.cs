@@ -26,7 +26,7 @@ public class ItemTemplate : MonoBehaviour
 
     GardenManager gm;
     XPManager xpm;
-    OpenTabs op;
+    TabManager op;
 
     public bool interactable;
     private bool isOpen = false;

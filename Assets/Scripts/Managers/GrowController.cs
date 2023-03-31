@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GrowController : MonoBehaviour
 {
@@ -44,9 +45,16 @@ public class GrowController : MonoBehaviour
 
     private void Update()
     {
+        Growing();
+
+        // SEEMS TO WORK NOW?? -> Prevents clicking thru UI elements BUT stops gameobjects from updating in real time when clicking a button (Might not be a problem when using pedometer?)
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         ClickPlot();
         //GrowTimer();
-        Growing();
     }
 
     private void Growing()
@@ -134,7 +142,7 @@ public class GrowController : MonoBehaviour
             {       
                 for (int i = 0; i < order.plantsRequired.Length; i++)
                 {
-                    orderInventory.RemovePlant(order.plantsRequired[i]);
+                    //orderInventory.RemovePlant(order.plantsRequired[i]);
                 }
 
                 Debug.Log("Order completed");

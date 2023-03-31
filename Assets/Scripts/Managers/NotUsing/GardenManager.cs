@@ -64,7 +64,7 @@ public class GardenManager : MonoBehaviour
             CheckSelection();
             CheckItemSelection();
             selectPlant = newPlant;
-            selectPlant.btnImage.color = cancelColor;
+            //selectPlant.btnImage.color = cancelColor;
             selectPlant.btnTxt.text = "Cancel";
             isPlanting = true;        
         }
@@ -115,7 +115,7 @@ public class GardenManager : MonoBehaviour
             isPlanting = false;
             if (selectPlant != null)
             {
-                selectPlant.btnImage.color = buyColor;
+                //selectPlant.btnImage.color = buyColor;
                 selectPlant.btnTxt.text = "Buy";
                 selectPlant = null;
             }

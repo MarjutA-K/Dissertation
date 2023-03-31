@@ -9,10 +9,17 @@ public class PlantOrderTemplate : MonoBehaviour
     public PlantOrdersSO order;
     public TMP_Text orderTitleTxt;
     public TMP_Text[] quantityRequiredTxt;
-    public TMP_Text rewardTxt;
+    public TMP_Text[] currentQuantityTxt;
+    //public TMP_Text rewardTxt;
     public Image[] image;
 
     private void Start()
+    {
+        UpdateUI();
+        Debug.Log(order.quantity);
+    }
+
+    private void Update()
     {
         UpdateUI();
     }
@@ -23,10 +30,13 @@ public class PlantOrderTemplate : MonoBehaviour
 
         for (int i = 0; i < order.plantsRequired.Length; i++)
         {
+            order.quantity = OrderInventory.instance.CountPlant(order.plantsRequired[i]);
+            Debug.Log(order.quantity);
+            currentQuantityTxt[i].text = order.quantity.ToString();
             quantityRequiredTxt[i].text = order.quantityRequired[i].ToString();
             image[i].sprite = order.icon[i];
         }
 
-        rewardTxt.text = order.reward.ToString();
+        //rewardTxt.text = order.reward.ToString();
     }
 }

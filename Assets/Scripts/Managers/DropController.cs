@@ -33,7 +33,7 @@ public class DropController : MonoBehaviour
             {
                 Debug.Log("clicked" + hit.collider.gameObject.name);
                 XPManager.instance.AddXP(100);
-                ShopManager.instance.AddMoney(50);
+                //ShopManager.instance.AddMoney(50);
 
                 isClicked = false;         
             }

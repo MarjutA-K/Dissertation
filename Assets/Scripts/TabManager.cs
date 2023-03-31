@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class OpenTabs : MonoBehaviour
+public class TabManager : MonoBehaviour
 {
-    OpenTabs instance;
+    TabManager instance;
 
     public GameObject shop;
     public GameObject activities;
@@ -14,6 +14,8 @@ public class OpenTabs : MonoBehaviour
     public GameObject exerciseTimer;
     public GameObject congratsMsg;
     public GameObject inventory;
+    public GameObject steps;
+    public GameObject orders;
 
     public bool interactable;
 
@@ -117,5 +119,31 @@ public class OpenTabs : MonoBehaviour
     public void CloseInventory()
     {
         inventory.SetActive(false);
+    }
+
+    public void OpenSteps()
+    {
+        if(steps != null)
+        {
+            steps.SetActive(true);
+        }
+    }
+
+    public void CloseSteps()
+    {
+        steps.SetActive(false);
+    }
+
+    public void OpenOrders()
+    {
+        if (orders != null)
+        {
+            orders.SetActive(true);
+        }
+    }
+
+    public void CloseOrders()
+    {
+        orders.SetActive(false);
     }
 }

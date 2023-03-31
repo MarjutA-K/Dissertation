@@ -14,6 +14,7 @@ public class PlantSO : ScriptableObject
     public int buyPrice;
     public int sellPrice;
     public Sprite icon;
+    public Sprite lockIcon;
 
     //Growth
     [Header("Growth")]

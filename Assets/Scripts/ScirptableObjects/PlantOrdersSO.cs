@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlantOrdersSO : ScriptableObject
 {
     public string orderTitle;
+    public int quantity;
     public PlantSO[] plantsRequired;
     public int[] quantityRequired;
     public int reward;

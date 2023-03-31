@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class TestPedometer : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class TestPedometer : MonoBehaviour
     private Vector3 prevAcceleration;
     private Vector3 prevRotation;
     public int stepCount = 0;
+
+    public Slider slider;
+    //public int currentValue = 0;
+    public int maxValue = 10000;
 
     private bool reachedTarget1;
     private bool reachedTarget2;
@@ -35,6 +40,7 @@ public class TestPedometer : MonoBehaviour
     private void Start()
     {
         stepsTxt.text = stepCount.ToString();
+        slider.maxValue = maxValue;
 
         reachedTarget1 = true;
         reachedTarget2 = true;
@@ -45,13 +51,15 @@ public class TestPedometer : MonoBehaviour
     {
         StepsTaken();
 
-        /*switch (stepCount)
+        slider.value = stepCount;
+
+        switch (stepCount)
         {
             case 500:
                 if (reachedTarget1)
                 {
                     reachedTarget1 = false;
-                    ShopManager.instance.AddMoney(50);
+                    XPManager.instance.AddXP(100);
                 }
                 Debug.Log("500 steps");
                 break;
@@ -59,7 +67,7 @@ public class TestPedometer : MonoBehaviour
                 if (reachedTarget2)
                 {
                     reachedTarget2 = false;
-                    ShopManager.instance.AddMoney(100);
+                    XPManager.instance.AddXP(200);
                 }
                 Debug.Log("1000 steps");
                 break;
@@ -67,19 +75,20 @@ public class TestPedometer : MonoBehaviour
                 if (reachedTarget3)
                 {
                     reachedTarget3 = false;
-                    ShopManager.instance.AddMoney(200);
+                    XPManager.instance.AddXP(300);
                 }
                 Debug.Log("5000 steps");
                 break;
             default:
                 //Debug.Log("Unknown level");
                 break;
-        }*/
+        }
     }
 
     public void AddSteps()
     {
         stepCount += 500;
+        //stepCount++;
         stepsTxt.text = stepCount.ToString();
 
         if (stepCount >= 1000)

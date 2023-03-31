@@ -5,6 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public PlantSO activePlant;
+    public ShopManager shopManager;
+
+    private void Start()
+    {
+        shopManager = FindObjectOfType<ShopManager>();
+    }
 
     private void Update()
     {
@@ -18,16 +24,16 @@ public class Player : MonoBehaviour
 
     public void AddMoney()
     {
-        ShopManager.instance.AddMoney(50);
+        shopManager.AddMoney(50);
     }
 
-    public void AddRewardMoney1()
+    public void AddRewardMoney(RewardSO reward)
     {
-        ShopManager.instance.AddMoney(50);
+        shopManager.AddMoney(reward.rewardAmount);
     }
 
-    public void AddRewardMoney2()
+    public void AddRewardDiamonds(RewardSO reward)
     {
-        ShopManager.instance.AddMoney(100);
+        shopManager.AddDiamonds(reward.rewardAmount);
     }
 }

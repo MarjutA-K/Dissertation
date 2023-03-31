@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public static ShopManager instance;
+    //public static ShopManager instance;
     private XPManager _xp;
     public InventoryManager InventoryManager;
     [SerializeField]
     public TempLoadSave _saveManager;
 
     public int money;
+    public int diamonds;
+    public TMP_Text diamondsTxt;
     public TMP_Text moneyTxt;
 
     public PlantSO[] shopItemsSO;
@@ -20,7 +22,10 @@ public class ShopManager : MonoBehaviour
     public PlantItemTemplate[] shopPanels;
     public Button[] purchasaBtns;
 
-    private void Awake()
+    public GameObject shopObject;
+    private bool shopIsActive;
+
+    /*private void Awake()
     {
         if (instance == null)
         {
@@ -30,7 +35,7 @@ public class ShopManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     private void Start()
     {
@@ -41,22 +46,43 @@ public class ShopManager : MonoBehaviour
             shopPanelsSO[i].SetActive(true);
         }
 
-        moneyTxt.text = "Money: " + money.ToString();
+        moneyTxt.text = money.ToString();
+        diamondsTxt.text = diamonds.ToString();
+
         LoadPanels();
         CheckPurchaseable();
+
+        shopIsActive = shopObject.activeSelf;
     }
 
     private void Update()
     {
         CheckPurchaseable();
+
+        if (shopIsActive != shopObject.activeSelf)
+        {
+            shopIsActive = shopObject.activeSelf;
+        }
     }
 
     public void AddMoney(int _money)
     {
         money += _money;
-        moneyTxt.text = "Coins: " + money.ToString();
+        moneyTxt.text = money.ToString();
         CheckPurchaseable();
         _saveManager.moneyChanged.Invoke(money);
+    }
+
+    public void AddDiamonds(int _diamonds)
+    {
+        diamonds += _diamonds;
+        diamondsTxt.text = diamonds.ToString();
+        _saveManager.diamondsChanged.Invoke(diamonds);
+    }
+
+    public void CheckPurchableDiamonds()
+    {
+        //
     }
 
     // Check if Item is purchable
@@ -80,7 +106,7 @@ public class ShopManager : MonoBehaviour
         if (money >= shopItemsSO[btnNo].buyPrice)
         {
             money = money - shopItemsSO[btnNo].buyPrice;
-            moneyTxt.text = "Coins: " + money.ToString();
+            moneyTxt.text = money.ToString();
             CheckPurchaseable();
             _saveManager.moneyChanged.Invoke(money);
             BoughtPlant(btnNo);
@@ -91,20 +117,21 @@ public class ShopManager : MonoBehaviour
     {
         for(int i = 0; i < shopItemsSO.Length; i++)
         {
-            shopPanels[i].icon.sprite = shopItemsSO[i].icon;
+            
             shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
 
             if (_xp.level >= shopItemsSO[i].level)
             {         
-                shopPanels[i].priceTxt.text = "£" + shopItemsSO[i].buyPrice.ToString();
-                shopPanels[i].lockedTxtActive.SetActive(false);
+                shopPanels[i].priceTxt.text = shopItemsSO[i].buyPrice.ToString();
                 shopPanels[i].priceTxtActive.SetActive(true);
+                shopPanels[i].titleActive.SetActive(true);
+                shopPanels[i].icon.sprite = shopItemsSO[i].icon;
             }
             else
             {
-                shopPanels[i].lockedTxtActive.SetActive(true);
+                shopPanels[i].icon.sprite = shopItemsSO[i].lockIcon;
                 shopPanels[i].priceTxtActive.SetActive(false);
-                shopPanels[i].lockedTxt.text = "Reach Level " + shopItemsSO[i].level.ToString() + " to Unlock plant";
+                shopPanels[i].titleActive.SetActive(false);
             }
         }
     }

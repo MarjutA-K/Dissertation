@@ -33,4 +33,19 @@ public class OrderInventory : MonoBehaviour
     {
         return plants.Contains(plant);
     }
+
+    public int CountPlant(PlantSO plant)
+    {
+        int count = 0;
+
+        foreach(PlantSO p in plants)
+        {
+            if(p == plant)
+            {
+                count++;
+            }
+        }
+        Debug.Log(count + plant.name);
+        return count;
+    }
 }

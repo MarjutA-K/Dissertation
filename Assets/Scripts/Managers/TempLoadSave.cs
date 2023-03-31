@@ -12,6 +12,7 @@ public class TempLoadSave : MonoBehaviour
     GameObject []plots;
     public UnityEvent<int, int> xpChanged;
     public UnityEvent<int> moneyChanged;
+    public UnityEvent<int> diamondsChanged;
     JsonSerialize saveData;
     List<PlantSO> plantObjects;
 
@@ -21,11 +22,13 @@ public class TempLoadSave : MonoBehaviour
         plantObjects = new List<PlantSO>();
         xpChanged.AddListener(xpChangedEvent);
         moneyChanged.AddListener(moneyChangedEvent);
+        diamondsChanged.AddListener(DiamondsChangedEvent);
         
         saveData =JsonUtility.FromJson<JsonSerialize>(File.ReadAllText("JsonData/SaveData.json"));
         xpManager.currentXP = saveData.exp;
         xpManager.level = saveData.level;
         shopManager.money = saveData.money;
+        shopManager.diamonds = saveData.diamonds;
         streak = saveData.streak;
        
 
@@ -103,6 +106,7 @@ public class TempLoadSave : MonoBehaviour
         endData.exp = saveData.exp;
         endData.level = saveData.level;
         endData.money = saveData.money;
+        endData.diamonds = saveData.diamonds;
         //endData.lastOnlineDate = 
         endData.lastOnlineDate = System.DateTime.Now.ToBinary();
         endData.streak = streak;
@@ -123,6 +127,12 @@ public class TempLoadSave : MonoBehaviour
     {
         saveData.money = _money;
     }
+
+    void DiamondsChangedEvent(int _diamonds)
+    {
+        saveData.diamonds = _diamonds;
+    }
+
     void saveGridData()
     {
         int i = 0;

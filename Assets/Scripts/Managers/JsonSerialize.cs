@@ -6,6 +6,7 @@ using UnityEngine;
 public class JsonSerialize
 {
     public int money;
+    public int diamonds;
     public int level;
     public int exp;
     public int streak;

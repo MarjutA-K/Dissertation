@@ -10,6 +10,8 @@ public class RewardManager : MonoBehaviour
     public GameObject[] rewardTemplatesSO;
     public Button[] rewardBtns;
 
+    private Player player;
+
     void Start()
     {
         for(int i = 0; i < rewardsSO.Length; i++)
@@ -18,6 +20,8 @@ public class RewardManager : MonoBehaviour
         }
 
         LoadTemplates();
+
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -29,7 +33,7 @@ public class RewardManager : MonoBehaviour
     {
         for(int i = 0; i < rewardsSO.Length; i++)
         {
-            if(TestPedometer.instance.stepCount >= rewardsSO[i].stepAmount)
+            if(TestPedometer.instance.stepCount >= rewardsSO[i].stepAmount && !rewardsSO[i].claimed)
             {
                 rewardBtns[i].interactable = true;
             }
@@ -42,9 +46,11 @@ public class RewardManager : MonoBehaviour
 
     public void GetReward(int btnNum)
     {
-        if(TestPedometer.instance.stepCount >= rewardsSO[btnNum].stepAmount)
+        if(TestPedometer.instance.stepCount >= rewardsSO[btnNum].stepAmount && !rewardsSO[btnNum].claimed)
         {
             Check();
+            rewardsSO[btnNum].claimed = true;
+            rewardBtns[btnNum].interactable = false;
             Debug.Log("Got reward");
         }
     }
