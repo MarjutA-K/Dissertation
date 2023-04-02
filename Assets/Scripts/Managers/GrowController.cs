@@ -36,6 +36,7 @@ public class GrowController : MonoBehaviour
         growthStage = plant.growthStage;
         growthTime = plant.growthTime;
         maxSize = plant.maxSize;
+        //orderCompleted = false;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
@@ -120,7 +121,38 @@ public class GrowController : MonoBehaviour
         }
     }
 
-    void CheckOrder()
+    public void CheckOrder(PlantOrdersSO order)
+    {
+        if(order == null)
+        {
+            return;
+        }
+
+        orderCompleted = true;
+
+        for(int i = 0; i < order.plantsRequired.Length; i++)
+        {
+            if(!orderInventory.HasPlant(order.plantsRequired[i]))
+            {
+                orderCompleted = false;
+                break;
+            }
+        }
+
+        if(orderCompleted)
+        {
+            for (int i = 0; i < order.plantsRequired.Length; i++)
+            {
+                orderInventory.RemovePlant(order.plantsRequired[i]);
+            }
+
+            Debug.Log("Order completed");
+            OrderManager orderManager = FindObjectOfType<OrderManager>();
+            orderManager.CompleteOrder(order);
+        }
+    }
+
+    /*public void CheckOrder()
     {
         OrderManager orderManager = FindObjectOfType<OrderManager>();
         List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
@@ -142,7 +174,7 @@ public class GrowController : MonoBehaviour
             {       
                 for (int i = 0; i < order.plantsRequired.Length; i++)
                 {
-                    //orderInventory.RemovePlant(order.plantsRequired[i]);
+                    orderInventory.RemovePlant(order.plantsRequired[i]);
                 }
 
                 Debug.Log("Order completed");
@@ -151,13 +183,13 @@ public class GrowController : MonoBehaviour
                 break;
             }
         }
-    }
+    }*/
 
     void DropItems()
     {
         orderInventory.AddPlant(plant);
         //sr.sprite = emptyPlot;
-        CheckOrder();
+        //CheckOrder();
     }
 }
 

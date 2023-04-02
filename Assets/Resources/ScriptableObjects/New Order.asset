@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: New Order
   m_EditorClassIdentifier: 
   orderTitle: Flowers
+  quantity: 0
   plantsRequired:
   - {fileID: 11400000, guid: 280636a538264a4488526783b1eb8300, type: 2}
   - {fileID: 11400000, guid: aa229d4fac8ef2745951571629b507e8, type: 2}
@@ -20,6 +21,6 @@ MonoBehaviour:
   quantityRequired: 010000000100000001000000
   reward: 0
   icon:
-  - {fileID: -961008932, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: 1290861732, guid: 2457224b4546ff841be8ff3804361b9f, type: 3}
-  - {fileID: 21300000, guid: 51a92944cbb43994da23aecd56a62978, type: 3}
+  - {fileID: -444093586, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 1341213934, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -901488471, guid: 58e34bda4339bac47b055b199767dd19, type: 3}

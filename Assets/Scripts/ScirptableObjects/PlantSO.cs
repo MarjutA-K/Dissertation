@@ -29,5 +29,5 @@ public class PlantSO : ScriptableObject
     [Header("Level to be Unlocked")]
     public int level;
 
-    public int quantity;
+    //public int quantity;
 }

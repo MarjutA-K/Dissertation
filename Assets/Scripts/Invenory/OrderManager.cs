@@ -8,6 +8,7 @@ public class OrderManager : MonoBehaviour
     public static OrderManager instance;
 
     public List<PlantOrdersSO> activeOrders = new List<PlantOrdersSO>();
+    public List<PlantOrderTemplate> orderTemplates = new List<PlantOrderTemplate>();
 
     private void Awake()
     {
@@ -35,5 +36,24 @@ public class OrderManager : MonoBehaviour
     public List<PlantOrdersSO> GetActiveOrders()
     {
         return activeOrders;
+    }
+
+    public void CompleteOrder(PlantOrdersSO order)
+    {
+        if(order == null)
+        {
+            return;
+        }
+
+        activeOrders.Remove(order);
+
+        foreach (PlantOrderTemplate template in orderTemplates)
+        {
+            if(template.order == order)
+            {
+                template.gameObject.SetActive(false);
+                break;
+            }
+        }
     }
 }

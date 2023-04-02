@@ -16,7 +16,6 @@ public class PlantOrderTemplate : MonoBehaviour
     private void Start()
     {
         UpdateUI();
-        Debug.Log(order.quantity);
     }
 
     private void Update()
@@ -36,7 +35,5 @@ public class PlantOrderTemplate : MonoBehaviour
             quantityRequiredTxt[i].text = order.quantityRequired[i].ToString();
             image[i].sprite = order.icon[i];
         }
-
-        //rewardTxt.text = order.reward.ToString();
     }
 }
