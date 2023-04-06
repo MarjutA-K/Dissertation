@@ -8,6 +8,7 @@ public class OrderInventory : MonoBehaviour
     public static OrderInventory instance;
 
     public List<PlantSO> plants = new List<PlantSO>();
+    public List<GameObject> plots;
 
     private void Awake()
     {

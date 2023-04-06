@@ -72,8 +72,8 @@ public class GrowController : MonoBehaviour
                 growthStage = maxSize;
                 sr.sprite = plant.growthSprite[growthStage];
                 isGrowing = false;
-                DropItems();
-                //orderInventory.AddPlant(plant);
+                //DropItems();
+                orderInventory.AddPlant(plant);
             }
         }
 
@@ -103,7 +103,7 @@ public class GrowController : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
 
-                if (!isGrowing && player.activePlant)
+                if (!isGrowing && player.activePlant && growthStage < maxSize)
                 {
                     InventoryManager.instance.GetSelectedPlant(true);
 
@@ -122,15 +122,15 @@ public class GrowController : MonoBehaviour
     }
 
     public void CheckOrder(PlantOrdersSO order)
-    {
-        if(order == null)
+    {      
+        if (order == null)
         {
             return;
         }
 
         orderCompleted = true;
 
-        for(int i = 0; i < order.plantsRequired.Length; i++)
+        for (int i = 0; i < order.plantsRequired.Length; i++)
         {
             if(!orderInventory.HasPlant(order.plantsRequired[i]))
             {
@@ -139,59 +139,94 @@ public class GrowController : MonoBehaviour
             }
         }
 
-        if(orderCompleted)
+        if (orderCompleted)
         {
             for (int i = 0; i < order.plantsRequired.Length; i++)
             {
                 orderInventory.RemovePlant(order.plantsRequired[i]);
+
+                PlantSO plant = order.plantsRequired[i];
+                int count = orderInventory.CountPlant(plant);
+
+                GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
+                foreach (GrowController plot in plotGameObjects)
+                {
+                    if(plot.plant == plant)
+                    {
+                        plot.sr.sprite = plot.emptyPlot;
+                        plot.isGrowing = false;
+                        plot.growthStage = -1;
+                        plot.plant = null;
+                        count--;
+
+                        if(count == 0)
+                        {
+                            break;
+                        }
+                    }
+                }
             }
+
 
             Debug.Log("Order completed");
             OrderManager orderManager = FindObjectOfType<OrderManager>();
             orderManager.CompleteOrder(order);
-        }
+
+            /*GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
+
+            foreach (GrowController plot in plotGameObjects)
+            {
+                if (order.plantsRequired.Contains(plot.plant))
+                {
+                    plot.sr.sprite = plot.emptyPlot;
+                    plot.isGrowing = false;
+                    plot.growthStage = -1;
+                    plot.plant = null;
+                    Debug.Log("wot");
+                    //break;
+                }
+            }*/
+        }        
     }
 
-    /*public void CheckOrder()
-    {
-        OrderManager orderManager = FindObjectOfType<OrderManager>();
-        List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
-
-        foreach (PlantOrdersSO order in activeOrders)
-        {
-            orderCompleted = true;
-
-            for (int i = 0; i < order.plantsRequired.Length; i++)
-            {
-                if (!orderInventory.HasPlant(order.plantsRequired[i]))
-                {
-                    orderCompleted = false;
-                    break;
-                }
-            }
-
-            if (orderCompleted)
-            {       
-                for (int i = 0; i < order.plantsRequired.Length; i++)
-                {
-                    orderInventory.RemovePlant(order.plantsRequired[i]);
-                }
-
-                Debug.Log("Order completed");
-                activeOrders.Remove(order);
-                //sr.sprite = emptyPlot;     
-                break;
-            }
-        }
-    }*/
-
-    void DropItems()
+    /*void DropItems()
     {
         orderInventory.AddPlant(plant);
-        //sr.sprite = emptyPlot;
-        //CheckOrder();
-    }
+    }*/
 }
+
+/*public void CheckOrder()
+  {
+      OrderManager orderManager = FindObjectOfType<OrderManager>();
+      List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
+
+      foreach (PlantOrdersSO order in activeOrders)
+      {
+          orderCompleted = true;
+
+          for (int i = 0; i < order.plantsRequired.Length; i++)
+          {
+              if (!orderInventory.HasPlant(order.plantsRequired[i]))
+              {
+                  orderCompleted = false;
+                  break;
+              }
+          }
+
+          if (orderCompleted)
+          {       
+              for (int i = 0; i < order.plantsRequired.Length; i++)
+              {
+                  orderInventory.RemovePlant(order.plantsRequired[i]);
+              }
+
+              Debug.Log("Order completed");
+              activeOrders.Remove(order);
+              //sr.sprite = emptyPlot;     
+              break;
+          }
+      }
+  }*/
 
 /*void DropItems()
 {
