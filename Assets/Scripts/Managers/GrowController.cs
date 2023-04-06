@@ -101,8 +101,6 @@ public class GrowController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                Debug.Log(hit.collider.gameObject.name);
-
                 if (!isGrowing && player.activePlant && growthStage < maxSize)
                 {
                     InventoryManager.instance.GetSelectedPlant(true);
@@ -116,6 +114,9 @@ public class GrowController : MonoBehaviour
 
                     isGrowing = true;
                     growthStage = 0;
+
+                    AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
+                    achievementManager.SeedsPlantedAchievement(0);
                 }
             }
         }

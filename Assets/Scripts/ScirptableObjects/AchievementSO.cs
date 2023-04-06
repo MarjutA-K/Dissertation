@@ -7,6 +7,9 @@ public class AchievementSO : ScriptableObject
 {
     public string description;
     public int requiredAmount;
-    public int maxAmount;
+    public int currentAmount;
     public int rewardAmount;
+    public bool claimed;
+
+    public int id;
 }

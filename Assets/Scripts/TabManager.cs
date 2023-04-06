@@ -16,8 +16,9 @@ public class TabManager : MonoBehaviour
     public GameObject inventory;
     public GameObject steps;
     public GameObject orders;
+    public GameObject achievements;
 
-    public bool interactable;
+    //public bool interactable;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class TabManager : MonoBehaviour
 
     private void Start()
     {
-        interactable = true;
+        //interactable = true;
     }
 
     public void OpenShop()
@@ -49,7 +50,7 @@ public class TabManager : MonoBehaviour
         shop.SetActive(false);
     }
 
-    public void OpenActivities()
+    /*public void OpenActivities()
     {
         if (activities != null)
         {
@@ -106,7 +107,7 @@ public class TabManager : MonoBehaviour
     public void CloseCongratsMsg()
     {
         congratsMsg.SetActive(false);
-    }
+    }*/
 
     public void OpenInventory()
     {
@@ -145,5 +146,18 @@ public class TabManager : MonoBehaviour
     public void CloseOrders()
     {
         orders.SetActive(false);
+    }
+
+    public void OpenAchievements()
+    {
+        if (achievements != null)
+        {
+            achievements.SetActive(true);
+        }
+    }
+
+    public void CloseAchievements()
+    {
+        achievements.SetActive(false);
     }
 }

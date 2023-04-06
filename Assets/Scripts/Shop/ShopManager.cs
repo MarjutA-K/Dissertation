@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    //public static ShopManager instance;
     private XPManager _xp;
     public InventoryManager InventoryManager;
     [SerializeField]
@@ -24,18 +23,6 @@ public class ShopManager : MonoBehaviour
 
     public GameObject shopObject;
     private bool shopIsActive;
-
-    /*private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }*/
 
     private void Start()
     {

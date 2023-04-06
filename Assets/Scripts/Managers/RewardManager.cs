@@ -10,8 +10,6 @@ public class RewardManager : MonoBehaviour
     public GameObject[] rewardTemplatesSO;
     public Button[] rewardBtns;
 
-    private Player player;
-
     void Start()
     {
         for(int i = 0; i < rewardsSO.Length; i++)
@@ -20,8 +18,6 @@ public class RewardManager : MonoBehaviour
         }
 
         LoadTemplates();
-
-        player = FindObjectOfType<Player>();
     }
 
     void Update()

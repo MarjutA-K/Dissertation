@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
                 slider.value = time;
                 player.AddMoney();
                 player.AddXP();
-                congratsMsg.showCongratsMsg();
+                //congratsMsg.showCongratsMsg();
                 StartCoroutine(showMsgCountdown());
                 workout.isWOCompleted = true;
             }
@@ -67,10 +67,10 @@ public class Timer : MonoBehaviour
     private IEnumerator showMsgCountdown()
     {
         yield return new WaitForSeconds(2);
-        congratsMsg.CloseCongratsMsg();
-        congratsMsg.CloseExerciseTimerView();
-        congratsMsg.CloseExerciseDescr();
-        congratsMsg.CloseWorkoutView();
+        //congratsMsg.CloseCongratsMsg();
+        //congratsMsg.CloseExerciseTimerView();
+        //congratsMsg.CloseExerciseDescr();
+        //congratsMsg.CloseWorkoutView();
     }
 
     private void updateTimer(float currentTime)
