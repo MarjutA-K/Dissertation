@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Achievement 3
   m_EditorClassIdentifier: 
   description: Complete 5 orders
-  requiredAmount: 5
+  requiredAmount: 2
   currentAmount: 0
   rewardAmount: 4
-  id: 3
+  claimed: 0
+  id: 2

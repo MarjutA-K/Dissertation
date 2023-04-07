@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Plant 50 seeds to land
   requiredAmount: 5
-  currentAmount: 1
+  currentAmount: 5
   rewardAmount: 4
-  claimed: 0
+  claimed: 1
   id: 0

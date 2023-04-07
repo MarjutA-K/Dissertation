@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331c4aa1626391c49a4ccdd4c78bb2f5, type: 3}
   m_Name: Achievement 4
   m_EditorClassIdentifier: 
-  description: 'Walk 10K steps '
-  requiredAmount: 10
+  description: Walk 10K steps for 3 days
+  requiredAmount: 3
   currentAmount: 0
   rewardAmount: 4
-  id: 4
+  claimed: 0
+  id: 3

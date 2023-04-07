@@ -47,7 +47,7 @@ public class RewardManager : MonoBehaviour
             Check();
             rewardsSO[btnNum].claimed = true;
             rewardBtns[btnNum].interactable = false;
-            Debug.Log("Got reward");
+            Debug.Log("Got reward" + btnNum);
         }
     }
 

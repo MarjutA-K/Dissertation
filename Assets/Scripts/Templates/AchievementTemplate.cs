@@ -12,4 +12,7 @@ public class AchievementTemplate : MonoBehaviour
     public TMP_Text currentAmountTxt;
     public TMP_Text rewardAmountTxt;
     public GameObject claimBtn;
+    public GameObject currentAmount;
+    public GameObject requireAmount;
+    public GameObject slash;
 }

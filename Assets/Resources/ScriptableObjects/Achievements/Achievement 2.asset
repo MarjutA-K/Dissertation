@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Unlock 10 Plants
   requiredAmount: 10
-  currentAmount: 0
+  currentAmount: 5
   rewardAmount: 4
-  id: 2
+  claimed: 0
+  id: 1

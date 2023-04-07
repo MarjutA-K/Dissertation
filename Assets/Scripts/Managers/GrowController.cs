@@ -27,6 +27,7 @@ public class GrowController : MonoBehaviour
 
     private DestroyGameObjects objectsToDestroy;
     private OrderInventory orderInventory;
+    AchievementManager achievementManager;
 
     //GameObject go;
 
@@ -42,6 +43,7 @@ public class GrowController : MonoBehaviour
 
         orderInventory = FindObjectOfType<OrderInventory>();
         objectsToDestroy = FindObjectOfType<DestroyGameObjects>();
+        achievementManager = FindObjectOfType<AchievementManager>();
     }
 
     private void Update()
@@ -114,9 +116,8 @@ public class GrowController : MonoBehaviour
 
                     isGrowing = true;
                     growthStage = 0;
-
-                    AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
-                    achievementManager.SeedsPlantedAchievement(0);
+                
+                    achievementManager.CheckAchievement(0);
                 }
             }
         }
@@ -142,6 +143,9 @@ public class GrowController : MonoBehaviour
 
         if (orderCompleted)
         {
+            //achievementManager.OrdersCompletedAchievement(2);
+            achievementManager.CheckAchievement(2);
+
             for (int i = 0; i < order.plantsRequired.Length; i++)
             {
                 orderInventory.RemovePlant(order.plantsRequired[i]);

@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
 {
     private XPManager _xp;
     public InventoryManager InventoryManager;
+    private AchievementManager achievementManager;
     [SerializeField]
     public TempLoadSave _saveManager;
 
@@ -27,6 +28,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         _xp = FindObjectOfType<XPManager>();
+        achievementManager = FindObjectOfType<AchievementManager>();
 
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
@@ -45,6 +47,7 @@ public class ShopManager : MonoBehaviour
     private void Update()
     {
         CheckPurchaseable();
+        LoadPanels();
 
         if (shopIsActive != shopObject.activeSelf)
         {
@@ -103,8 +106,7 @@ public class ShopManager : MonoBehaviour
     public void LoadPanels()
     {
         for(int i = 0; i < shopItemsSO.Length; i++)
-        {
-            
+        {            
             shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
 
             if (_xp.level >= shopItemsSO[i].level)
@@ -113,6 +115,8 @@ public class ShopManager : MonoBehaviour
                 shopPanels[i].priceTxtActive.SetActive(true);
                 shopPanels[i].titleActive.SetActive(true);
                 shopPanels[i].icon.sprite = shopItemsSO[i].icon;
+
+                achievementManager.UnlockItemsAchievement(1);
             }
             else
             {

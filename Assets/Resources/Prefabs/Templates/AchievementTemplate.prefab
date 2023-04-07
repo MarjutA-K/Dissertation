@@ -256,7 +256,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5431486627081871920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AchievementManager, Assembly-CSharp
+        m_MethodName: Getreward
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: AddAchievementReward
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c32903446170d5e458fd1dc0778c35f8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AchievementSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4845032856594350770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1602,9 @@ MonoBehaviour:
   achievement: {fileID: 11400000, guid: c32903446170d5e458fd1dc0778c35f8, type: 2}
   descriptionTxt: {fileID: 4845032856606888595}
   requiredAmountTxt: {fileID: 4845032857043805738}
-  currentAmount: {fileID: 4845032857386656886}
+  currentAmountTxt: {fileID: 4845032857386656886}
   rewardAmountTxt: {fileID: 4845032857800644568}
   claimBtn: {fileID: 1592440142824781398}
+  currentAmount: {fileID: 4845032857386656880}
+  requireAmount: {fileID: 4845032857043805716}
+  slash: {fileID: 4845032858548650005}

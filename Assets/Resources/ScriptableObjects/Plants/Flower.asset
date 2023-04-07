@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
+  m_Name: Flower
+  m_EditorClassIdentifier: 
+  plantTitle: Flower
+  buyPrice: 0
+  sellPrice: 0
+  icon: {fileID: 2003146618, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  growthSprite:
+  - {fileID: 21300000, guid: 2317820899dd90b41adae1778d4aa5cb, type: 3}
+  - {fileID: 21300000, guid: bac6fa65f85b2844c9968659c8773cb5, type: 3}
+  isGrowing: 1
+  growthStage: 0
+  growthTime: 0
+  maxSize: 0
+  worthPer: 0
+  finalProduct: {fileID: 21300000, guid: 240ae01ad665c6d4798249cbec763ce8, type: 3}
+  level: 34

@@ -24,6 +24,7 @@ public class TestPedometer : MonoBehaviour
     private bool reachedTarget1;
     private bool reachedTarget2;
     private bool reachedTarget3;
+    private bool reachedTarget4;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class TestPedometer : MonoBehaviour
         reachedTarget1 = true;
         reachedTarget2 = true;
         reachedTarget3 = true;
+        reachedTarget4 = true;
     }
 
     void Update()
@@ -78,6 +80,14 @@ public class TestPedometer : MonoBehaviour
                     XPManager.instance.AddXP(300);
                 }
                 Debug.Log("5000 steps");
+                break;
+            case 10000:
+                if(reachedTarget4)
+                {
+                    reachedTarget4 = false;
+                    AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
+                    achievementManager.CheckAchievement(3);
+                }
                 break;
             default:
                 //Debug.Log("Unknown level");

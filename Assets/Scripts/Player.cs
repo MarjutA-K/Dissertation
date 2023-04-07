@@ -36,4 +36,9 @@ public class Player : MonoBehaviour
     {
         shopManager.AddDiamonds(reward.rewardAmount);
     }
+
+    public void AddAchievementReward(AchievementSO reward)
+    {
+        shopManager.AddDiamonds(reward.rewardAmount);
+    }
 }

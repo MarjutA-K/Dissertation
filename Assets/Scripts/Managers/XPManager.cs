@@ -9,6 +9,7 @@ public class XPManager : MonoBehaviour
     public int currentXP, targetXP, level;
 
     public static XPManager instance;
+    private ShopManager shopManager;
 
     [SerializeField]
     TempLoadSave saveManager;
@@ -34,6 +35,8 @@ public class XPManager : MonoBehaviour
         levelTxt.text = level.ToString();
         levelTxt1.text = level.ToString();
         levelTxt2.text = level.ToString();
+
+        shopManager = FindObjectOfType<ShopManager>();
     }
 
     public void AddXP(int xp)
@@ -58,6 +61,5 @@ public class XPManager : MonoBehaviour
         currentXPTxt.text = currentXP.ToString();
         currentXPTxt1.text = currentXP.ToString();
         saveManager.xpChanged.Invoke(currentXP, level);
-
     }
 }
