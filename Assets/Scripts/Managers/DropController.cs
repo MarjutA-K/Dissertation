@@ -7,7 +7,6 @@ public class DropController : MonoBehaviour
 {
     public bool isClicked = true;
     private GrowController gr;
-    private DestroyGameObjects objectsToDestroy;
     private OrderInventory orderInventory;
     public bool orderCompleted = true;
 
@@ -16,7 +15,6 @@ public class DropController : MonoBehaviour
     private void Start()
     {
         gr = FindObjectOfType<GrowController>();
-        objectsToDestroy = FindObjectOfType<DestroyGameObjects>();
         orderInventory = FindObjectOfType<OrderInventory>();
     }
 

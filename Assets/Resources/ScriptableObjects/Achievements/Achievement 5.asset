@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Money collected from steps X 10K
   requiredAmount: 3000
-  currentAmount: 12179
+  currentAmount: 12085
   rewardAmount: 4
   claimed: 1
   id: 4

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
-  m_Name: Sunflower
+  m_Name: Orange Marigold
   m_EditorClassIdentifier: 
-  plantTitle: Sunflower
+  plantTitle: Orange Marigold
   buyPrice: 5
   sellPrice: 2
   icon: {fileID: 1148128264, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   growthSprite:
+  - {fileID: 1243175820, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: 1243175820, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: -970822285, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: -1641424362, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
@@ -26,8 +27,5 @@ MonoBehaviour:
   isGrowing: 1
   growthStage: -1
   growthTime: 12
-  maxSize: 4
-  worthPer: 12
-  finalProduct: {fileID: -1080890372, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  maxSize: 5
   level: 2
-  quantity: 0

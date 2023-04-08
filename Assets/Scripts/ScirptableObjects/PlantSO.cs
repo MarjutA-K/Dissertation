@@ -23,8 +23,7 @@ public class PlantSO : ScriptableObject
     public int growthStage;
     public float growthTime;
     public int maxSize;
-    public int worthPer;
-    public Sprite finalProduct;
+    //public int worthPer;
 
     [Header("Level to be Unlocked")]
     public int level;

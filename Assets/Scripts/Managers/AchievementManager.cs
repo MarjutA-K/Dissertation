@@ -23,12 +23,9 @@ public class AchievementManager : MonoBehaviour
         {
             achievements.Add(achievementsSO[i].id, achievementsSO[i]);
             achievementTemplatesSO[i].SetActive(true);
-            achievementsSO[i].currentAmount = 0;
-            achievementTemplates[i].claimBtn.SetActive(false);
         }
 
         LoadTemplates();
-        //SeedsPlantedAchievement(0);
 
         achievementsIsActive = achievementsObject.activeSelf;
     }
@@ -41,6 +38,7 @@ public class AchievementManager : MonoBehaviour
         }
 
         MoneyAchievement(4);
+        CheckBtns();
     }
 
     private void LoadTemplates()
@@ -53,6 +51,24 @@ public class AchievementManager : MonoBehaviour
             achievementTemplates[i].currentAmountTxt.text = achievementsSO[i].currentAmount.ToString();
             achievementTemplates[i].rewardAmountTxt.text = achievementsSO[i].rewardAmount.ToString();
             achievementTemplates[i].descriptionTxt.text = achievementsSO[i].description;
+            achievementsSO[i].currentAmount = 0;
+            achievementTemplates[i].completed.SetActive(false);
+            achievementsSO[i].claimed = false;
+        }
+    }
+
+    private void CheckBtns()
+    {
+        for(int i = 0; i < achievementsSO.Length; i++)
+        {
+            if(achievementsSO[i].currentAmount >= achievementsSO[i].requiredAmount && !achievementsSO[i].claimed)
+            {
+                achievementBtns[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                achievementBtns[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -61,9 +77,10 @@ public class AchievementManager : MonoBehaviour
         AchievementSO achievement = achievements[achievementId];
         if (achievement.currentAmount >= achievement.requiredAmount && !achievement.claimed)
         {
+            CheckBtns();
             achievement.claimed = true;
-            //achievementTemplates[achievementId].claimBtn.SetActive(false);
             achievementBtns[achievementId].gameObject.SetActive(false);
+            achievementTemplates[achievementId].completed.SetActive(true);
             Debug.Log("Got reward " + achievementId);
         }
     }
@@ -74,11 +91,11 @@ public class AchievementManager : MonoBehaviour
         achievement.currentAmount++;    
 
         achievementTemplates[achievementId].currentAmountTxt.text = achievement.currentAmount.ToString();
+        achievementTemplates[achievementId].slider.maxValue = achievement.requiredAmount;
+        achievementTemplates[achievementId].slider.value = achievement.currentAmount;
 
         if (achievement.currentAmount >= achievement.requiredAmount && !achievementsSO[achievementId].claimed)
         {
-            //achievementTemplates[achievementId].claimBtn.SetActive(true);
-            achievementBtns[achievementId].gameObject.SetActive(true);
             achievementTemplates[achievementId].currentAmount.SetActive(false);
             achievementTemplates[achievementId].slash.SetActive(false);
             achievementTemplates[achievementId].requireAmount.SetActive(false);
@@ -98,11 +115,11 @@ public class AchievementManager : MonoBehaviour
             {
                 achievement.currentAmount++;
                 achievementTemplates[achievementId].currentAmountTxt.text = achievement.currentAmount.ToString();
+                achievementTemplates[achievementId].slider.maxValue = achievement.requiredAmount;
+                achievementTemplates[achievementId].slider.value = achievement.currentAmount;
 
                 if (achievement.currentAmount >= achievement.requiredAmount && !achievementsSO[achievementId].claimed)
                 {
-                    //achievementTemplates[achievementId].claimBtn.SetActive(true);
-                    achievementBtns[achievementId].gameObject.SetActive(true);
                     achievementTemplates[achievementId].currentAmount.SetActive(false);
                     achievementTemplates[achievementId].slash.SetActive(false);
                     achievementTemplates[achievementId].requireAmount.SetActive(false);
@@ -118,11 +135,11 @@ public class AchievementManager : MonoBehaviour
 
         achievement.currentAmount = shopManager.money;
         achievementTemplates[achievementId].currentAmountTxt.text = achievement.currentAmount.ToString();
+        achievementTemplates[achievementId].slider.maxValue = achievement.requiredAmount;
+        achievementTemplates[achievementId].slider.value = achievement.currentAmount;
 
         if (achievement.currentAmount >= achievement.requiredAmount && !achievementsSO[achievementId].claimed)
         {
-            //achievementTemplates[achievementId].claimBtn.SetActive(true);
-            achievementBtns[achievementId].gameObject.SetActive(true);
             achievementTemplates[achievementId].currentAmount.SetActive(false);
             achievementTemplates[achievementId].slash.SetActive(false);
             achievementTemplates[achievementId].requireAmount.SetActive(false);

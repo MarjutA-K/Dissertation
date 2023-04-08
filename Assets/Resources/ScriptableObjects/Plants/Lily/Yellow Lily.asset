@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f8f8232cad4a342b144cb2738dfac6, type: 3}
+  m_Name: Yellow Lily
+  m_EditorClassIdentifier: 
+  plantTitle: Yellow Lily
+  buyPrice: 5
+  sellPrice: 2
+  icon: {fileID: 347724087, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
+  lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  growthSprite:
+  - {fileID: 63400594, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 63400594, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -205468406, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -327937464, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1505694765, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -174509330, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  isGrowing: 1
+  growthStage: -1
+  growthTime: 12
+  maxSize: 5
+  level: 2

@@ -25,7 +25,6 @@ public class GrowController : MonoBehaviour
 
     public bool orderCompleted;
 
-    private DestroyGameObjects objectsToDestroy;
     private OrderInventory orderInventory;
     AchievementManager achievementManager;
 
@@ -37,12 +36,10 @@ public class GrowController : MonoBehaviour
         growthStage = plant.growthStage;
         growthTime = plant.growthTime;
         maxSize = plant.maxSize;
-        //orderCompleted = false;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
         orderInventory = FindObjectOfType<OrderInventory>();
-        objectsToDestroy = FindObjectOfType<DestroyGameObjects>();
         achievementManager = FindObjectOfType<AchievementManager>();
     }
 
@@ -57,7 +54,6 @@ public class GrowController : MonoBehaviour
         }
 
         ClickPlot();
-        //GrowTimer();
     }
 
     private void Growing()
@@ -65,14 +61,13 @@ public class GrowController : MonoBehaviour
         // Grow plant
         if (TestPedometer.instance.stepCount >= growthTime * growthStage && isGrowing)
         {
-            sr.color = new Color(255, 255, 255, 255);
-
             growthStage++;
 
             if (growthStage >= maxSize)
             {
                 growthStage = maxSize;
                 sr.sprite = plant.growthSprite[growthStage];
+
                 isGrowing = false;
                 //DropItems();
                 orderInventory.AddPlant(plant);
@@ -112,10 +107,8 @@ public class GrowController : MonoBehaviour
                     isGrowing = plant.isGrowing;
                     growthStage = plant.growthStage;
                     growthTime = plant.growthTime;
-                    maxSize = plant.maxSize;
-
+                    maxSize = plant.maxSize;           
                     isGrowing = true;
-                    growthStage = 0;
                 
                     achievementManager.CheckAchievement(0);
                 }
@@ -143,7 +136,6 @@ public class GrowController : MonoBehaviour
 
         if (orderCompleted)
         {
-            //achievementManager.OrdersCompletedAchievement(2);
             achievementManager.CheckAchievement(2);
 
             for (int i = 0; i < order.plantsRequired.Length; i++)
@@ -171,7 +163,6 @@ public class GrowController : MonoBehaviour
                     }
                 }
             }
-
 
             Debug.Log("Order completed");
             OrderManager orderManager = FindObjectOfType<OrderManager>();

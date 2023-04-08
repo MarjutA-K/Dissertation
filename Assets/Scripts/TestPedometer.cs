@@ -97,8 +97,8 @@ public class TestPedometer : MonoBehaviour
 
     public void AddSteps()
     {
-        stepCount += 500;
-        //stepCount++;
+        //stepCount += 500;
+        stepCount++;
         stepsTxt.text = stepCount.ToString();
 
         if (stepCount >= 1000)

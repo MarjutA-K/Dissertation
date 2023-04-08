@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7336eeb9bc2415c4db319eaeef9f9b83, type: 3}
+  m_Name: New Order 3
+  m_EditorClassIdentifier: 
+  orderTitle: Flowers
+  quantity: 0
+  plantsRequired:
+  - {fileID: 11400000, guid: ef2b755f15581d04e9daa46382599932, type: 2}
+  - {fileID: 11400000, guid: 2f96b1c7321f5f743b4f97a93d3a52a5, type: 2}
+  - {fileID: 11400000, guid: aa229d4fac8ef2745951571629b507e8, type: 2}
+  quantityRequired: 010000000100000001000000
+  icon:
+  - {fileID: -901488471, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -35665673, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 1099218346, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
