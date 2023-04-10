@@ -23,13 +23,14 @@ public class RewardManager : MonoBehaviour
     void Update()
     {
         Check();
+        LoadTemplates();
     }
 
     public void Check()
     {
         for(int i = 0; i < rewardsSO.Length; i++)
         {
-            if(TestPedometer.instance.stepCount >= rewardsSO[i].stepAmount && !rewardsSO[i].claimed)
+            if(TestPedometer.instance.stepCount >= rewardsSO[i].stepAmount)
             {
                 rewardBtns[i].interactable = true;
             }
@@ -42,12 +43,23 @@ public class RewardManager : MonoBehaviour
 
     public void GetReward(int btnNum)
     {
-        if(TestPedometer.instance.stepCount >= rewardsSO[btnNum].stepAmount && !rewardsSO[btnNum].claimed)
+        if(TestPedometer.instance.stepCount >= rewardsSO[btnNum].stepAmount)
         {
             Check();
             rewardsSO[btnNum].claimed = true;
             rewardBtns[btnNum].interactable = false;
-            Debug.Log("Got reward" + btnNum);
+            TestPedometer.instance.stepCount -= rewardsSO[btnNum].stepAmount;
+            TestPedometer.instance.stepsTxt.text = TestPedometer.instance.stepCount.ToString();
+
+            if (TestPedometer.instance.stepCount >= 1000)
+            {
+                int amountInK = TestPedometer.instance.stepCount / 1000;
+                TestPedometer.instance.stepsTxt.text = amountInK.ToString("0.#") + "K";
+            }
+            else
+            {
+                TestPedometer.instance.stepsTxt.text = TestPedometer.instance.stepCount.ToString();
+            }
         }
     }
 
@@ -59,7 +71,7 @@ public class RewardManager : MonoBehaviour
             rewardTemplates[i].stepAmountTxt.text = rewardsSO[i].stepAmount.ToString();
             rewardTemplates[i].rewardAmountText.text = rewardsSO[i].rewardAmount.ToString();
 
-            if(rewardsSO[i].stepAmount >= 3000)
+            if(rewardsSO[i].stepAmount >= 1000)
             {
                 int amountInK = rewardsSO[i].stepAmount / 1000;
                 rewardTemplates[i].stepAmountTxt.text = amountInK.ToString("0.#") + "K";

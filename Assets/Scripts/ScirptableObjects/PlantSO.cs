@@ -12,6 +12,7 @@ public class PlantSO : ScriptableObject
     [Header("Shop Template")]
     public string plantTitle;
     public int buyPrice;
+    public int unlockPrice;
     public int sellPrice;
     public Sprite icon;
     public Sprite lockIcon;
@@ -23,10 +24,8 @@ public class PlantSO : ScriptableObject
     public int growthStage;
     public float growthTime;
     public int maxSize;
-    //public int worthPer;
 
     [Header("Level to be Unlocked")]
     public int level;
-
-    //public int quantity;
+    public bool unlocked;
 }

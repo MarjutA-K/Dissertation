@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Red Marigold
   m_EditorClassIdentifier: 
   plantTitle: Red Marigold
-  buyPrice: 5
+  buyPrice: 15
+  unlockPrice: 5
   sellPrice: 2
   icon: {fileID: 1671481884, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
@@ -28,4 +29,5 @@ MonoBehaviour:
   growthStage: -1
   growthTime: 12
   maxSize: 5
-  level: 2
+  level: 42
+  unlocked: 1

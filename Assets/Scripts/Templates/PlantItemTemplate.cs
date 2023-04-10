@@ -12,8 +12,7 @@ public class PlantItemTemplate : MonoBehaviour
     public TMP_Text priceTxt;
     public TMP_Text btnTxt;
 
-    public GameObject priceTxtActive;
-    public GameObject titleActive;
-
     public Image icon;
+    public Image currencyIcon;
+    public Image diamondsIcon;
 }

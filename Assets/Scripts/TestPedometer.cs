@@ -8,8 +8,17 @@ using UnityEngine.UI;
 public class TestPedometer : MonoBehaviour
 {
     public static TestPedometer instance;
+    private ShopManager shopManager;
+    [SerializeField]
+    public TempLoadSave _saveManager;
 
     public TMP_Text stepsTxt;
+    public TMP_Text currentStorageAmountTxt;
+    public TMP_Text storageAmountTxt;
+
+    public Button upgradeBtn;
+    public TMP_Text priceTxt;
+
     public float stepThreshold = 0.5f;
     private float lowPassFilterFactor = 0.2f;
     private float[] lowPassResults = new float[3];
@@ -17,14 +26,23 @@ public class TestPedometer : MonoBehaviour
     private Vector3 prevRotation;
     public int stepCount = 0;
 
+    public int currenStoragetAmount;
+    public int purchasePrice;
+
     public Slider slider;
-    //public int currentValue = 0;
+    public Slider storageSlider;
+
     public int maxValue = 10000;
 
     private bool reachedTarget1;
     private bool reachedTarget2;
     private bool reachedTarget3;
     private bool reachedTarget4;
+
+    public GameObject maxTxt;
+    public GameObject coinIcon;
+    public GameObject plusSign;
+    public GameObject upgradeAmount;
 
     private void Awake()
     {
@@ -40,20 +58,33 @@ public class TestPedometer : MonoBehaviour
 
     private void Start()
     {
+        storageSlider.maxValue = 50000;
+        maxValue = 10000;
+        purchasePrice = 1000;
+
         stepsTxt.text = stepCount.ToString();
-        slider.maxValue = maxValue;
+        currentStorageAmountTxt.text = maxValue.ToString();
+        priceTxt.text = purchasePrice.ToString();
+        maxTxt.SetActive(false);
 
         reachedTarget1 = true;
         reachedTarget2 = true;
         reachedTarget3 = true;
         reachedTarget4 = true;
+
+        shopManager = FindObjectOfType<ShopManager>();
     }
 
     void Update()
     {
         StepsTaken();
+        CheckPurchable();
+        UpdateUI();
+
+        slider.maxValue = maxValue;
 
         slider.value = stepCount;
+        storageSlider.value = maxValue; 
 
         switch (stepCount)
         {
@@ -61,7 +92,7 @@ public class TestPedometer : MonoBehaviour
                 if (reachedTarget1)
                 {
                     reachedTarget1 = false;
-                    XPManager.instance.AddXP(100);
+                    XPManager.instance.AddXP(500);
                 }
                 Debug.Log("500 steps");
                 break;
@@ -69,7 +100,7 @@ public class TestPedometer : MonoBehaviour
                 if (reachedTarget2)
                 {
                     reachedTarget2 = false;
-                    XPManager.instance.AddXP(200);
+                    XPManager.instance.AddXP(500);
                 }
                 Debug.Log("1000 steps");
                 break;
@@ -77,7 +108,7 @@ public class TestPedometer : MonoBehaviour
                 if (reachedTarget3)
                 {
                     reachedTarget3 = false;
-                    XPManager.instance.AddXP(300);
+                    XPManager.instance.AddXP(500);
                 }
                 Debug.Log("5000 steps");
                 break;
@@ -95,10 +126,55 @@ public class TestPedometer : MonoBehaviour
         }
     }
 
+    private void UpdateUI()
+    {
+        if (maxValue >= 10000)
+        {
+            int amountInK = maxValue / 1000;
+            storageAmountTxt.text = amountInK.ToString("0.#") + "K";
+        }
+
+        if (maxValue == 50000)
+        {
+            upgradeBtn.interactable = false;
+            maxTxt.SetActive(true);
+            priceTxt.gameObject.SetActive(false);
+            coinIcon.SetActive(false);
+            plusSign.SetActive(false);
+            upgradeAmount.SetActive(false);
+        }
+    }
+
+    public void UpgradeStorage()
+    {
+        if (shopManager.money >= purchasePrice)
+        {            
+            shopManager.money = shopManager.money - purchasePrice;
+            shopManager.moneyTxt.text = shopManager.money.ToString();
+            maxValue += 10000;
+            currentStorageAmountTxt.text = maxValue.ToString();
+            purchasePrice *= 2;
+            priceTxt.text = purchasePrice.ToString();
+            _saveManager.moneyChanged.Invoke(shopManager.money);
+        }
+    }
+
+    public void CheckPurchable()
+    {
+        if (shopManager.money >= purchasePrice)
+        {
+            upgradeBtn.interactable = true;
+        }
+        else
+        {
+            upgradeBtn.interactable = false;
+        }
+    }
+
     public void AddSteps()
     {
-        //stepCount += 500;
-        stepCount++;
+        stepCount += 500;
+        //stepCount++;
         stepsTxt.text = stepCount.ToString();
 
         if (stepCount >= 1000)
@@ -135,7 +211,6 @@ public class TestPedometer : MonoBehaviour
 
             if(stepCount >= 1000)
             {
-                Debug.Log("Hello");
                 int amountInK = stepCount / 1000;
                 stepsTxt.text = amountInK.ToString("0.#") + "K";
             }

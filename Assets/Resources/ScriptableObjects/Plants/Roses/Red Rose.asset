@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantTitle: Red Rose
   buyPrice: 1
+  unlockPrice: 0
   sellPrice: 2
   icon: {fileID: -1425948438, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
@@ -29,3 +30,4 @@ MonoBehaviour:
   growthTime: 3
   maxSize: 5
   level: 0
+  unlocked: 1

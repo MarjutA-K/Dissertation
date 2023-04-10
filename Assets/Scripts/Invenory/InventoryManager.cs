@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    public PlantSO[] startVegetables;
+    public PlantSO[] startPlant;
 
     public int maxStackedItems = 4;
     public InventorySlot[] inventorySlots;
@@ -23,9 +23,9 @@ public class InventoryManager : MonoBehaviour
     {
         ChangeSelectedSlot(0);
 
-        foreach(var vegetable in startVegetables)
+        foreach(var plant in startPlant)
         {
-            AddItem(vegetable);
+            AddItem(plant);
         }
     }
 
@@ -63,7 +63,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.plant == plant 
                 && itemInSlot.count < maxStackedItems
-                /*&& itemInSlot.vegetable.stackable == true*/)
+                /*&& itemInSlot.plant.stackable == true*/)
             {
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();

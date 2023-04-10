@@ -40,6 +40,7 @@ public class ShopManager : MonoBehaviour
 
         LoadPanels();
         CheckPurchaseable();
+        CheckLockedItem();
 
         shopIsActive = shopObject.activeSelf;
     }
@@ -47,6 +48,7 @@ public class ShopManager : MonoBehaviour
     private void Update()
     {
         CheckPurchaseable();
+        CheckLockedItem();
         LoadPanels();
 
         if (shopIsActive != shopObject.activeSelf)
@@ -70,17 +72,11 @@ public class ShopManager : MonoBehaviour
         _saveManager.diamondsChanged.Invoke(diamonds);
     }
 
-    public void CheckPurchableDiamonds()
-    {
-        //
-    }
-
-    // Check if Item is purchable
-   public void CheckPurchaseable()
+    public void CheckLockedItem()
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
-            if (money >= shopItemsSO[i].buyPrice && _xp.level >= shopItemsSO[i].level)
+            if (diamonds >= shopItemsSO[i].unlockPrice && _xp.level >= shopItemsSO[i].level)
             {
                 purchasaBtns[i].interactable = true;
             }
@@ -91,13 +87,40 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void UnlockItem(int btnNUm)
+    {
+        if(diamonds >= shopItemsSO[btnNUm].unlockPrice && !shopItemsSO[btnNUm].unlocked)
+        {
+            shopItemsSO[btnNUm].unlocked = true;
+            diamonds = diamonds - shopItemsSO[btnNUm].unlockPrice;
+            diamondsTxt.text = diamonds.ToString();
+            _saveManager.diamondsChanged.Invoke(diamonds);
+        }
+    }
+
+    // Check if Item is purchable
+   public void CheckPurchaseable()
+    {
+        for (int i = 0; i < shopItemsSO.Length; i++)
+        {
+            if (money >= shopItemsSO[i].buyPrice && shopItemsSO[i].unlocked)
+            {
+                purchasaBtns[i].interactable = true;
+            }
+            else if (money <= shopItemsSO[i].buyPrice && shopItemsSO[i].unlocked)
+            {
+                purchasaBtns[i].interactable = false;
+            }
+        }
+    }
+
     public void PurchaseItem(int btnNo)
     {
-        if (money >= shopItemsSO[btnNo].buyPrice)
+        if (money >= shopItemsSO[btnNo].buyPrice && shopItemsSO[btnNo].unlocked)
         {
             money = money - shopItemsSO[btnNo].buyPrice;
             moneyTxt.text = money.ToString();
-            CheckPurchaseable();
+            //CheckPurchaseable();
             _saveManager.moneyChanged.Invoke(money);
             BoughtPlant(btnNo);
         }
@@ -106,23 +129,25 @@ public class ShopManager : MonoBehaviour
     public void LoadPanels()
     {
         for(int i = 0; i < shopItemsSO.Length; i++)
-        {            
-            shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
+        {                       
 
-            if (_xp.level >= shopItemsSO[i].level)
+            if (shopItemsSO[i].unlocked)
             {         
                 shopPanels[i].priceTxt.text = shopItemsSO[i].buyPrice.ToString();
-                shopPanels[i].priceTxtActive.SetActive(true);
-                shopPanels[i].titleActive.SetActive(true);
+                shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
                 shopPanels[i].icon.sprite = shopItemsSO[i].icon;
+                shopPanels[i].currencyIcon.gameObject.SetActive(true);
+                shopPanels[i].diamondsIcon.gameObject.SetActive(false);
 
                 achievementManager.UnlockItemsAchievement(1);
             }
             else
             {
+                shopPanels[i].titleTxt.text = "Reach level " + shopItemsSO[i].level.ToString();
                 shopPanels[i].icon.sprite = shopItemsSO[i].lockIcon;
-                shopPanels[i].priceTxtActive.SetActive(false);
-                shopPanels[i].titleActive.SetActive(false);
+                shopPanels[i].priceTxt.text = shopItemsSO[i].unlockPrice.ToString();
+                shopPanels[i].diamondsIcon.gameObject.SetActive(true);
+                shopPanels[i].currencyIcon.gameObject.SetActive(false);
             }
         }
     }

@@ -17,8 +17,8 @@ public class TabManager : MonoBehaviour
     public GameObject steps;
     public GameObject orders;
     public GameObject achievements;
-
-    //public bool interactable;
+    public GameObject upgrade;
+    public GameObject stepRewards;
 
     private void Awake()
     {
@@ -30,11 +30,6 @@ public class TabManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        //interactable = true;
     }
 
     public void OpenShop()
@@ -49,65 +44,6 @@ public class TabManager : MonoBehaviour
     {
         shop.SetActive(false);
     }
-
-    /*public void OpenActivities()
-    {
-        if (activities != null)
-        {
-            activities.SetActive(true);
-            interactable = false;
-        }
-    }
-
-    public void CloseActivities()
-    {
-        activities.SetActive(false);
-        interactable = true;
-    }
-
-    public void OpenWorkoutView()
-    {
-        if(workout != null)
-        {
-            workout.SetActive(true);
-        }
-        
-    }
-
-    public void CloseWorkoutView()
-    {
-        workout.SetActive(false);
-    }
-
-    public void OpenExerciseDescr()
-    {
-        exerciseDescription.SetActive(true);
-    }
-
-    public void CloseExerciseDescr()
-    {
-        exerciseDescription.SetActive(false);
-    }
-
-    public void OpenExerciseTimerView()
-    {
-        exerciseTimer.SetActive(true);
-    }
-
-    public void CloseExerciseTimerView()
-    {
-        exerciseTimer.SetActive(false);
-    }
-
-    public void showCongratsMsg()
-    {
-        congratsMsg.SetActive(true);
-    }
-
-    public void CloseCongratsMsg()
-    {
-        congratsMsg.SetActive(false);
-    }*/
 
     public void OpenInventory()
     {
@@ -159,5 +95,20 @@ public class TabManager : MonoBehaviour
     public void CloseAchievements()
     {
         achievements.SetActive(false);
+    }
+
+    public void OpenStorageUpgrade()
+    {
+        if (upgrade != null)
+        {
+            upgrade.SetActive(true);
+            stepRewards.SetActive(false);
+        }
+    }
+
+    public void CloseStorageUpgrade()
+    {
+        upgrade.SetActive(false);
+        stepRewards.SetActive(true);
     }
 }
