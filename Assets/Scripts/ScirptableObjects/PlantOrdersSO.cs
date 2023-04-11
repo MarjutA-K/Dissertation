@@ -9,6 +9,6 @@ public class PlantOrdersSO : ScriptableObject
     public int quantity;
     public PlantSO[] plantsRequired;
     public int[] quantityRequired;
-    //public int reward;
+    public int rewardAmount;
     public Sprite[] icon;
 }

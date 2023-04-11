@@ -41,4 +41,9 @@ public class Player : MonoBehaviour
     {
         shopManager.AddDiamonds(reward.rewardAmount);
     }
+
+    public void OrderReward(PlantOrdersSO reward)
+    {
+        shopManager.AddDiamonds(reward.rewardAmount);
+    }
 }

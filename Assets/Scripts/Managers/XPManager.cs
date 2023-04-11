@@ -5,11 +5,14 @@ using TMPro;
 
 public class XPManager : MonoBehaviour
 {
-    public TextMeshProUGUI currentXPTxt, currentXPTxt1, targetXPTxt, targetXPTxt1, levelTxt, levelTxt1, levelTxt2;
+    public TextMeshProUGUI currentXPTxt, targetXPTxt, levelTxt, levelTxt1, levelTxt2, rewardTxt;
     public int currentXP, targetXP, level;
+    public int reward;
 
     public static XPManager instance;
     private ShopManager shopManager;
+
+    public GameObject levelReachedNote;
 
     [SerializeField]
     TempLoadSave saveManager;
@@ -28,15 +31,20 @@ public class XPManager : MonoBehaviour
 
     private void Start()
     {
-        currentXPTxt.text = currentXP.ToString();
-        currentXPTxt1.text = currentXP.ToString();
+        currentXPTxt.text = currentXP.ToString();     
         targetXPTxt.text = targetXP.ToString();
-        targetXPTxt1.text = targetXP.ToString();
         levelTxt.text = level.ToString();
-        levelTxt1.text = level.ToString();
-        levelTxt2.text = level.ToString();
+
+        levelReachedNote.SetActive(false);
+
+        reward = 50;
 
         shopManager = FindObjectOfType<ShopManager>();
+    }
+
+    public void CloseNote()
+    {
+        levelReachedNote.SetActive(false);
     }
 
     public void AddXP(int xp)
@@ -50,16 +58,22 @@ public class XPManager : MonoBehaviour
             level++;
             // Target XP higher each time player levels up
             targetXP += targetXP / 20;
+            reward *= 2;
+            shopManager.money = shopManager.money + reward;
+            shopManager.moneyTxt.text = shopManager.money.ToString();
 
             levelTxt.text = level.ToString();
             levelTxt1.text = level.ToString();
-            levelTxt2.text = level.ToString();
+            levelTxt2.text = "YOU'VE REACHED LEVEL " + level.ToString();
+            rewardTxt.text = reward.ToString();
             targetXPTxt.text = targetXP.ToString();
-            targetXPTxt1.text = targetXP.ToString();
+
+            levelReachedNote.SetActive(true);
+
+            saveManager.moneyChanged.Invoke(shopManager.money);
         }
 
         currentXPTxt.text = currentXP.ToString();
-        currentXPTxt1.text = currentXP.ToString();
         saveManager.xpChanged.Invoke(currentXP, level);
     }
 }

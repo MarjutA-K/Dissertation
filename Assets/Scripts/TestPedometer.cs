@@ -13,6 +13,7 @@ public class TestPedometer : MonoBehaviour
     public TempLoadSave _saveManager;
 
     public TMP_Text stepsTxt;
+    public TMP_Text stepAmountTxt;
     public TMP_Text currentStorageAmountTxt;
     public TMP_Text storageAmountTxt;
 
@@ -25,8 +26,8 @@ public class TestPedometer : MonoBehaviour
     private Vector3 prevAcceleration;
     private Vector3 prevRotation;
     public int stepCount = 0;
+    public int steps;
 
-    public int currenStoragetAmount;
     public int purchasePrice;
 
     public Slider slider;
@@ -43,6 +44,8 @@ public class TestPedometer : MonoBehaviour
     public GameObject coinIcon;
     public GameObject plusSign;
     public GameObject upgradeAmount;
+
+    public int addSteps;
 
     private void Awake()
     {
@@ -63,6 +66,7 @@ public class TestPedometer : MonoBehaviour
         purchasePrice = 1000;
 
         stepsTxt.text = stepCount.ToString();
+        stepAmountTxt.text = steps.ToString();
         currentStorageAmountTxt.text = maxValue.ToString();
         priceTxt.text = purchasePrice.ToString();
         maxTxt.SetActive(false);
@@ -78,6 +82,7 @@ public class TestPedometer : MonoBehaviour
     void Update()
     {
         StepsTaken();
+        StepsTaken1();
         CheckPurchable();
         UpdateUI();
 
@@ -86,7 +91,7 @@ public class TestPedometer : MonoBehaviour
         slider.value = stepCount;
         storageSlider.value = maxValue; 
 
-        switch (stepCount)
+        switch (steps)
         {
             case 500:
                 if (reachedTarget1)
@@ -121,7 +126,6 @@ public class TestPedometer : MonoBehaviour
                 }
                 break;
             default:
-                //Debug.Log("Unknown level");
                 break;
         }
     }
@@ -173,18 +177,23 @@ public class TestPedometer : MonoBehaviour
 
     public void AddSteps()
     {
-        stepCount += 500;
-        //stepCount++;
-        stepsTxt.text = stepCount.ToString();
+        steps += addSteps;
+        stepAmountTxt.text = steps.ToString();
 
-        if (stepCount >= 1000)
-        {
-            int amountInK = stepCount / 1000;
-            stepsTxt.text = amountInK.ToString("0.#") + "K";
-        }
-        else
-        {
+        if (stepCount < maxValue)
+        {     
+            stepCount += addSteps;
             stepsTxt.text = stepCount.ToString();
+
+            if (stepCount >= 1000)
+            {
+                int amountInK = stepCount / 1000;
+                stepsTxt.text = amountInK.ToString("0.#") + "K";
+            }
+            else
+            {
+                stepsTxt.text = stepCount.ToString();
+            }
         }
     }
 
@@ -206,10 +215,47 @@ public class TestPedometer : MonoBehaviour
         // Check if step was taken
         if (deltaAcceleration.sqrMagnitude > stepThreshold && deltaRotation.sqrMagnitude < 0.05f)
         {
+            steps++;
+            stepsTxt.text = stepCount.ToString();
+
+            if(steps >= 1000)
+            {
+                int amountInK = stepCount / 1000;
+                stepAmountTxt.text = amountInK.ToString("0.#") + "K";
+            }
+            else
+            {
+                stepAmountTxt.text = stepCount.ToString();
+            }
+        }
+
+        // Update previous values
+        prevAcceleration = acceleration;
+        prevRotation = rawRotation;
+    }
+
+    private void StepsTaken1()
+    {
+        Vector3 rawAcceleration = Input.acceleration;
+        Vector3 rawRotation = Input.gyro.rotationRateUnbiased;
+
+        // Apply low-pass filter to accelerometer data
+        lowPassResults[0] = rawAcceleration.x * lowPassFilterFactor + lowPassResults[0] * (1 - lowPassFilterFactor);
+        lowPassResults[1] = rawAcceleration.y * lowPassFilterFactor + lowPassResults[1] * (1 - lowPassFilterFactor);
+        lowPassResults[2] = rawAcceleration.z * lowPassFilterFactor + lowPassResults[2] * (1 - lowPassFilterFactor);
+        Vector3 acceleration = new Vector3(lowPassResults[0], lowPassResults[1], lowPassResults[2]);
+
+        // Calculate delta acceleration and rotation
+        Vector3 deltaAcceleration = acceleration - prevAcceleration;
+        Vector3 deltaRotation = rawRotation - prevRotation;
+
+        // Check if step was taken
+        if (deltaAcceleration.sqrMagnitude > stepThreshold && deltaRotation.sqrMagnitude < 0.05f)
+        {
             stepCount++;
             stepsTxt.text = stepCount.ToString();
 
-            if(stepCount >= 1000)
+            if (stepCount >= 1000)
             {
                 int amountInK = stepCount / 1000;
                 stepsTxt.text = amountInK.ToString("0.#") + "K";

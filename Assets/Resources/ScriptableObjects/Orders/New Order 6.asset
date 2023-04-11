@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f96b1c7321f5f743b4f97a93d3a52a5, type: 2}
   - {fileID: 11400000, guid: 60e429852d054234b8ee79b529a55180, type: 2}
   quantityRequired: 010000000100000001000000
+  rewardAmount: 2
   icon:
   - {fileID: 823101043, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: -146041775, guid: 58e34bda4339bac47b055b199767dd19, type: 3}

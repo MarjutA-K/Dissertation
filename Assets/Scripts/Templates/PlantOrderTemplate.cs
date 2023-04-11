@@ -10,7 +10,7 @@ public class PlantOrderTemplate : MonoBehaviour
     public TMP_Text orderTitleTxt;
     public TMP_Text[] quantityRequiredTxt;
     public TMP_Text[] currentQuantityTxt;
-    //public TMP_Text rewardTxt;
+    public TMP_Text rewardTxt;
     public Image[] image;
 
     private void Start()
@@ -26,6 +26,7 @@ public class PlantOrderTemplate : MonoBehaviour
     public void UpdateUI()
     {
         orderTitleTxt.text = order.orderTitle;
+        rewardTxt.text = order.rewardAmount.ToString();
 
         for (int i = 0; i < order.plantsRequired.Length; i++)
         {
@@ -33,7 +34,7 @@ public class PlantOrderTemplate : MonoBehaviour
             Debug.Log(order.quantity);
             currentQuantityTxt[i].text = order.quantity.ToString();
             quantityRequiredTxt[i].text = order.quantityRequired[i].ToString();
-            image[i].sprite = order.icon[i];
+            image[i].sprite = order.icon[i];         
         }
     }
 }

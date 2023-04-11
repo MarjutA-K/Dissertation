@@ -361,7 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ca6d886bd040db4094470bf9ebaa4ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8881fd462b1792849b42382c7f68697f, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -387,8 +387,6 @@ MonoBehaviour:
   titleTxt: {fileID: 7077086115178209655}
   priceTxt: {fileID: 1633803418529744370}
   btnTxt: {fileID: 6988436651611613552}
-  priceTxtActive: {fileID: 7024623994951222227}
-  titleActive: {fileID: 3244014598147647009}
   icon: {fileID: 5887655530905596324}
   currencyIcon: {fileID: 1096603779636396248}
   diamondsIcon: {fileID: 9180154256083475999}
@@ -439,6 +437,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: PurchaseItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: UnlockItem
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

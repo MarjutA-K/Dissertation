@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GrowController : MonoBehaviour
 {
@@ -19,16 +20,16 @@ public class GrowController : MonoBehaviour
     public float timer;
 
     public bool isGrowing;
-    private int growthStage;
+    public int growthStage;
     private float growthTime;
-    private int maxSize;
+    public int maxSize;
 
     public bool orderCompleted;
 
     private OrderInventory orderInventory;
     AchievementManager achievementManager;
 
-    //GameObject go;
+    public Slider slider;
 
     private void Start()
     {
@@ -37,10 +38,12 @@ public class GrowController : MonoBehaviour
         growthTime = plant.growthTime;
         maxSize = plant.maxSize;
 
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        slider.gameObject.SetActive(false);
 
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         orderInventory = FindObjectOfType<OrderInventory>();
         achievementManager = FindObjectOfType<AchievementManager>();
+
     }
 
     private void Update()
@@ -54,6 +57,7 @@ public class GrowController : MonoBehaviour
         }
 
         ClickPlot();
+        slider.maxValue = maxSize;
     }
 
     private void Growing()
@@ -69,9 +73,9 @@ public class GrowController : MonoBehaviour
                 sr.sprite = plant.growthSprite[growthStage];
 
                 isGrowing = false;
-                //DropItems();
                 orderInventory.AddPlant(plant);
             }
+            slider.value = growthStage;
         }
 
         // Change apperance
@@ -80,11 +84,14 @@ public class GrowController : MonoBehaviour
             if (isGrowing)
             {
                 sr.sprite = plant.growthSprite[growthStage];
+               
             }
         }
         else
         {
             sr.sprite = emptyPlot;
+            slider.value = 0f;
+            slider.gameObject.SetActive(false);
         }
     }
 
@@ -109,8 +116,10 @@ public class GrowController : MonoBehaviour
                     growthTime = plant.growthTime;
                     maxSize = plant.maxSize;           
                     isGrowing = true;
-                
+
                     achievementManager.CheckAchievement(0);
+
+                    slider.gameObject.SetActive(true);
                 }
             }
         }
@@ -156,7 +165,7 @@ public class GrowController : MonoBehaviour
                         plot.plant = null;
                         count--;
 
-                        if(count == 0)
+                        if (count == 0)
                         {
                             break;
                         }
@@ -167,28 +176,8 @@ public class GrowController : MonoBehaviour
             Debug.Log("Order completed");
             OrderManager orderManager = FindObjectOfType<OrderManager>();
             orderManager.CompleteOrder(order);
-
-            /*GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
-
-            foreach (GrowController plot in plotGameObjects)
-            {
-                if (order.plantsRequired.Contains(plot.plant))
-                {
-                    plot.sr.sprite = plot.emptyPlot;
-                    plot.isGrowing = false;
-                    plot.growthStage = -1;
-                    plot.plant = null;
-                    Debug.Log("wot");
-                    //break;
-                }
-            }*/
         }        
     }
-
-    /*void DropItems()
-    {
-        orderInventory.AddPlant(plant);
-    }*/
 }
 
 /*public void CheckOrder()

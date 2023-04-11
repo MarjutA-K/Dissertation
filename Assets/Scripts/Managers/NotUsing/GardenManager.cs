@@ -8,7 +8,7 @@ using TMPro;
 public class GardenManager : MonoBehaviour
 {
     public PlantItemTemplate selectPlant;
-    public ItemTemplate selectItem;
+    //public ItemTemplate selectItem;
 
     public static GardenManager instance;
 
@@ -57,12 +57,12 @@ public class GardenManager : MonoBehaviour
         if (selectPlant == newPlant)
         {
             CheckSelection();
-            CheckItemSelection();
+            //CheckItemSelection();
         }
         else
         {
             CheckSelection();
-            CheckItemSelection();
+            //CheckItemSelection();
             selectPlant = newPlant;
             //selectPlant.btnImage.color = cancelColor;
             selectPlant.btnTxt.text = "Cancel";
@@ -70,7 +70,7 @@ public class GardenManager : MonoBehaviour
         }
     }
 
-    public void SelectItem(ItemTemplate newItem)
+    /*public void SelectItem(ItemTemplate newItem)
     {
         if (selectItem == newItem)
         {
@@ -87,7 +87,7 @@ public class GardenManager : MonoBehaviour
             selectItem.btnTxt.text = "Cancel";
             isPlacing = true;
         }
-    }
+    }*/
 
     public void SelectTool(int toolNumber)
     {
@@ -95,13 +95,13 @@ public class GardenManager : MonoBehaviour
         {
             //deselect
             CheckSelection();
-            CheckItemSelection();
+            //CheckItemSelection();
         }
         else
         {
             //select tool number and check to see if anything was also selected
             CheckSelection();
-            CheckItemSelection();
+            //CheckItemSelection();
             isSelecting = true;
             selectedTool = toolNumber;
             buttonsImg[toolNumber - 1].sprite = selectedButton;
@@ -132,7 +132,7 @@ public class GardenManager : MonoBehaviour
         }
     }
 
-    void CheckItemSelection()
+    /*void CheckItemSelection()
     {
         if (isPlacing)
         {
@@ -153,7 +153,7 @@ public class GardenManager : MonoBehaviour
             isSelecting = false;
             selectedTool = 0;
         }
-    }
+    }*/
 
     public void AddMoney(int _money)
     {
