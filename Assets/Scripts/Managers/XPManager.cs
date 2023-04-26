@@ -15,7 +15,7 @@ public class XPManager : MonoBehaviour
     public GameObject levelReachedNote;
 
     [SerializeField]
-    TempLoadSave saveManager;
+    LoadSave saveManager;
 
     private void Awake()
     {

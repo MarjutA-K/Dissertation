@@ -21,7 +21,7 @@ public class GrowController : MonoBehaviour
 
     public bool isGrowing;
     public int growthStage;
-    private float growthTime;
+    public float growthTime;
     public int maxSize;
 
     public bool orderCompleted;
@@ -33,22 +33,25 @@ public class GrowController : MonoBehaviour
 
     private void Start()
     {
-        isGrowing = plant.isGrowing;
-        growthStage = plant.growthStage;
-        growthTime = plant.growthTime;
-        maxSize = plant.maxSize;
+       isGrowing = plant.isGrowing;
+       growthStage = plant.growthStage;
+       growthTime = plant.growthSteps;
 
-        slider.gameObject.SetActive(false);
+       maxSize = plant.maxSize;   
+        
+        /*if(plant.plantTitle == "Black Rose" || plant == null)
+        {
+            slider.gameObject.SetActive(false);
+        }*/
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         orderInventory = FindObjectOfType<OrderInventory>();
         achievementManager = FindObjectOfType<AchievementManager>();
-
     }
 
     private void Update()
     {
-        Growing();
+        Growing();        
 
         // SEEMS TO WORK NOW?? -> Prevents clicking thru UI elements BUT stops gameobjects from updating in real time when clicking a button (Might not be a problem when using pedometer?)
         if (EventSystem.current.IsPointerOverGameObject())
@@ -63,7 +66,7 @@ public class GrowController : MonoBehaviour
     private void Growing()
     {
         // Grow plant
-        if (TestPedometer.instance.stepCount >= growthTime * growthStage && isGrowing)
+        if (StepTracker.instance.stepCount >= growthTime * growthStage && isGrowing)
         {
             growthStage++;
 
@@ -79,21 +82,39 @@ public class GrowController : MonoBehaviour
         }
 
         // Change apperance
-        if (growthStage != -1)
+        if (growthStage < 0)
+        {
+            sr.sprite = emptyPlot;
+            slider.value = 0f;
+            slider.gameObject.SetActive(false);            
+        }
+        else
         {
             if (isGrowing)
             {
                 sr.sprite = plant.growthSprite[growthStage];
-               
             }
         }
-        else
-        {
-            sr.sprite = emptyPlot;
-            slider.value = 0f;
-            slider.gameObject.SetActive(false);
-        }
+        //PatchManager.instance.RefreshPatches();
     }
+
+    /*public void LoadFromData(PlantSO loaded, int _growStage, float _growTime)
+    {
+        plant = loaded;
+        growthStage = _growStage;
+        growthTime = _growTime;
+   
+        isGrowing = plant.isGrowing;
+        sr.sprite = plant.growthSprite[_growStage];
+
+        if(_growStage >= plant.maxSize)
+        {
+            slider.gameObject.SetActive(false);
+            //orderInventory.AddPlant(plant);
+        }
+
+        slider.gameObject.SetActive(true);
+    }*/
 
     public void ClickPlot()
     {
@@ -101,6 +122,7 @@ public class GrowController : MonoBehaviour
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+            
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null && hit.collider.gameObject == gameObject)
@@ -113,13 +135,15 @@ public class GrowController : MonoBehaviour
 
                     isGrowing = plant.isGrowing;
                     growthStage = plant.growthStage;
-                    growthTime = plant.growthTime;
+                    growthTime = plant.growthSteps;
                     maxSize = plant.maxSize;           
                     isGrowing = true;
 
                     achievementManager.CheckAchievement(0);
 
                     slider.gameObject.SetActive(true);
+                    PatchManager.instance.RefreshPatches();
+                    
                 }
             }
         }
@@ -170,145 +194,16 @@ public class GrowController : MonoBehaviour
                             break;
                         }
                     }
+                   
                 }
+                
             }
 
             Debug.Log("Order completed");
             OrderManager orderManager = FindObjectOfType<OrderManager>();
             orderManager.CompleteOrder(order);
-        }        
-    }
-}
-
-/*public void CheckOrder()
-  {
-      OrderManager orderManager = FindObjectOfType<OrderManager>();
-      List<PlantOrdersSO> activeOrders = orderManager.GetActiveOrders();
-
-      foreach (PlantOrdersSO order in activeOrders)
-      {
-          orderCompleted = true;
-
-          for (int i = 0; i < order.plantsRequired.Length; i++)
-          {
-              if (!orderInventory.HasPlant(order.plantsRequired[i]))
-              {
-                  orderCompleted = false;
-                  break;
-              }
-          }
-
-          if (orderCompleted)
-          {       
-              for (int i = 0; i < order.plantsRequired.Length; i++)
-              {
-                  orderInventory.RemovePlant(order.plantsRequired[i]);
-              }
-
-              Debug.Log("Order completed");
-              activeOrders.Remove(order);
-              //sr.sprite = emptyPlot;     
-              break;
-          }
-      }
-  }*/
-
-/*void DropItems()
-{
-    //go = new GameObject(plant.name + "Drop");
-    //go.tag = "Drop";
-    //DropController dc = go.AddComponent<DropController>();
-    //dc.worth = vg.worthPer;
-
-    //CircleCollider2D col = go.AddComponent<CircleCollider2D>();
-    //col.isTrigger = true;
-    //SpriteRenderer ren = go.AddComponent<SpriteRenderer>();
-    //ren.sprite = plant.finalProduct;
-    //ren.sortingOrder = 1;
-    //go.transform.position = new Vector3(transform.position.x, transform.position.y, -2);
-
-    //objectsToDestroy.AddPlant(go);
-
-    orderInventory.AddPlant(plant);
-    //sr.sprite = emptyPlot;
-
-    CheckOrder();
-}*/
-
-
-/*foreach (GameObject obj in objectsToDestroy.objects)
-{
-    Destroy(obj);
-    objectsToDestroy.objects.Clear();
-}*/
-
-
-/*foreach(PlantOrdersSO order in activeOrders)
-       {
-           if(orderInventory.HasPlant(plant) && System.Array.Exists(order.plantsRequired, p => p == plant))
-           {
-               int plantIndex = System.Array.IndexOf(order.plantsRequired, plant);
-               order.quantityRequired[plantIndex] -= 1;
-               if(order.quantityRequired[plantIndex] == 0)
-               {
-                   Debug.Log("Order completed");
-                   break;
-               }
-               else
-               {
-                   Debug.Log("Order NOT completed");
-               }
-           }
-       }*/
-
-
-/*public void GrowTimer()
-{
-    timer += Time.deltaTime;
-
-    // Grow plant
-    if (timer >= growthTime && isGrowing)
-    {
-        sr.color = new Color(255, 255, 255, 255);
-
-        timer = 0f;
-        growthStage++;
-
-        if (growthStage >= maxSize)
-        {
-            growthStage = maxSize;
-            sr.sprite = plant.growthSprite[growthStage];
-            isGrowing = false;
-            StartCoroutine(FinishGrowing());
         }
+        //PatchManager.instance.RefreshPatches(); 
     }
-
-    // Change apperance
-    if (growthStage != -1)
-    {
-        if (isGrowing)
-        {
-            sr.sprite = plant.growthSprite[growthStage];
-        }
-    }
-    else
-    {
-        sr.sprite = emptyPlot;
-    }
-}*/
-
-/*IEnumerator FinishGrowing()
-{
-    yield return new WaitForSeconds(growthTime);
-    //sr.sprite = emptyPlot;
-    //DropItems();
-}*/
-
-/*void DestroyObjects()
-{
-foreach (GameObject obj in objectsToDestroy)
-{
-    Destroy(obj);
+    
 }
-objectsToDestroy.Clear();
-}*/

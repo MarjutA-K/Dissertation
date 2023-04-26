@@ -13,7 +13,6 @@ public class PlantSO : ScriptableObject
     public string plantTitle;
     public int buyPrice;
     public int unlockPrice;
-    public int sellPrice;
     public Sprite icon;
     public Sprite lockIcon;
 
@@ -22,7 +21,7 @@ public class PlantSO : ScriptableObject
     public Sprite[] growthSprite;
     public bool isGrowing = true;
     public int growthStage;
-    public float growthTime;
+    public int growthSteps;
     public int maxSize;
 
     [Header("Level to be Unlocked")]

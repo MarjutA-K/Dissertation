@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
     public InventoryManager InventoryManager;
     private AchievementManager achievementManager;
     [SerializeField]
-    public TempLoadSave _saveManager;
+    public LoadSave _saveManager;
 
     public int money;
     public int diamonds;
@@ -182,10 +182,10 @@ public class ShopManager : MonoBehaviour
 
     public void UseSelectedPlant()
     {
-        PlantSO receivedVegetable = InventoryManager.GetSelectedPlant(true);
-        if (receivedVegetable != null)
+        PlantSO receivedPlant = InventoryManager.GetSelectedPlant(true);
+        if (receivedPlant != null)
         {
-            Debug.Log("Used item: " + receivedVegetable);
+            Debug.Log("Used item: " + receivedPlant);
         }
         else
         {

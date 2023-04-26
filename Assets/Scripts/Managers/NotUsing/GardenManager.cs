@@ -29,7 +29,7 @@ public class GardenManager : MonoBehaviour
     public Sprite normalButton;
     public Sprite selectedButton;
     [SerializeField]
-    TempLoadSave saveManager;
+    LoadSave saveManager;
 
 
     private void Awake()

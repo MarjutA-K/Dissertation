@@ -8,6 +8,4 @@ public class RewardSO : ScriptableObject
     public int stepAmount;
     public int rewardAmount;
     public Sprite icon;
-
-    public bool claimed;
 }

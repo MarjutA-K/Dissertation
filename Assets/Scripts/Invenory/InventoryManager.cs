@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    public PlantSO[] startPlant;
+    [SerializeField] public PlantArrayWrapper plants;
 
     public int maxStackedItems = 4;
     public InventorySlot[] inventorySlots;
@@ -23,10 +23,15 @@ public class InventoryManager : MonoBehaviour
     {
         ChangeSelectedSlot(0);
 
-        foreach(var plant in startPlant)
+        for (int i = 0; i < plants.startPlant.Length; i++)
         {
-            AddItem(plant);
+            if (plants.startPlant[i] != null)
+            {
+                AddItemFromSave(plants.startPlant[i], i, plants.plantCounts[i]);
+           }
+
         }
+        
     }
 
     private void Update()
@@ -65,6 +70,7 @@ public class InventoryManager : MonoBehaviour
                 && itemInSlot.count < maxStackedItems
                 /*&& itemInSlot.plant.stackable == true*/)
             {
+                plants.plantCounts[i]++;
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
                 return true;
@@ -78,12 +84,31 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if(itemInSlot == null)
             {
+                plants.startPlant[i] = plant;
+                plants.plantCounts[i]++;
                 SpawnNewItem(plant, slot);
                 return true;
             }
         }
 
         return false;
+    }
+
+    public bool AddItemFromSave(PlantSO plant, int index, int count)
+    {
+        InventorySlot slot = inventorySlots[index];
+        if(plants.startPlant[index] == null)
+        {
+            return false;
+        }
+        else
+        {
+            GameObject newPlantGo = Instantiate(inventoryItemPrefab, slot.transform);
+            InventoryItem item = newPlantGo.GetComponent<InventoryItem>();
+            item.InitializeFromSave(plant, count);
+          
+            return true;
+        }
     }
 
     void SpawnNewItem(PlantSO plant, InventorySlot slot)
@@ -103,8 +128,12 @@ public class InventoryManager : MonoBehaviour
             if(use)
             {
                 itemInSlot.count--;
+                plants.plantCounts[selectedSlot]--;
+
                 if(itemInSlot.count <= 0)
                 {
+                    plants.startPlant[selectedSlot] = null;
+                
                     Destroy(itemInSlot.gameObject);
                 }
                 else

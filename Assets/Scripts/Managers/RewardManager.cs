@@ -30,7 +30,7 @@ public class RewardManager : MonoBehaviour
     {
         for(int i = 0; i < rewardsSO.Length; i++)
         {
-            if(TestPedometer.instance.stepCount >= rewardsSO[i].stepAmount)
+            if(StepTracker.instance.stepCount >= rewardsSO[i].stepAmount)
             {
                 rewardBtns[i].interactable = true;
             }
@@ -43,22 +43,21 @@ public class RewardManager : MonoBehaviour
 
     public void GetReward(int btnNum)
     {
-        if(TestPedometer.instance.stepCount >= rewardsSO[btnNum].stepAmount)
+        if(StepTracker.instance.stepCount >= rewardsSO[btnNum].stepAmount)
         {
             Check();
-            rewardsSO[btnNum].claimed = true;
             rewardBtns[btnNum].interactable = false;
-            TestPedometer.instance.stepCount -= rewardsSO[btnNum].stepAmount;
-            TestPedometer.instance.stepsTxt.text = TestPedometer.instance.stepCount.ToString();
+            StepTracker.instance.stepCount -= rewardsSO[btnNum].stepAmount;
+            StepTracker.instance.stepsTxt.text = StepTracker.instance.stepCount.ToString();
 
-            if (TestPedometer.instance.stepCount >= 1000)
+            if (StepTracker.instance.stepCount >= 1000)
             {
-                int amountInK = TestPedometer.instance.stepCount / 1000;
-                TestPedometer.instance.stepsTxt.text = amountInK.ToString("0.#") + "K";
+                int amountInK = StepTracker.instance.stepCount / 1000;
+                StepTracker.instance.stepsTxt.text = amountInK.ToString("0.#") + "K";
             }
             else
             {
-                TestPedometer.instance.stepsTxt.text = TestPedometer.instance.stepCount.ToString();
+                StepTracker.instance.stepsTxt.text = StepTracker.instance.stepCount.ToString();
             }
         }
     }

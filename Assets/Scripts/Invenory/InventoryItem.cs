@@ -14,6 +14,16 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
 
+    public void InitializeFromSave(PlantSO newplant, int _count)
+    {
+        plant = newplant;
+        image.sprite = newplant.icon;
+        count = _count;
+        countText.text = count.ToString();
+        bool textActive = count > 1;
+        countText.gameObject.SetActive(textActive);
+    }
+
     public void InitializePlant(PlantSO newPlant)
     {
         plant = newPlant;
