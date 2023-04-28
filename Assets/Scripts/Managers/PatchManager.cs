@@ -16,7 +16,7 @@ public class PatchManager : MonoBehaviour
         
     }
 
-    /*private void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -27,16 +27,16 @@ public class PatchManager : MonoBehaviour
             if (plantedflowers.startPlant[i].plantTitle != badplant.plantTitle && plantedflowers.startPlant[i] != null)
             {
                 Debug.Log("Plant at location" + i + "is " + plantedflowers.startPlant[i].plantTitle);
-                //patches[i].LoadFromData(plantedflowers.startPlant[i], plantedflowers.growthStage[i], plantedflowers.growthSteps[i]);
+                patches[i].LoadFromData(plantedflowers.startPlant[i], plantedflowers.growthStage[i], plantedflowers.growthSteps[i]);
             }
         }
-    }*/
+    }
 
     public void RefreshPatches()
     {
-        for (int i = 0; i< patches.Length; i++)
+        for (int i = 0; i < patches.Length; i++)
         {
-            if (patches[i].plant != null)
+            if (patches[i].plant != null && patches[i].growthStage >=0)
             {
                 if (patches[i].plant.plantTitle != badplant.plantTitle)
                 {
@@ -45,11 +45,11 @@ public class PatchManager : MonoBehaviour
                     plantedflowers.growthStage[i] = patch.growthStage;
                     plantedflowers.growthSteps[i] = patch.growthTime;
                 }
-               
+
             }
-             else
+            else
                 {
-                    plantedflowers.startPlant[i] = null;
+                    plantedflowers.startPlant[i] = badplant;
                     plantedflowers.growthStage[i] = -1;
                     plantedflowers.growthSteps[i] = 0.0f;
                 }

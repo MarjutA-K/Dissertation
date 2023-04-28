@@ -39,7 +39,7 @@ public class OrderInventory : MonoBehaviour
                 count++;
             }
         }
-        Debug.Log(count + plant.name);
+       // Debug.Log(count + plant.name);
         return count;
     }
 }

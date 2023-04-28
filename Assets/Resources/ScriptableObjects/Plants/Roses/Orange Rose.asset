@@ -15,7 +15,6 @@ MonoBehaviour:
   plantTitle: Orange Rose
   buyPrice: 1
   unlockPrice: 0
-  sellPrice: 2
   icon: {fileID: -1593978249, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   growthSprite:
@@ -25,9 +24,9 @@ MonoBehaviour:
   - {fileID: -1002666318, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: 1438255601, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: 199128436, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  isGrowing: 0
-  growthStage: -1
-  growthTime: 3
+  isGrowing: 1
+  growthStage: 0
+  growthSteps: 20
   maxSize: 5
   level: 0
   unlocked: 1

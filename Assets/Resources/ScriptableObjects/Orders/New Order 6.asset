@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Order 6
   m_EditorClassIdentifier: 
   orderTitle: Flowers
-  quantity: 0
+  quantity: 1
   plantsRequired:
   - {fileID: 11400000, guid: 83f04a7dc04ea7247b6c133bb1810669, type: 2}
   - {fileID: 11400000, guid: 2f96b1c7321f5f743b4f97a93d3a52a5, type: 2}

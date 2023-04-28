@@ -475,7 +475,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -485,8 +485,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1518,7 +1526,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96299114}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b99f43f431caa8b48a9bd0818ce0f1fe, type: 3}
   m_Name: 
@@ -2446,7 +2454,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2456,8 +2464,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -3432,7 +3448,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3442,8 +3458,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -3709,7 +3733,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3719,8 +3743,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -18219,7 +18251,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -18229,8 +18261,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -20565,7 +20605,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -20575,8 +20615,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -26896,7 +26944,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -26906,8 +26954,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -27115,7 +27171,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -27125,8 +27181,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -29291,7 +29355,7 @@ PrefabInstance:
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 345836203}
+      objectReference: {fileID: 1016043871}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -29301,8 +29365,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckOrder
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OrderReward
+      objectReference: {fileID: 0}
+    - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OrderManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 695656458, guid: 038870c1950b87244844459c05c981e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

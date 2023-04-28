@@ -34,18 +34,22 @@ public class GrowController : MonoBehaviour
     private void Start()
     {
        isGrowing = plant.isGrowing;
-       growthStage = plant.growthStage;
-       growthTime = plant.growthSteps;
+       //growthStage = plant.growthStage;
+       //growthTime = plant.growthSteps;
 
        maxSize = plant.maxSize;   
         
-        /*if(plant.plantTitle == "Black Rose" || plant == null)
+        if(plant.plantTitle == "Black Rose" || plant == null)
         {
             slider.gameObject.SetActive(false);
-        }*/
+        }
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        orderInventory = FindObjectOfType<OrderInventory>();
+        if(orderInventory == null)
+        {
+            orderInventory = FindObjectOfType<OrderInventory>();
+        }
+        
         achievementManager = FindObjectOfType<AchievementManager>();
     }
 
@@ -95,26 +99,36 @@ public class GrowController : MonoBehaviour
                 sr.sprite = plant.growthSprite[growthStage];
             }
         }
-        //PatchManager.instance.RefreshPatches();
+        PatchManager.instance.RefreshPatches();
     }
 
-    /*public void LoadFromData(PlantSO loaded, int _growStage, float _growTime)
+    public void LoadFromData(PlantSO loaded, int _growStage, float _growTime)
     {
+        if(orderInventory == null)
+        {
+            orderInventory = FindObjectOfType<OrderInventory>();
+        }
         plant = loaded;
         growthStage = _growStage;
         growthTime = _growTime;
    
         isGrowing = plant.isGrowing;
         sr.sprite = plant.growthSprite[_growStage];
+       
 
-        if(_growStage >= plant.maxSize)
+        if(_growStage >= 5)
         {
             slider.gameObject.SetActive(false);
-            //orderInventory.AddPlant(plant);
+            isGrowing = false;
+            orderInventory.AddPlant(plant);
         }
-
-        slider.gameObject.SetActive(true);
-    }*/
+        else
+        {
+            slider.gameObject.SetActive(true);
+        }
+        slider.value = growthStage;
+  
+    }
 
     public void ClickPlot()
     {
@@ -149,6 +163,7 @@ public class GrowController : MonoBehaviour
         }
     }
 
+    /*
     public void CheckOrder(PlantOrdersSO order)
     {      
         if (order == null)
@@ -175,17 +190,17 @@ public class GrowController : MonoBehaviour
             {
                 orderInventory.RemovePlant(order.plantsRequired[i]);
 
-                PlantSO plant = order.plantsRequired[i];
-                int count = orderInventory.CountPlant(plant);
+                PlantSO _plant = order.plantsRequired[i];
+                int count = orderInventory.CountPlant(_plant);
 
                 GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
                 foreach (GrowController plot in plotGameObjects)
                 {
-                    if(plot.plant == plant)
+                    if(plot.plant == _plant)
                     {
                         plot.sr.sprite = plot.emptyPlot;
                         plot.isGrowing = false;
-                        plot.growthStage = -1;
+                        plot.growthStage = 0;
                         plot.plant = null;
                         count--;
 
@@ -203,7 +218,7 @@ public class GrowController : MonoBehaviour
             OrderManager orderManager = FindObjectOfType<OrderManager>();
             orderManager.CompleteOrder(order);
         }
-        //PatchManager.instance.RefreshPatches(); 
-    }
+        PatchManager.instance.RefreshPatches(); 
+    }*/
     
 }

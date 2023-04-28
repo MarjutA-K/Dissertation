@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: PlantedFlowerData
   m_EditorClassIdentifier: 
   startPlant:
-  - {fileID: 11400000, guid: 60e429852d054234b8ee79b529a55180, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 60e429852d054234b8ee79b529a55180, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -30,17 +30,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   plantCounts: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  growthStage: 0500000005000000050000000500000005000000ffffffffffffffff050000000100000000000000000000000000000000000000000000000000000000000000
+  growthStage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   growthSteps:
   - 0
-  - 20
-  - 20
-  - 20
-  - 20
   - 0
   - 0
   - 0
-  - 20
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   - 0
   - 0
   - 0

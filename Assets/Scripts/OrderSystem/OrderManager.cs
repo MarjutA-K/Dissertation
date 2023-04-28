@@ -6,9 +6,15 @@ using TMPro;
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager instance;
+    //public static PatchManager instance;
 
     public List<PlantOrdersSO> activeOrders = new List<PlantOrdersSO>();
     public List<PlantOrderTemplate> orderTemplates = new List<PlantOrderTemplate>();
+
+    private OrderInventory orderInventory;
+    AchievementManager achievementManager;
+
+    bool orderCompleted = false;
 
     private void Awake()
     {
@@ -20,6 +26,13 @@ public class OrderManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (orderInventory == null)
+        {
+            orderInventory = FindObjectOfType<OrderInventory>();
+        }
+
+        achievementManager = FindObjectOfType<AchievementManager>();
     }
 
     public void AddActiveOrder(PlantOrdersSO order)
@@ -55,5 +68,66 @@ public class OrderManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+     public void CheckOrder(PlantOrdersSO order)
+    {
+        if (order == null)
+        {
+            return;
+        }
+
+        orderCompleted = true;
+
+        for (int i = 0; i < order.plantsRequired.Length; i++)
+        {
+            if (!orderInventory.HasPlant(order.plantsRequired[i]))
+            {
+                orderCompleted = false;
+                break;
+            }
+        }
+
+        if (orderCompleted)
+        {
+            achievementManager.CheckAchievement(2);
+            GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
+            for (int i = 0; i < order.plantsRequired.Length; i++)
+            {
+                orderInventory.RemovePlant(order.plantsRequired[i]);
+
+                PlantSO _plant = order.plantsRequired[i];
+                int count = orderInventory.CountPlant(_plant);
+                bool filled = false;
+
+               
+                foreach (GrowController plot in plotGameObjects)
+                {
+                    if (plot.plant == _plant && !filled)
+                    {
+                        Debug.Log("setting plant to null" + _plant.plantTitle);
+                        plot.sr.sprite = plot.emptyPlot;
+                        plot.isGrowing = false;
+                        plot.growthStage = -1;
+                        //plot.plant = null;
+                        count--;
+                        filled = true;
+                        
+                        if (count == 0 )
+                        {
+
+                            break;
+                        }
+                    }
+
+                }
+
+            }
+
+            Debug.Log("Order completed");
+            OrderManager orderManager = FindObjectOfType<OrderManager>();
+            orderManager.CompleteOrder(order);
+        }
+        PatchManager.instance.RefreshPatches();
     }
 }
