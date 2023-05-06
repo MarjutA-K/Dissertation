@@ -76,14 +76,16 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
-            if (diamonds >= shopItemsSO[i].unlockPrice && _xp.level >= shopItemsSO[i].level)
-            {
-                purchasaBtns[i].interactable = true;
-            }
-            else
-            {
-                purchasaBtns[i].interactable = false;
-            }
+ 
+                if (diamonds >= shopItemsSO[i].unlockPrice && _xp.level >= shopItemsSO[i].level && !shopItemsSO[i].unlocked)
+                {
+                    purchasaBtns[i].interactable = true;
+                }
+                else if (diamonds <= shopItemsSO[i].unlockPrice && _xp.level <= shopItemsSO[i].level && !shopItemsSO[i].unlocked)
+                {
+                    purchasaBtns[i].interactable = false;
+                }
+                    
         }
     }
 
@@ -136,6 +138,9 @@ public class ShopManager : MonoBehaviour
                 shopPanels[i].priceTxt.text = shopItemsSO[i].buyPrice.ToString();
                 shopPanels[i].titleTxt.text = shopItemsSO[i].plantTitle;
                 shopPanels[i].icon.sprite = shopItemsSO[i].icon;
+                shopPanels[i].stepsToGrow.SetActive(true);
+                shopPanels[i].stepsToGrowTxt.gameObject.SetActive(true);
+                shopPanels[i].stepsToGrowTxt.text = (shopItemsSO[i].growthSteps * 5).ToString();
                 shopPanels[i].currencyIcon.gameObject.SetActive(true);
                 shopPanels[i].diamondsIcon.gameObject.SetActive(false);
 
@@ -148,6 +153,8 @@ public class ShopManager : MonoBehaviour
                 shopPanels[i].priceTxt.text = shopItemsSO[i].unlockPrice.ToString();
                 shopPanels[i].diamondsIcon.gameObject.SetActive(true);
                 shopPanels[i].currencyIcon.gameObject.SetActive(false);
+                shopPanels[i].stepsToGrow.SetActive(false);
+                shopPanels[i].stepsToGrowTxt.gameObject.SetActive(false);
             }
         }
     }

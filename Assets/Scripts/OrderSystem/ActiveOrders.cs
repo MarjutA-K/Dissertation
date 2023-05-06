@@ -17,7 +17,6 @@ public class ActiveOrders : MonoBehaviour
         foreach(PlantOrdersSO order in activeOrders)
         {
             orderManager.AddActiveOrder(order);
-            //Debug.Log("Active order " + order.name);
         }
     }
 }

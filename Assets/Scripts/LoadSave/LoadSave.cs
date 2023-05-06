@@ -26,7 +26,7 @@ public class LoadSave : MonoBehaviour
         diamondsChanged.AddListener(DiamondsChangedEvent);
 
         LoadGameData();
-        CalculateStreak();            
+               
     }
 
     private void OnDestroy()
@@ -44,6 +44,8 @@ public class LoadSave : MonoBehaviour
         xpManager.level = saveData.level;
         shopManager.money = saveData.money;
         shopManager.diamonds = saveData.diamonds;
+        CalculateStreak();
+
     }
 
     private void SaveGameData()
@@ -68,7 +70,7 @@ public class LoadSave : MonoBehaviour
         {
             Debug.Log("Current streak: " + streak);
         }
-        else if(timeSinceLastLogin.TotalDays >= 1 && timeSinceLastLogin.TotalDays < 2)
+        else if(timeSinceLastLogin.TotalDays >= 1.0 && timeSinceLastLogin.TotalDays < 2.0)
         {
             streak++;
             Debug.Log("Streak increased to: " + streak);

@@ -1,0 +1,2380 @@
+fileFormatVersion: 2
+guid: 7d7a34e9df52f634586565baa79211d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUIlightgreen1_0
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1731
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33af220af4124594996b4c766ff76291
+      internalID: 337648923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1741
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bf1d0d474ff084c903d3040ff728a9
+      internalID: 1495764919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1745
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40b2d685283e2641858f268b1f48495
+      internalID: 1397161500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1741
+        width: 43
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036d95e1c5438264ab5887c3191fd207
+      internalID: -1493765793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1624
+        width: 98
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9759656044e2648808e0664ebf1d57
+      internalID: 423018242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_5
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1741
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472d109f24fb13d4a8fdee78f2e91121
+      internalID: -161797189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1745
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425a924f41411e246a63cc2fd94ab518
+      internalID: -761015885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_7
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1518
+        width: 165
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2727e3849988bf4da10834b2b6b57f6
+      internalID: 1635521349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1518
+        width: 166
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de86bc22adde0b445abe873292dba38a
+      internalID: 571866563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_9
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1518
+        width: 169
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7516c35e528f74443ae948c1d5f00b6d
+      internalID: -2067868404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_10
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1461
+        width: 1517
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90793a4dbc97e6842a2ed0e1fa682c2b
+      internalID: -1028634341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1610
+        width: 111
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338702d6afee2a341872679b205e619a
+      internalID: 1645975146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1622
+        width: 86
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ef520ce17f150458ca2cadeaa5cf25
+      internalID: 342138111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1625
+        width: 87
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86c29609a17711449373c5959e574a6
+      internalID: -1361813269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1724
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15799a6d52342bb4d8530cd2a50fa614
+      internalID: -531308789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_15
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1541
+        width: 209
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54f15ec21dd34f4298d656664a753e0
+      internalID: -1274472478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_16
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1541
+        width: 203
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647444a64360a70489aa3a7d2bbccd83
+      internalID: -917500336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fb71d2ec90a6e4398a818ec48f8ac1
+      internalID: -2077496978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_18
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1681
+        width: 4
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1364a99721b7f0d42a3ac5767da71667
+      internalID: 1268334170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_19
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1664
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09490cb09a2284149a3e87238225515c
+      internalID: -1020606668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56abf3b97d89a8b4990ce1a8112a971f
+      internalID: 1746567594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1578
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f230eb181095441b05f0639828ba02
+      internalID: -765489894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1612
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1660e6e85bac744e91762b0fb75864f
+      internalID: -35676339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_23
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1587
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90c1efcbe7fa4e4a9441ab00cf5039a
+      internalID: -741183654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_24
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1604
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344cf946938653a4694e3476cf3b5774
+      internalID: -470523284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1587
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788a538e2f60f3d488e3ffa2b87f890f
+      internalID: -1257874958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_26
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1587
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e10bdafb995b4429aa0c4e548725cf
+      internalID: -2060830123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1595
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946901ed60060ff4991faec7de09b333
+      internalID: -1713335333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_28
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1587
+        width: 60
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f428a898afecea94d873228b12cdbc5c
+      internalID: 2127703081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_29
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1450
+        width: 398
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d845e3742fbd7384c858acaa9ceffa36
+      internalID: 277711934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_30
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1520
+        width: 123
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a23dcb7ecaa75649a43949d34012e5d
+      internalID: -953583633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1537
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6f877b84be87c48918d156eebad84d
+      internalID: -978909330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_32
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1481
+        width: 329
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff6a0ede975e3f4ebf5282c286e52e9
+      internalID: -924962554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_33
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1542
+        width: 304
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2298df749a6b748ae97c588b3eae7a
+      internalID: 849100031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1527
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ad4979e9e3dbb4fa0fe8ef6581c8f7
+      internalID: -1905171517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1319
+        width: 191
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c85a18037bd8b4b9a08d8ddc754b5f
+      internalID: 1501450140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_36
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1510
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4464b2c6a80000847b4a37bc4e6f3135
+      internalID: -829088903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_37
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1322
+        width: 185
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cfe274a29a16b4f8bf633fc3715e1b
+      internalID: -908921931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1312
+        width: 187
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4dbbe3b0cdc244dbab71433afa1281
+      internalID: 1624554539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_39
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1484
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0b4d7f09baf094081e11c6fff0ab3e
+      internalID: 2074178867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_40
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1475
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8652a40fb390f1498fb918ba7cd42b1
+      internalID: -1227300613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_41
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 529
+        width: 1399
+        height: 929
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bf05921a7fe394fa1dce7181828c64
+      internalID: 1149702571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_42
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 1450
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b680d52bc6ba2dc41b5ef535bac47828
+      internalID: -27502539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_43
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 664
+        width: 622
+        height: 794
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1020cac53401cd9408302b223e07ea60
+      internalID: -1618372963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_44
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1312
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea2541afa677eb4bb528865ea0855f2
+      internalID: -556871151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_45
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1295
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b12793d63e8144ca4d0c02263aaeeb
+      internalID: 360451157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_46
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1124
+        width: 185
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7918b82d2db6694489abbfe2bf2d8250
+      internalID: 576732130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1124
+        width: 200
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ec3c02ebc82de4982a92efc3bc2936
+      internalID: 132759466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_48
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1124
+        width: 163
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cb2e9375f5c974abeb4c394ad3a6df
+      internalID: 920301108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_49
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1287
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f421a0e77545e9d4aa239a051813d416
+      internalID: 639474967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_50
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1244
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5996c2e189d276c489d53d08eb44cb32
+      internalID: -873648329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_51
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1261
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8f95f5a11b9054ba91f7c4b5a3d365
+      internalID: -1593217835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_52
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1261
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12655711e6507f54fb6c35e7af9e8e29
+      internalID: -1197754238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_53
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1244
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8805097c1180ce842a52830c81b7a59e
+      internalID: -1017911997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_54
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1251
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9f7349f1c1fb941b96f6582a99afb5
+      internalID: 2067518490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_55
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1235
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263a2c848550f97448721549ba467e72
+      internalID: -1308763379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_56
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 986
+        width: 120
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9112f306c7866124c8241a2df151e99c
+      internalID: 901603530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 978
+        width: 103
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88916c940f62d44b8730f3373054d3b
+      internalID: -811637273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_58
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 978
+        width: 106
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53333a529c63f9e499a5eaf6feb508fd
+      internalID: -1706087070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_59
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 986
+        width: 137
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae83e04dec6d4054cb6030ae99d0004c
+      internalID: 357839129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_60
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 832
+        width: 74
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3212cfe3e90a12244bc007ff40559abd
+      internalID: -2092294151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_61
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 832
+        width: 91
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6935f61750f8434594e566cba7bb965
+      internalID: -490435495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_62
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 832
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e3792031c8dff4e983bc19abb75771
+      internalID: -219943657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_63
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 841
+        width: 33
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732b869ea30733f4aa9129489128e6ae
+      internalID: -523175118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_64
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 845
+        width: 113
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b63753fe3ea764aae6d44755356bc0
+      internalID: 1676044937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_65
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 669
+        width: 68
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536a00c3aa060124987e9c83e050ad0d
+      internalID: -1228319792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_66
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 668
+        width: 144
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ea3fb1021573d479f09acf23b5fd1e
+      internalID: -964836605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_67
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 678
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adc5f262cfb50144882369cb757664f
+      internalID: 77355171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_68
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 678
+        width: 137
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c38026ec45a254e81bcbdfd5be6759
+      internalID: -2067946383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_69
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 530
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322ddc357e3bf824ea5d430fe45702c7
+      internalID: 1127250808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_70
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 520
+        width: 98
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df43de5a800eb14c81d9b94813df544
+      internalID: 1268028899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_71
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 530
+        width: 69
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dfabed32fa3f846a016cebb2aebe6f
+      internalID: -1464551789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_72
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 532
+        width: 56
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842cb1189e22d3248a3753d4cc5ddf0d
+      internalID: 791538029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_73
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 522
+        width: 133
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca085cb6f84f3c847ad3681ea21b5d15
+      internalID: 1950501338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_74
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 506
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99aefed58f4b89941adacfeea353e5e7
+      internalID: -1891539102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_75
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 506
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85df4dfbef6782f4d9dd6a48adeb7118
+      internalID: -1264368275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_76
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 359
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6db152cefd28a4e8ef6c4e7ffd00f8
+      internalID: -217659191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_77
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 445
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7b2ec745ef8204692d8d8af29e8239
+      internalID: -67507973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_78
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 369
+        width: 122
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfa1673c3e15264db794334756a9c93
+      internalID: -1441096561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_79
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 367
+        width: 143
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d0513839302894ab2801f040974236
+      internalID: 940936383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_80
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 360
+        width: 86
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb74a83f373db74886300dd62be5cb1
+      internalID: -396567906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_81
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 154
+        width: 1294
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63be8c9a5eb9baa4ab790ad246fa2551
+      internalID: 2043899781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_82
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 400
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f080fdc4edd2d449615eeea6e98ea9
+      internalID: 1857076447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 222
+        width: 113
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58662b9238389c54f9ebc3af711b90b2
+      internalID: -969627370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_84
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 223
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a62ee31fc3b847ba2e3d2ddad4fd4
+      internalID: -329643102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_85
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 326
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d11c335331cd54cb422f912a0fb336
+      internalID: -480859066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_86
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 223
+        width: 122
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d186b4c58ddbb42a19d9306ef96524
+      internalID: -554296711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_87
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 309
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854f6f20045dc1c4e99efce86b7c356b
+      internalID: -745189064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_88
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 249
+        width: 103
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3e9ebd438a130418f0f0e6f4d3faa1
+      internalID: -1968244081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_89
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 240
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4635193ce089a34d8e9c7509320c937
+      internalID: -1759513622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_90
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 206
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d82a2769525bf64e9537779d8dc2d26
+      internalID: -1952704222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_91
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0b04ea02eb58249b40ea382ef5c3a6
+      internalID: 757433526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_92
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 69
+        width: 124
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8081fe8a31ea648b59818a9e0e522e
+      internalID: -961723607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_93
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 74
+        width: 108
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf005326efe2fdf4c9502fb08e7fcf1d
+      internalID: -473348618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_94
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 76
+        width: 110
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d9773d4d674a944b813d96a2177476
+      internalID: -1109055382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_95
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 154
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfa1465e0e3f164a94e219a555821cc
+      internalID: 1974360821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_96
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 16
+        width: 673
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9066abbe52ca2740b9d9a219d2e12a7
+      internalID: -1500276714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_97
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 129
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305af1676d1711446aa8c3e6d91ddfcf
+      internalID: 425788610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_98
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 129
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cedc1be1198fe42b5738158a5aa2a4
+      internalID: -518448204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_99
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 103
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75dcf33ab1f9fc47a418b2a0db972d2
+      internalID: 1641699582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_100
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 69
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aab4ed6a3998f64bafdde6ce88c4020
+      internalID: -1658939098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIlightgreen1_101
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 60
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69f86d8b1a0f104c9f684b641882615
+      internalID: 1810603631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GUIlightgreen1_47: 132759466
+      GUIlightgreen1_75: -1264368275
+      GUIlightgreen1_86: -554296711
+      GUIlightgreen1_8: 571866563
+      GUIlightgreen1_72: 791538029
+      GUIlightgreen1_84: -329643102
+      GUIlightgreen1_33: 849100031
+      GUIlightgreen1_82: 1857076447
+      GUIlightgreen1_11: 1645975146
+      GUIlightgreen1_5: -161797189
+      GUIlightgreen1_31: -978909330
+      GUIlightgreen1_2: 1397161500
+      GUIlightgreen1_23: -741183654
+      GUIlightgreen1_91: 757433526
+      GUIlightgreen1_64: 1676044937
+      GUIlightgreen1_48: 920301108
+      GUIlightgreen1_80: -396567906
+      GUIlightgreen1_34: -1905171517
+      GUIlightgreen1_59: 357839129
+      GUIlightgreen1_30: -953583633
+      GUIlightgreen1_73: 1950501338
+      GUIlightgreen1_44: -556871151
+      GUIlightgreen1_92: -961723607
+      GUIlightgreen1_95: 1974360821
+      GUIlightgreen1_20: 1746567594
+      GUIlightgreen1_45: 360451157
+      GUIlightgreen1_12: 342138111
+      GUIlightgreen1_26: -2060830123
+      GUIlightgreen1_70: 1268028899
+      GUIlightgreen1_7: 1635521349
+      GUIlightgreen1_74: -1891539102
+      GUIlightgreen1_49: 639474967
+      GUIlightgreen1_53: -1017911997
+      GUIlightgreen1_25: -1257874958
+      GUIlightgreen1_41: 1149702571
+      GUIlightgreen1_78: -1441096561
+      GUIlightgreen1_18: 1268334170
+      GUIlightgreen1_62: -219943657
+      GUIlightgreen1_56: 901603530
+      GUIlightgreen1_93: -473348618
+      GUIlightgreen1_35: 1501450140
+      GUIlightgreen1_39: 2074178867
+      GUIlightgreen1_0: 337648923
+      GUIlightgreen1_83: -969627370
+      GUIlightgreen1_19: -1020606668
+      GUIlightgreen1_77: -67507973
+      GUIlightgreen1_51: -1593217835
+      GUIlightgreen1_10: -1028634341
+      GUIlightgreen1_1: 1495764919
+      GUIlightgreen1_42: -27502539
+      GUIlightgreen1_76: -217659191
+      GUIlightgreen1_13: -1361813269
+      GUIlightgreen1_81: 2043899781
+      GUIlightgreen1_43: -1618372963
+      GUIlightgreen1_67: 77355171
+      GUIlightgreen1_88: -1968244081
+      GUIlightgreen1_14: -531308789
+      GUIlightgreen1_94: -1109055382
+      GUIlightgreen1_3: -1493765793
+      GUIlightgreen1_22: -35676339
+      GUIlightgreen1_58: -1706087070
+      GUIlightgreen1_17: -2077496978
+      GUIlightgreen1_6: -761015885
+      GUIlightgreen1_9: -2067868404
+      GUIlightgreen1_97: 425788610
+      GUIlightgreen1_15: -1274472478
+      GUIlightgreen1_101: 1810603631
+      GUIlightgreen1_37: -908921931
+      GUIlightgreen1_68: -2067946383
+      GUIlightgreen1_66: -964836605
+      GUIlightgreen1_50: -873648329
+      GUIlightgreen1_28: 2127703081
+      GUIlightgreen1_29: 277711934
+      GUIlightgreen1_79: 940936383
+      GUIlightgreen1_89: -1759513622
+      GUIlightgreen1_85: -480859066
+      GUIlightgreen1_61: -490435495
+      GUIlightgreen1_69: 1127250808
+      GUIlightgreen1_4: 423018242
+      GUIlightgreen1_36: -829088903
+      GUIlightgreen1_87: -745189064
+      GUIlightgreen1_21: -765489894
+      GUIlightgreen1_99: 1641699582
+      GUIlightgreen1_40: -1227300613
+      GUIlightgreen1_54: 2067518490
+      GUIlightgreen1_55: -1308763379
+      GUIlightgreen1_52: -1197754238
+      GUIlightgreen1_71: -1464551789
+      GUIlightgreen1_57: -811637273
+      GUIlightgreen1_90: -1952704222
+      GUIlightgreen1_65: -1228319792
+      GUIlightgreen1_96: -1500276714
+      GUIlightgreen1_98: -518448204
+      GUIlightgreen1_63: -523175118
+      GUIlightgreen1_46: 576732130
+      GUIlightgreen1_38: 1624554539
+      GUIlightgreen1_60: -2092294151
+      GUIlightgreen1_16: -917500336
+      GUIlightgreen1_100: -1658939098
+      GUIlightgreen1_27: -1713335333
+      GUIlightgreen1_24: -470523284
+      GUIlightgreen1_32: -924962554
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

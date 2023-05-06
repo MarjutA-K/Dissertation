@@ -49,6 +49,7 @@ public class RewardManager : MonoBehaviour
             rewardBtns[btnNum].interactable = false;
             StepTracker.instance.stepCount -= rewardsSO[btnNum].stepAmount;
             StepTracker.instance.stepsTxt.text = StepTracker.instance.stepCount.ToString();
+            
 
             if (StepTracker.instance.stepCount >= 1000)
             {

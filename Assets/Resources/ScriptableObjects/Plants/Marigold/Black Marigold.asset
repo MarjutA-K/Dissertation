@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Black Marigold
   m_EditorClassIdentifier: 
   plantTitle: Black Marigold
-  buyPrice: 5
-  sellPrice: 2
+  buyPrice: 3000
+  unlockPrice: 100
   icon: {fileID: 406690717, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   growthSprite:
@@ -25,7 +25,8 @@ MonoBehaviour:
   - {fileID: -1349161852, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: -1622056960, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   isGrowing: 1
-  growthStage: -1
-  growthTime: 12
+  growthStage: 0
+  growthSteps: 500
   maxSize: 5
-  level: 2
+  level: 30
+  unlocked: 1

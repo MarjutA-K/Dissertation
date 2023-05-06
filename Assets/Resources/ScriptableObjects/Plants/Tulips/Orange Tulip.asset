@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Orange Tulip
   m_EditorClassIdentifier: 
   plantTitle: Orange Tulip
-  buyPrice: 7
-  unlockPrice: 0
-  sellPrice: 3
+  buyPrice: 1000
+  unlockPrice: 100
   icon: {fileID: 1635691915, guid: 91b050e2eb9ed9c46ac572f231be43f9, type: 3}
   lockIcon: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   growthSprite:
@@ -25,9 +24,9 @@ MonoBehaviour:
   - {fileID: 662595321, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: 165638600, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
   - {fileID: -1684551745, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  isGrowing: 0
-  growthStage: -1
-  growthTime: 2
+  isGrowing: 1
+  growthStage: 0
+  growthSteps: 200
   maxSize: 5
   level: 1
   unlocked: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b0baf76d9e9e5c4d85d038cced507dc, type: 3}
-  m_Name: Rewards5
+  m_Name: Reward 2
   m_EditorClassIdentifier: 
-  stepAmount: 10000
-  rewardAmount: 10
+  stepAmount: 1000
+  rewardAmount: 5
   icon: {fileID: 21300044, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   claimed: 0

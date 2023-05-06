@@ -25,7 +25,7 @@ public class StepTracker : MonoBehaviour
     private float[] lowPassResults = new float[3];
     private Vector3 prevAcceleration;
     private Vector3 prevRotation;
-    public int stepCount = 0;
+    public int stepCount;
     public int steps;
 
     public int purchasePrice;
@@ -46,6 +46,8 @@ public class StepTracker : MonoBehaviour
     public GameObject upgradeAmount;
 
     public int addSteps;
+
+    int test;
 
     private void Awake()
     {
@@ -76,7 +78,7 @@ public class StepTracker : MonoBehaviour
         reachedTarget3 = true;
         reachedTarget4 = true;
 
-        shopManager = FindObjectOfType<ShopManager>();
+        shopManager = FindObjectOfType<ShopManager>();       
     }
 
     void Update()
@@ -89,45 +91,9 @@ public class StepTracker : MonoBehaviour
         slider.maxValue = maxValue;
 
         slider.value = stepCount;
-        storageSlider.value = maxValue; 
+        storageSlider.value = maxValue;
 
-        switch (steps)
-        {
-            case 500:
-                if (reachedTarget1)
-                {
-                    reachedTarget1 = false;
-                    XPManager.instance.AddXP(500);
-                }
-                Debug.Log("500 steps");
-                break;
-            case 1000:
-                if (reachedTarget2)
-                {
-                    reachedTarget2 = false;
-                    XPManager.instance.AddXP(500);
-                }
-                Debug.Log("1000 steps");
-                break;
-            case 5000:
-                if (reachedTarget3)
-                {
-                    reachedTarget3 = false;
-                    XPManager.instance.AddXP(500);
-                }
-                Debug.Log("5000 steps");
-                break;
-            case 10000:
-                if(reachedTarget4)
-                {
-                    reachedTarget4 = false;
-                    AchievementManager achievementManager = FindObjectOfType<AchievementManager>();
-                    achievementManager.CheckAchievement(3);
-                }
-                break;
-            default:
-                break;
-        }
+        AddSteps();
     }
 
     private void UpdateUI()
@@ -175,24 +141,37 @@ public class StepTracker : MonoBehaviour
         }
     }
 
-    public void AddSteps()
+    private void AddXP()
     {
-        steps += addSteps;
-        stepAmountTxt.text = steps.ToString();
+        if((stepCount % 1000) == 0 && stepCount != 0)
+        {
+            XPManager.instance.AddXP(250);
+            Debug.Log("added xp");
+        }
+    }
 
-        if (stepCount < maxValue)
-        {     
-            stepCount += addSteps;
-            stepsTxt.text = stepCount.ToString();
+    public void AddSteps()
+    { 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            steps += addSteps;
+            stepAmountTxt.text = steps.ToString();
+            AddXP();
 
-            if (stepCount >= 1000)
+            if (stepCount < maxValue)
             {
-                int amountInK = stepCount / 1000;
-                stepsTxt.text = amountInK.ToString("0.#") + "K";
-            }
-            else
-            {
+                stepCount += addSteps;
                 stepsTxt.text = stepCount.ToString();
+
+                if (stepCount >= 1000)
+                {
+                    int amountInK = stepCount / 1000;
+                    stepsTxt.text = amountInK.ToString("0.#") + "K";
+                }
+                else
+                {
+                    stepsTxt.text = stepCount.ToString();
+                }
             }
         }
     }

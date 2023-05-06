@@ -1,0 +1,2212 @@
+fileFormatVersion: 2
+guid: 859a7de02da1c1747a08fb43328b55d4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUIBrown_0
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1731
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf834f7c5220c9a4ea93b0d30d9c4818
+      internalID: 843057391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1741
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec19c2436250fc040b65e4aa687a926c
+      internalID: 546243750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1745
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f9c3492db8897468c9144c0c43c7ff
+      internalID: 687277271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1741
+        width: 43
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a577613038458438e416ddf787406f
+      internalID: -358330875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1624
+        width: 98
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f457b769f66a7a143a35f49df6f86ee8
+      internalID: 818436924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_5
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1741
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b1e63609d1f2646bfb977c0f30f15c
+      internalID: 1930981235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1745
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58ce5de14efe8a4f848da62aa835c1a
+      internalID: -1788777461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_7
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1518
+        width: 165
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bb72693ddaecb4ea3df1dea8c3a694
+      internalID: -733590535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1518
+        width: 166
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeca6cb6f61131642ad01ea94b8e1c5e
+      internalID: -1575902097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_9
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1518
+        width: 169
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3f7de7c9eded7428b862223406301f
+      internalID: -529861329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_10
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1461
+        width: 1517
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19f0e39fa73d544a9bbd9fc7fa02f9a
+      internalID: 1283766446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1610
+        width: 111
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5ca018052646d469db7d28ba87dbc4
+      internalID: 1783922991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1622
+        width: 86
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cceace61eeff449a1976a7351041b0
+      internalID: -2077428940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1625
+        width: 87
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c455696fbdccdc45a59655075ada6c5
+      internalID: 997825780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1724
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb73db3bcce44144cbd9f5bb5ce7223b
+      internalID: 619639305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_15
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1541
+        width: 209
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912fb6369febfd94f9d3ddb4e5d06f1f
+      internalID: 576779433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_16
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1541
+        width: 203
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6bbd505c672054594a256d0fb3fdaa
+      internalID: 282752049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25639aaed4f8d724d8f761ff58ba48dc
+      internalID: 2105973307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_18
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1681
+        width: 4
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd0da736a5a31147bf5fce7c402f2fd
+      internalID: -844270014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_19
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1664
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba561a0674f8794b84e339f7b9bbb1a
+      internalID: 2060870248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1647
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acc8e965383f2743a01653a283c470e
+      internalID: 404269576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1578
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e32dd10996b11c4ba26d215849ea803
+      internalID: 1888114678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1612
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092fd8f52b5ccbb47adece5abab79a86
+      internalID: 955800082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_23
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1587
+        width: 45
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2458651252404d4db72deec42948fbd
+      internalID: -1618229788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_24
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1604
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cd28431deb8e54e9a73bce07d33ff5
+      internalID: 798554705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1587
+        width: 69
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec117297d8234c46909dfbf60125383
+      internalID: -1336256811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_26
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1587
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bab2a1ac09af041b897718383e64e1
+      internalID: 1598049752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1595
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5fb3a2c667fe34f86fca353987df9c
+      internalID: -1563685021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_28
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1587
+        width: 60
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa5ff8da2a444b409edd677ac0770e8
+      internalID: 1120272620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_29
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1450
+        width: 398
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10dca7329e3649e44b78ab02277c0009
+      internalID: 1874977874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_30
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1520
+        width: 123
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165e738b3779f8743afc2cadbe8510fb
+      internalID: -1527996790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_31
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1537
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7268263611fcd3c4497d212b7aa52ee7
+      internalID: -172384807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_32
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1481
+        width: 329
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9f275026d85f140b99f5262a13205c
+      internalID: -883408990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_33
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1542
+        width: 304
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00462312b8e7cc84dbf26e7f1d7484ea
+      internalID: 415640667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1527
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c844943c0dc78249bccfa673c9f7a07
+      internalID: 795376495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1319
+        width: 191
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc5c6d6a374cef49b0f357476d65a70
+      internalID: 551937910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_36
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1510
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2290dd6a345714e4c91ad0e102d4cfae
+      internalID: 929672389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_37
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1322
+        width: 185
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b09d555edbefc469ad85a652d20eea
+      internalID: -1541322590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1312
+        width: 187
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5405bbb0d4dd134dba7a2a5491d543e
+      internalID: -1495045037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_39
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1484
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a886f82a7b91a47920eaaa24975c0a
+      internalID: 1329955480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_40
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1475
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2fc053a8aa168489bdf125123f61d9
+      internalID: -145372489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_41
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 529
+        width: 1399
+        height: 929
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b91219bd440608429456e3c2ca5b3e5
+      internalID: -1493784509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_42
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 1450
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c2ea179a6a1e44daf43bec69a65cd9
+      internalID: 304889856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_43
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 662
+        width: 626
+        height: 796
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6e5153a27057947b78915fca7e77b4
+      internalID: -400281959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_44
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1312
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b3d8808ee25214abc8a870de273a50
+      internalID: 1893768881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_45
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1295
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b4431121b23af43a495215227bf859
+      internalID: -2006958791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_46
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1124
+        width: 185
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45776ff6a731c624d8f9db91ab8d7e4d
+      internalID: -921995627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1124
+        width: 200
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead2d289f0109ba4cb3bfea5628f2e5e
+      internalID: -546228157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_48
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1124
+        width: 163
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ebf721bc7eb984bbe2cfa4b7a51159
+      internalID: -1536994068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_49
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1287
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c143294249c4c1e4e91f31c2bb253072
+      internalID: 1494824437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_50
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1244
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9fd4dbfcbfb164b96d983d9ef5796a
+      internalID: -1410476205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_51
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1261
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e94a6fc2976dc478e25ca7e81bb126
+      internalID: 1870236642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_52
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1261
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafc6fccecfd131448f8175a81346055
+      internalID: 1544719086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_53
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1244
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de718801e1f38a54facd37a431863916
+      internalID: 1470209959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_54
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1251
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013314d6e66caa1469e867976f45695f
+      internalID: 1096052614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_55
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 1235
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3fe8ab47205794a90ca9605759769f
+      internalID: -783042714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_60
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 832
+        width: 74
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974f2ceea7fcb8b4d9dd02a16de25cb0
+      internalID: -542952928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_64
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 845
+        width: 113
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449668029388dcf4db53c9de2616d1f9
+      internalID: -744183386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_65
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 669
+        width: 68
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d96eedf8307594990cdab1377105dd
+      internalID: -1189201828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_66
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 668
+        width: 144
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8731dcf86e4ef72409383caa2ab813de
+      internalID: -1919209380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_67
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 678
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00786aae9d31c34484fac0543e1c7c7
+      internalID: -147354328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_68
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 678
+        width: 137
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b838ff087b2337419823ac5fcb3f5c3
+      internalID: -444861473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_69
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 530
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e96588dc6177247b39a3bcb9d9ccaa
+      internalID: 1437323911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_70
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 520
+        width: 98
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021dc05b4e275e34cb5db2a29eca1376
+      internalID: -283379007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_71
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 530
+        width: 69
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37058c402af5b443b31ca3ad3dd4320
+      internalID: 1907752547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_72
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 532
+        width: 56
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ff572ae48b1d44581c7b9b610d3de8
+      internalID: 1765848814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_73
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 522
+        width: 133
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25784fc357e73ba4a9d0140b38a22bbc
+      internalID: 447165238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_74
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 506
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01754ce94ce2f0448b1f773f4acfcfc7
+      internalID: 1175524392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_75
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 506
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b6efd0be52a724da1cde0c9e4adda6
+      internalID: -60786924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_76
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 359
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58cca08f4cd9fd49866347f48800d26
+      internalID: 1518398373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_77
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 445
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a6f1dcb5ef678498ef95ff6d6ae5eb
+      internalID: 1269005721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_78
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 369
+        width: 122
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaa37e024777884a82e33d5fd2b1437
+      internalID: 809641320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_79
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 367
+        width: 143
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132d65f9bfef0af45bfe65589087cee8
+      internalID: 595257398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_80
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 360
+        width: 86
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4f8ad69aac8c3409ba146b43e8cda0
+      internalID: 469170377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_82
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 400
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd36e6e465f874ea6383b4423ebd39
+      internalID: -115013717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 222
+        width: 113
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cffd6aeba3ebc644816abd3b0f7a877
+      internalID: -982413330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_84
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 223
+        width: 129
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c760091811d2f9740b7b26c11f8f9d6e
+      internalID: 1883196548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_85
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 326
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9255cefaacbded44b96d851220fc6372
+      internalID: -349465302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_86
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 223
+        width: 122
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50dad0c172d4994cbb71212985a2d44
+      internalID: -1094547454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_87
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 309
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c6292a51baa8f489fdd4ef1e1ce894
+      internalID: 1520323941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_88
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 249
+        width: 103
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c959a8d243dacf4c9caea8e14a2410f
+      internalID: 216074858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_89
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 240
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502f721390f50264884cd98e5e4f2bb3
+      internalID: 248181957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_90
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 206
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcc5ace189cf294ea4b4931dbd00d5e
+      internalID: 811909854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_91
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 77
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86c25c37032b32418cc9319cbb25f7f
+      internalID: -884345495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_92
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 69
+        width: 124
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2346ec8e5eaca0a42945ee0b80f84000
+      internalID: -1373087115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_93
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 74
+        width: 108
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101178dfd6a22f94f8d84ac89e9f22da
+      internalID: -1004829366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_94
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 76
+        width: 110
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ec20f8671ae544abeb54bbf76cbef8
+      internalID: -197002384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_95
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 154
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b724c42fdf5e84cb2f1fcaa6d41d7e
+      internalID: -1997162699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_96
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 16
+        width: 673
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5332f54681c9564ba0db44113b4e0ee
+      internalID: 1670471236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_97
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 129
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac32aae4adfcef640b21e740525399e6
+      internalID: -399413939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_98
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 129
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84a33f14c521394e960b477e02af048
+      internalID: 1694194890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_99
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 103
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a93f88221f328649b8fb21fcc352a65
+      internalID: -32525135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_100
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 69
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74272853b3b6c04d93d7812b76df51f
+      internalID: -18142218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIBrown_101
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 60
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19db53b66283ab4ab4076d79957a484
+      internalID: -555078454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GUIBrown_42: 304889856
+      GUIBrown_101: -555078454
+      GUIBrown_91: -884345495
+      GUIBrown_52: 1544719086
+      GUIBrown_34: 795376495
+      GUIBrown_94: -197002384
+      GUIBrown_79: 595257398
+      GUIBrown_71: 1907752547
+      GUIBrown_85: -349465302
+      GUIBrown_95: -1997162699
+      GUIBrown_2: 687277271
+      GUIBrown_99: -32525135
+      GUIBrown_46: -921995627
+      GUIBrown_39: 1329955480
+      GUIBrown_5: 1930981235
+      GUIBrown_8: -1575902097
+      GUIBrown_6: -1788777461
+      GUIBrown_29: 1874977874
+      GUIBrown_41: -1493784509
+      GUIBrown_35: 551937910
+      GUIBrown_44: 1893768881
+      GUIBrown_97: -399413939
+      GUIBrown_21: 1888114678
+      GUIBrown_57: 1261620898
+      GUIBrown_60: -542952928
+      GUIBrown_13: 997825780
+      GUIBrown_27: -1563685021
+      GUIBrown_82: -115013717
+      GUIBrown_7: -733590535
+      GUIBrown_33: 415640667
+      GUIBrown_76: 1518398373
+      GUIBrown_69: 1437323911
+      GUIBrown_88: 216074858
+      GUIBrown_16: 282752049
+      GUIBrown_31: -172384807
+      GUIBrown_22: 955800082
+      GUIBrown_80: 469170377
+      GUIBrown_19: 2060870248
+      GUIBrown_54: 1096052614
+      GUIBrown_36: 929672389
+      GUIBrown_90: 811909854
+      GUIBrown_61: 1417331816
+      GUIBrown_24: 798554705
+      GUIBrown_51: 1870236642
+      GUIBrown_74: 1175524392
+      GUIBrown_81: 1098338217
+      GUIBrown_9: -529861329
+      GUIBrown_18: -844270014
+      GUIBrown_30: -1527996790
+      GUIBrown_77: 1269005721
+      GUIBrown_96: 1670471236
+      GUIBrown_100: -18142218
+      GUIBrown_56: 271406233
+      GUIBrown_20: 404269576
+      GUIBrown_1: 546243750
+      GUIBrown_49: 1494824437
+      GUIBrown_67: -147354328
+      GUIBrown_73: 447165238
+      GUIBrown_58: 1670399121
+      GUIBrown_14: 619639305
+      GUIBrown_28: 1120272620
+      GUIBrown_78: 809641320
+      GUIBrown_65: -1189201828
+      GUIBrown_68: -444861473
+      GUIBrown_48: -1536994068
+      GUIBrown_45: -2006958791
+      GUIBrown_59: -1738803183
+      GUIBrown_23: -1618229788
+      GUIBrown_26: 1598049752
+      GUIBrown_55: -783042714
+      GUIBrown_72: 1765848814
+      GUIBrown_75: -60786924
+      GUIBrown_40: -145372489
+      GUIBrown_12: -2077428940
+      GUIBrown_38: -1495045037
+      GUIBrown_87: 1520323941
+      GUIBrown_70: -283379007
+      GUIBrown_63: -1164297143
+      GUIBrown_37: -1541322590
+      GUIBrown_50: -1410476205
+      GUIBrown_25: -1336256811
+      GUIBrown_93: -1004829366
+      GUIBrown_92: -1373087115
+      GUIBrown_15: 576779433
+      GUIBrown_98: 1694194890
+      GUIBrown_3: -358330875
+      GUIBrown_0: 843057391
+      GUIBrown_4: 818436924
+      GUIBrown_47: -546228157
+      GUIBrown_66: -1919209380
+      GUIBrown_10: 1283766446
+      GUIBrown_53: 1470209959
+      GUIBrown_11: 1783922991
+      GUIBrown_64: -744183386
+      GUIBrown_84: 1883196548
+      GUIBrown_89: 248181957
+      GUIBrown_86: -1094547454
+      GUIBrown_62: 2113114645
+      GUIBrown_17: 2105973307
+      GUIBrown_43: -400281959
+      GUIBrown_83: -982413330
+      GUIBrown_32: -883408990
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
