@@ -10,54 +10,46 @@ public class GrowController : MonoBehaviour
 {
     [Header("Sprite Renderer")]
     public SpriteRenderer sr;
-    [Header("Vegatable Scritable Object")]
+    [Header("Plant Scritable Object")]
     public PlantSO plant;
 
     private Player player;
+    private OrderInventory orderInventory;
+    private AchievementManager achievementManager;
 
     public Sprite emptyPlot;
-
-    public float timer;
 
     public bool isGrowing;
     public int growthStage;
     public float growthTime;
     public int maxSize;
-
     public bool orderCompleted;
-
-    private OrderInventory orderInventory;
-    AchievementManager achievementManager;
 
     public Slider slider;
 
     private void Start()
     {
-       isGrowing = plant.isGrowing;
-       //growthStage = plant.growthStage;
-       //growthTime = plant.growthSteps;
+        isGrowing = plant.isGrowing;
+        maxSize = plant.maxSize;
 
-       maxSize = plant.maxSize;   
-        
-        if(plant.plantTitle == "Black Rose" || plant == null)
+        if (plant.plantTitle == "Black Rose" || plant == null)
         {
             slider.gameObject.SetActive(false);
         }
 
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        if(orderInventory == null)
+        if (orderInventory == null)
         {
             orderInventory = FindObjectOfType<OrderInventory>();
         }
-        
+
         achievementManager = FindObjectOfType<AchievementManager>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void Update()
     {
         Growing();        
 
-        // SEEMS TO WORK NOW?? -> Prevents clicking thru UI elements BUT stops gameobjects from updating in real time when clicking a button (Might not be a problem when using pedometer?)
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -78,8 +70,8 @@ public class GrowController : MonoBehaviour
             {
                 growthStage = maxSize;
                 sr.sprite = plant.growthSprite[growthStage];
-
                 isGrowing = false;
+                slider.gameObject.SetActive(false);
                 orderInventory.AddPlant(plant);
             }
             slider.value = growthStage;
@@ -99,6 +91,7 @@ public class GrowController : MonoBehaviour
                 sr.sprite = plant.growthSprite[growthStage];
             }
         }
+
         PatchManager.instance.RefreshPatches();
     }
 
@@ -108,14 +101,13 @@ public class GrowController : MonoBehaviour
         {
             orderInventory = FindObjectOfType<OrderInventory>();
         }
+
         plant = loaded;
         growthStage = _growStage;
         growthTime = _growTime;
-   
         isGrowing = plant.isGrowing;
         sr.sprite = plant.growthSprite[_growStage];
        
-
         if(_growStage >= 5)
         {
             slider.gameObject.SetActive(false);
@@ -126,8 +118,8 @@ public class GrowController : MonoBehaviour
         {
             slider.gameObject.SetActive(true);
         }
-        slider.value = growthStage;
-  
+
+        slider.value = growthStage; 
     }
 
     public void ClickPlot()
@@ -161,64 +153,5 @@ public class GrowController : MonoBehaviour
                 }
             }
         }
-    }
-
-    /*
-    public void CheckOrder(PlantOrdersSO order)
-    {      
-        if (order == null)
-        {
-            return;
-        }
-
-        orderCompleted = true;
-
-        for (int i = 0; i < order.plantsRequired.Length; i++)
-        {
-            if(!orderInventory.HasPlant(order.plantsRequired[i]))
-            {
-                orderCompleted = false;
-                break;
-            }
-        }
-
-        if (orderCompleted)
-        {
-            achievementManager.CheckAchievement(2);
-
-            for (int i = 0; i < order.plantsRequired.Length; i++)
-            {
-                orderInventory.RemovePlant(order.plantsRequired[i]);
-
-                PlantSO _plant = order.plantsRequired[i];
-                int count = orderInventory.CountPlant(_plant);
-
-                GrowController[] plotGameObjects = FindObjectsOfType<GrowController>();
-                foreach (GrowController plot in plotGameObjects)
-                {
-                    if(plot.plant == _plant)
-                    {
-                        plot.sr.sprite = plot.emptyPlot;
-                        plot.isGrowing = false;
-                        plot.growthStage = 0;
-                        plot.plant = null;
-                        count--;
-
-                        if (count == 0)
-                        {
-                            break;
-                        }
-                    }
-                   
-                }
-                
-            }
-
-            Debug.Log("Order completed");
-            OrderManager orderManager = FindObjectOfType<OrderManager>();
-            orderManager.CompleteOrder(order);
-        }
-        PatchManager.instance.RefreshPatches(); 
-    }*/
-    
+    }    
 }

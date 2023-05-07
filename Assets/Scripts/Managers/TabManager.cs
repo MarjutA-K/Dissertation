@@ -5,32 +5,13 @@ using TMPro;
 
 public class TabManager : MonoBehaviour
 {
-    TabManager instance;
-
     public GameObject shop;
-    public GameObject activities;
-    public GameObject workout;
-    public GameObject exerciseDescription;
-    public GameObject exerciseTimer;
-    public GameObject congratsMsg;
     public GameObject inventory;
     public GameObject steps;
     public GameObject orders;
     public GameObject achievements;
     public GameObject upgrade;
     public GameObject stepRewards;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void OpenShop()
     {

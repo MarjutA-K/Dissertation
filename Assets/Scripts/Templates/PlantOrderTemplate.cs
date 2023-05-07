@@ -31,7 +31,6 @@ public class PlantOrderTemplate : MonoBehaviour
         for (int i = 0; i < order.plantsRequired.Length; i++)
         {
             order.quantity = OrderInventory.instance.CountPlant(order.plantsRequired[i]);
-            //Debug.Log(order.quantity);
             currentQuantityTxt[i].text = order.quantity.ToString();
             quantityRequiredTxt[i].text = order.quantityRequired[i].ToString();
             image[i].sprite = order.icon[i];         

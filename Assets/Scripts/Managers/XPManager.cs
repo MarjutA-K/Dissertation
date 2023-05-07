@@ -11,11 +11,9 @@ public class XPManager : MonoBehaviour
 
     public static XPManager instance;
     private ShopManager shopManager;
+    [SerializeField] LoadSave saveManager;
 
     public GameObject levelReachedNote;
-
-    [SerializeField]
-    LoadSave saveManager;
 
     private void Awake()
     {
@@ -72,7 +70,6 @@ public class XPManager : MonoBehaviour
 
             saveManager.moneyChanged.Invoke(shopManager.money);
         }
-
         currentXPTxt.text = currentXP.ToString();
         saveManager.xpChanged.Invoke(currentXP, level);
     }

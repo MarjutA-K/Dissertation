@@ -8,17 +8,17 @@ public class StepTracker : MonoBehaviour
 {
     public static StepTracker instance;
     private ShopManager shopManager;
-
-    [SerializeField]
-    public LoadSave _saveManager;
+    [SerializeField] public LoadSave _saveManager;
 
     public TMP_Text stepsTxt;
     public TMP_Text stepAmountTxt;
     public TMP_Text currentStorageAmountTxt;
     public TMP_Text storageAmountTxt;
+    public TMP_Text priceTxt;
 
     public Button upgradeBtn;
-    public TMP_Text priceTxt;
+    public Slider slider;
+    public Slider storageSlider;
 
     public float stepThreshold = 0.5f;
     private float lowPassFilterFactor = 0.2f;
@@ -30,15 +30,7 @@ public class StepTracker : MonoBehaviour
 
     public int purchasePrice;
 
-    public Slider slider;
-    public Slider storageSlider;
-
     public int maxValue = 10000;
-
-    private bool reachedTarget1;
-    private bool reachedTarget2;
-    private bool reachedTarget3;
-    private bool reachedTarget4;
 
     public GameObject maxTxt;
     public GameObject coinIcon;
@@ -46,8 +38,6 @@ public class StepTracker : MonoBehaviour
     public GameObject upgradeAmount;
 
     public int addSteps;
-
-    int test;
 
     private void Awake()
     {
@@ -73,11 +63,6 @@ public class StepTracker : MonoBehaviour
         priceTxt.text = purchasePrice.ToString();
         maxTxt.SetActive(false);
 
-        reachedTarget1 = true;
-        reachedTarget2 = true;
-        reachedTarget3 = true;
-        reachedTarget4 = true;
-
         shopManager = FindObjectOfType<ShopManager>();       
     }
 
@@ -89,7 +74,6 @@ public class StepTracker : MonoBehaviour
         UpdateUI();
 
         slider.maxValue = maxValue;
-
         slider.value = stepCount;
         storageSlider.value = maxValue;
 
@@ -146,7 +130,6 @@ public class StepTracker : MonoBehaviour
         if((stepCount % 1000) == 0 && stepCount != 0)
         {
             XPManager.instance.AddXP(250);
-            Debug.Log("added xp");
         }
     }
 

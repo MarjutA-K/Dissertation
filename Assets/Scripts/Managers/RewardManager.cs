@@ -50,7 +50,6 @@ public class RewardManager : MonoBehaviour
             StepTracker.instance.stepCount -= rewardsSO[btnNum].stepAmount;
             StepTracker.instance.stepsTxt.text = StepTracker.instance.stepCount.ToString();
             
-
             if (StepTracker.instance.stepCount >= 1000)
             {
                 int amountInK = StepTracker.instance.stepCount / 1000;

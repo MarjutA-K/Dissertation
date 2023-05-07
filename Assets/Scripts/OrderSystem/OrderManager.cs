@@ -6,15 +6,14 @@ using TMPro;
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager instance;
-    //public static PatchManager instance;
 
     public List<PlantOrdersSO> activeOrders = new List<PlantOrdersSO>();
     public List<PlantOrderTemplate> orderTemplates = new List<PlantOrderTemplate>();
 
     private OrderInventory orderInventory;
-    AchievementManager achievementManager;
+    private AchievementManager achievementManager;
 
-    bool orderCompleted = false;
+    private bool orderCompleted = false;
 
     private void Awake()
     {
@@ -38,7 +37,7 @@ public class OrderManager : MonoBehaviour
     public void AddActiveOrder(PlantOrdersSO order)
     {
         activeOrders.Add(order);
-        Debug.Log("Add active order: " + order.name);
+        //Debug.Log("Add active order: " + order.name);
     }
 
     public void RemoveActiveOrder(PlantOrdersSO order)
@@ -99,17 +98,14 @@ public class OrderManager : MonoBehaviour
                 PlantSO _plant = order.plantsRequired[i];
                 int count = orderInventory.CountPlant(_plant);
                 bool filled = false;
-
                
                 foreach (GrowController plot in plotGameObjects)
                 {
                     if (plot.plant == _plant && !filled)
                     {
-                        Debug.Log("setting plant to null" + _plant.plantTitle);
                         plot.sr.sprite = plot.emptyPlot;
                         plot.isGrowing = false;
                         plot.growthStage = -1;
-                        //plot.plant = null;
                         count--;
                         filled = true;
                         
@@ -128,6 +124,7 @@ public class OrderManager : MonoBehaviour
             OrderManager orderManager = FindObjectOfType<OrderManager>();
             orderManager.CompleteOrder(order);
         }
+
         PatchManager.instance.RefreshPatches();
     }
 }
