@@ -29,4 +29,4 @@ MonoBehaviour:
   growthSteps: 500
   maxSize: 5
   level: 60
-  unlocked: 0
+  unlocked: 1

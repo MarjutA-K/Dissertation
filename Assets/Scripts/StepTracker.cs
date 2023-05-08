@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -37,6 +35,7 @@ public class StepTracker : MonoBehaviour
     public GameObject plusSign;
     public GameObject upgradeAmount;
 
+    [Header("Press Space to add steps for testing pusposes")]
     public int addSteps;
 
     private void Awake()
@@ -133,6 +132,7 @@ public class StepTracker : MonoBehaviour
         }
     }
 
+    //Press Space to add steps for testing pusposes
     public void AddSteps()
     { 
         if (Input.GetKeyDown(KeyCode.Space))

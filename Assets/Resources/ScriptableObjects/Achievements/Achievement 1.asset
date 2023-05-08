@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Achievement 1
   m_EditorClassIdentifier: 
   description: Plant 50 seeds to land
-  requiredAmount: 5
-  currentAmount: 7
+  requiredAmount: 50
+  currentAmount: 0
   rewardAmount: 4
-  claimed: 1
+  claimed: 0
   id: 0

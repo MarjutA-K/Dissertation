@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -95,33 +91,6 @@ public class GrowController : MonoBehaviour
         PatchManager.instance.RefreshPatches();
     }
 
-    public void LoadFromData(PlantSO loaded, int _growStage, float _growTime)
-    {
-        if(orderInventory == null)
-        {
-            orderInventory = FindObjectOfType<OrderInventory>();
-        }
-
-        plant = loaded;
-        growthStage = _growStage;
-        growthTime = _growTime;
-        isGrowing = plant.isGrowing;
-        sr.sprite = plant.growthSprite[_growStage];
-       
-        if(_growStage >= 5)
-        {
-            slider.gameObject.SetActive(false);
-            isGrowing = false;
-            orderInventory.AddPlant(plant);
-        }
-        else
-        {
-            slider.gameObject.SetActive(true);
-        }
-
-        slider.value = growthStage; 
-    }
-
     public void ClickPlot()
     {
         if (Input.GetMouseButtonDown(0))
@@ -153,5 +122,33 @@ public class GrowController : MonoBehaviour
                 }
             }
         }
-    }    
+    }
+
+    // Loads flowers back to the patches
+    public void LoadFromData(PlantSO loaded, int _growStage, float _growTime)
+    {
+        if (orderInventory == null)
+        {
+            orderInventory = FindObjectOfType<OrderInventory>();
+        }
+
+        plant = loaded;
+        growthStage = _growStage;
+        growthTime = _growTime;
+        isGrowing = plant.isGrowing;
+        sr.sprite = plant.growthSprite[_growStage];
+
+        if (_growStage >= 5)
+        {
+            slider.gameObject.SetActive(false);
+            isGrowing = false;
+            orderInventory.AddPlant(plant);
+        }
+        else
+        {
+            slider.gameObject.SetActive(true);
+        }
+
+        slider.value = growthStage;
+    }
 }

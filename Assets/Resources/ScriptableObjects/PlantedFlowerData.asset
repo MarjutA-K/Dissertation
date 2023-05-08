@@ -13,38 +13,38 @@ MonoBehaviour:
   m_Name: PlantedFlowerData
   m_EditorClassIdentifier: 
   startPlant:
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
-  - {fileID: 11400000, guid: a84e365cbadfbd142a3c09b8e3536519, type: 2}
-  - {fileID: 11400000, guid: 21ece43395c014c4e86c0a0dbac3f0f8, type: 2}
-  - {fileID: 11400000, guid: 21ece43395c014c4e86c0a0dbac3f0f8, type: 2}
-  - {fileID: 11400000, guid: 6c630b8d8eae74a42b6ebbfef9787f89, type: 2}
-  - {fileID: 11400000, guid: 60e429852d054234b8ee79b529a55180, type: 2}
-  - {fileID: 11400000, guid: 20588fa147982d84eb2015c03cb77071, type: 2}
-  - {fileID: 11400000, guid: 86d182624a4311a4eb7fb3e6a4d65096, type: 2}
-  - {fileID: 11400000, guid: 9e8da69c7b66fc44d84218ffb7105e30, type: 2}
-  - {fileID: 11400000, guid: 83f04a7dc04ea7247b6c133bb1810669, type: 2}
-  - {fileID: 11400000, guid: 1f8c96ecb1fd2084ea4c21358935b9d9, type: 2}
-  - {fileID: 11400000, guid: 2f96b1c7321f5f743b4f97a93d3a52a5, type: 2}
-  - {fileID: 11400000, guid: 280636a538264a4488526783b1eb8300, type: 2}
-  - {fileID: 11400000, guid: 2d2c63d36dbe2054f927c6e21b4c3deb, type: 2}
-  - {fileID: 11400000, guid: 8eba2a45047bdf44c89df124dea77434, type: 2}
-  - {fileID: 11400000, guid: 20588fa147982d84eb2015c03cb77071, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   plantCounts: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  growthStage: 05000000050000000500000005000000050000000300000002000000020000000200000003000000030000000300000005000000030000000200000002000000
+  growthStage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   growthSteps:
-  - 200
-  - 200
-  - 200
-  - 200
-  - 200
-  - 400
-  - 500
-  - 500
-  - 500
-  - 400
-  - 400
-  - 400
-  - 200
-  - 400
-  - 500
-  - 500
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

@@ -755,7 +755,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2446,8 +2446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000020981, y: 102.3}
-  m_SizeDelta: {x: 418.5674, y: 50}
+  m_AnchoredPosition: {x: 0.000020027, y: 100.7}
+  m_SizeDelta: {x: 444.4625, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145564946
 MonoBehaviour:
@@ -2469,7 +2469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU'VE REACHED LEVEL 00
+  m_text: YOU'VE REACHED LEVEL 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -17255,7 +17255,7 @@ MonoBehaviour:
   coinIcon: {fileID: 187018223}
   plusSign: {fileID: 572107866}
   upgradeAmount: {fileID: 574813638}
-  addSteps: 100
+  addSteps: 1000
 --- !u!4 &1054705960
 Transform:
   m_ObjectHideFlags: 0

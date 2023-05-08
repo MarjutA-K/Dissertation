@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+/*Inventory system was build using the following tutorial: https://www.youtube.com/watch?v=oJAE6CbsQQA&t=400s */
+
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour

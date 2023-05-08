@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+/* XP Manager was build using the following tutorial: https://www.youtube.com/watch?v=57sak_5DJbM */
+
 using UnityEngine;
 using TMPro;
 

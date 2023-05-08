@@ -1,5 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
+/*This script takes inspiration from the following tutorial: https://www.youtube.com/watch?v=EEtOt0Jf7PQ */
+
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;

@@ -15,12 +15,12 @@ MonoBehaviour:
   orderTitle: Flowers
   quantity: 0
   plantsRequired:
-  - {fileID: 11400000, guid: ef2b755f15581d04e9daa46382599932, type: 2}
-  - {fileID: 11400000, guid: 2f96b1c7321f5f743b4f97a93d3a52a5, type: 2}
-  - {fileID: 11400000, guid: aa229d4fac8ef2745951571629b507e8, type: 2}
+  - {fileID: 11400000, guid: 86ea4dcaf85148e439a2675db30da4b4, type: 2}
+  - {fileID: 11400000, guid: 3b03dd49c1f085548b1a08eccba61290, type: 2}
+  - {fileID: 11400000, guid: 6c630b8d8eae74a42b6ebbfef9787f89, type: 2}
   quantityRequired: 010000000100000001000000
   rewardAmount: 2
   icon:
-  - {fileID: -901488471, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: -35665673, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
-  - {fileID: 1099218346, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: -1338591122, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 376752553, guid: 58e34bda4339bac47b055b199767dd19, type: 3}
+  - {fileID: 325286760, guid: 58e34bda4339bac47b055b199767dd19, type: 3}

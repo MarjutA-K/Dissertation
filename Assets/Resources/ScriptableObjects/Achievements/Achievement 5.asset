@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331c4aa1626391c49a4ccdd4c78bb2f5, type: 3}
   m_Name: Achievement 5
   m_EditorClassIdentifier: 
-  description: Money collected from steps X 10K
+  description: Money collected  X 10K
   requiredAmount: 3000
-  currentAmount: 12085
+  currentAmount: 21600
   rewardAmount: 4
-  claimed: 1
+  claimed: 0
   id: 4
